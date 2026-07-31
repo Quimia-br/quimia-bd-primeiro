@@ -42,7 +42,7 @@ CREATE TABLE usuario(
     nome VARCHAR(150) NOT NULL,
     data_nascimento DATE, 
     email VARCHAR(150) NOT NULL UNIQUE,
-    CONSTRAINT regex_email CHECK (email ~ '^[^\s@]+@[^\s@]+\.[^\s@]+$') -- REGRA PARA VERIFICAR FORMATO DO EMAIL
+    CONSTRAINT regex_email CHECK (email ~ '^[^\s@]+@[^\s@]+\.[^\s@]+$') 
 );
 
 CREATE TABLE comodo(
@@ -54,24 +54,24 @@ CREATE TABLE comodo(
 -- TABELAS PRODUTO
 -- ============================
 
-CREATE TABLE produto( -- PRECISA DE VERIFICAÇÃO RELACIONAMENTO
+CREATE TABLE produto(
     id_produto INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario_empresa INT NOT NULL,
-    cas_number VARCHAR(12) NOT NULL UNIQUE, -- ALTEREI O TIPO DE DADO PARA VARCHAR, PORQUE GERALMENTE O CAS NUMBER USA HIFEN
+    cas_number VARCHAR(12) NOT NULL UNIQUE, 
     nome VARCHAR(150) NOT NULL,
     marca VARCHAR(150) DEFAULT 'Sem informação',
     intrucoes_de_uso VARCHAR(255) NOT NULL,
     dosagem_tecnica VARCHAR(255) NOT NULL,
-    CONSTRAINT regex_cas_number CHECK (cas_number ~ '^\d{2,7}-\d{2}-\d$')-- REGRA REGEX PARA VERIFICAR CAS NUMBER
+    CONSTRAINT regex_cas_number CHECK (cas_number ~ '^\d{2,7}-\d{2}-\d$')
 );
 
-CREATE TABLE produto_usuario( -- PRECISA VERIFICAR RELACIONAMENTO
+CREATE TABLE produto_usuario( 
     id_produto_usuario INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_produto INT NOT NULL,
     id_usuario INT NOT NULL
 );
 
-CREATE TABLE produto_superficie( -- PRECISA VERIFICAR RELACIONAMENTO
+CREATE TABLE produto_superficie(
     id_produto_superficie INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_produto INT NOT NULL,
     id_superficie INT NOT null
@@ -100,7 +100,7 @@ CREATE TABLE composto_fds(
 -- ==========================
 -- TABELAS DEPENDENTES
 -- ==========================
-CREATE TABLE estante( -- VERIFICAR RELACIONAMENTO
+CREATE TABLE estante( 
     id_estante INT GENERATED ALWAYS AS IDENTITY  PRIMARY KEY,
     id_usuario INT NOT NULL,
     id_comodo INT
@@ -109,12 +109,12 @@ CREATE TABLE estante( -- VERIFICAR RELACIONAMENTO
 CREATE TABLE localizacao(
     id_localizacao INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario INT,
-    cep VARCHAR(18) NOT NULL, -- MUDEI PARA VARCHAR POR CAUSA DOS HIFENS
+    cep VARCHAR(18) NOT NULL, 
     latitude VARCHAR(255),
     longitude VARCHAR(255)
 );
 
-CREATE TABLE historico( -- VERIFICAR RELACIONAMENTO
+CREATE TABLE historico( 
     id_historico INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_estante INT NOT NULL,
     id_usuario INT,
