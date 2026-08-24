@@ -3,7 +3,6 @@
 -- =================================
 DROP TABLE IF EXISTS historico_produto_mistura;
 DROP TABLE IF EXISTS descarte_fds;
-DROP TABLE IF EXISTS composto_fds;
 DROP TABLE IF EXISTS localizacao;
 DROP TABLE IF EXISTS historico;
 DROP TABLE IF EXISTS tipo_historico;
@@ -87,14 +86,6 @@ CREATE TABLE descarte_fds(
     metodo_descarte_embalagem VARCHAR(255),
     restricao_descarte VARCHAR(255),
     precaucao_ambiental VARCHAR(255)
-);
-
-CREATE TABLE composto_fds( 
-    id_composto_fds INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_produto INT NOT NULL, 
-    percentual_min NUMERIC(10, 4),
-    percentual_max NUMERIC(10, 4),
-    classificacao_ghs VARCHAR(255)
 );
 
 -- ==========================

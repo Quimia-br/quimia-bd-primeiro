@@ -96,12 +96,6 @@ ALTER TABLE descarte_fds ADD CONSTRAINT fk_descarte_fds_produto
     FOREIGN KEY (id_produto)
     REFERENCES produto (id_produto);
 
--- ================================
--- composto_fds --> produto
--- ================================
-ALTER TABLE composto_fds ADD CONSTRAINT fk_composto_fds_produto
-    FOREIGN KEY (id_produto)
-    REFERENCES produto (id_produto);
 
 -- ================================
 -- historico_produto_mistura --> produto
