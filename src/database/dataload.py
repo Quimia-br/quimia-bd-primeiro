@@ -42,3 +42,16 @@ def inserir(conn, tabela: str, pk_col: str, rows: list[dict], extra_cols_fn=None
 
     ids[tabela] = novos_ids
     print(f"[OK] {tabela}: {len(novos_ids)} registros inseridos")
+
+def rand_id_or_none(tabela: str, prob_nulo: float = 0.0):
+    if random.random() < prob_nulo:
+        return None
+    return random.choice(ids[tabela])
+
+
+def pares_unicos(tabela_a: str, tabela_b: str, qtd: int) -> list[tuple[int, int]]:
+    """Sorteia qtd pares (id_a, id_b) sem repetir combinacao."""
+    pares = set()
+    while len(pares) < qtd:
+        pares.add((rand_id_or_none(tabela_a), rand_id_or_none(tabela_b)))
+    return list(pares)
