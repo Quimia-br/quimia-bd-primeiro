@@ -55,3 +55,12 @@ def pares_unicos(tabela_a: str, tabela_b: str, qtd: int) -> list[tuple[int, int]
     while len(pares) < qtd:
         pares.add((rand_id_or_none(tabela_a), rand_id_or_none(tabela_b)))
     return list(pares)
+
+
+def inserir_associativa(conn, tabela: str, pk_col: str, col_a: str, tabela_a: str, col_b: str, tabela_b: str):
+    """Insere uma tabela associativa (n:n) sorteando pares unicos entre tabela_a e tabela_b."""
+    rows = load_json(tabela)
+    for row, (id_a, id_b) in zip(rows, pares_unicos(tabela_a, tabela_b, len(rows))):
+        row[col_a] = id_a
+        row[col_b] = id_b
+    inserir(conn, tabela, pk_col, rows)
