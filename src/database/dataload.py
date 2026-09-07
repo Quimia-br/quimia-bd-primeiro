@@ -64,3 +64,92 @@ def inserir_associativa(conn, tabela: str, pk_col: str, col_a: str, tabela_a: st
         row[col_a] = id_a
         row[col_b] = id_b
     inserir(conn, tabela, pk_col, rows)
+
+
+
+def main():
+    conn = get_connection()
+
+    try:
+        # limpa o banco antes de popular, pra poder rodar o script quantas vezes quiser
+        execute_sql(conn, f"TRUNCATE {', '.join(TABELAS)} RESTART IDENTITY CASCADE;")
+
+        # nivel 0 --> sem fk
+
+        inserir(conn, "usuario_empresa", "id_usuario_empresa", load_json("usuario_empresa"))
+        inserir(conn, "superficie", "id_superficie", load_json("superficie"))
+        inserir(conn, "tipo_historico", "id_tipo_historico", load_json("tipo_historico"))
+        inserir(conn, "usuario", "id_usuario", load_json("usuario"))
+        inserir(conn, "comodo", "id_comodo", load_json("comodo"))
+
+        # nivel 1
+
+        inserir(
+            conn, "produto", "id_produto", load_json("produto"),
+            extra_cols_fn=lambda row: {"id_usuario_empresa": rand_id_or_none("usuario_empresa")},
+        )
+
+        inserir(
+            conn, "estante", "id_estante", load_json("estante"),
+            extra_cols_fn=lambda row: {
+                "id_usuario": rand_id_or_none("usuario"),
+                "id_comodo": rand_id_or_none("comodo", prob_nulo=0.1),
+            },
+        )
+
+        inserir(
+            conn, "localizacao", "id_localizacao", load_json("localizacao"),
+            extra_cols_fn=lambda row: {"id_usuario": rand_id_or_none("usuario", prob_nulo=0.1)},
+        )
+
+        # nivel 2
+
+        # produto_usuario e produto_superficie sao associativas: sorteia pares
+        # sem repetir combinacao, pra nao vincular o mesmo usuario/superficie 2x ao mesmo produto.
+        inserir_associativa(conn, "produto_usuario", "id_produto_usuario", "id_produto", "produto", "id_usuario", "usuario")
+        inserir_associativa(conn, "produto_superficie", "id_produto_superficie", "id_produto", "produto", "id_superficie", "superficie")
+
+        # descarte_fds tem id_produto UNIQUE -> nao pode repetir produto.
+        # sorteia sem reposicao a partir da lista de produtos.
+        produtos_disponiveis = ids["produto"][:]
+        random.shuffle(produtos_disponiveis)
+        descarte_rows = load_json("descarte_fds")
+        for row, id_produto in zip(descarte_rows, produtos_disponiveis):
+            row["id_produto"] = id_produto
+        inserir(conn, "descarte_fds", "id_descarte_fds", descarte_rows)
+
+        # nivel 3
+
+        inserir(
+            conn, "historico", "id_historico", load_json("historico"),
+            extra_cols_fn=lambda row: {
+                "id_estante": rand_id_or_none("estante"),
+                "id_usuario": rand_id_or_none("usuario", prob_nulo=0.15),
+                "id_tipo_historico": rand_id_or_none("tipo_historico"),
+                "id_produto_superficie": rand_id_or_none("produto_superficie", prob_nulo=0.3),
+                "id_produto_usuario": rand_id_or_none("produto_usuario", prob_nulo=0.3),
+            },
+        )
+
+        # nivel 4 - tabela associativa (PK composta, sem duplicar par)
+
+        for id_produto, id_historico in pares_unicos("produto", "historico", len(ids["historico"])):
+            query = """
+                INSERT INTO historico_produto_mistura (id_produto, id_historico)
+                VALUES (%s, %s);
+            """
+            execute_sql(conn, query, [id_produto, id_historico])
+        print(f"[OK] historico_produto_mistura: {len(ids['historico'])} registros inseridos")
+
+        conn.commit()
+        print("\nPopulacao concluida com sucesso.")
+
+    except Exception as e:
+        conn.rollback()
+        print(f"\n[ERRO] Populacao abortada, rollback executado: {e}")
+        raise
+    finally:
+        conn.close()
+
+if __name__ == "__main__":
+    main()
