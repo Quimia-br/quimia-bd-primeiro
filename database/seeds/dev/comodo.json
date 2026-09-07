@@ -1,0 +1,18 @@
+[
+  { "nome": "Cozinha" },
+  { "nome": "Banheiro" },
+  { "nome": "Sala" },
+  { "nome": "Quarto" },
+  { "nome": "Lavanderia" },
+  { "nome": "Garagem" },
+  { "nome": "Área de Serviço" },
+  { "nome": "Escritório" },
+  { "nome": "Depósito" },
+  { "nome": "Varanda" },
+  { "nome": "Closet" },
+  { "nome": "Copa" },
+  { "nome": "Despensa" },
+  { "nome": "Quintal" },
+  { "nome": "Corredor" },
+  { "nome": "Desconhecido" }
+]
