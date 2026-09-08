@@ -1,0 +1,1402 @@
+[
+  {
+    "cas_number": "2302448-63-3",
+    "nome": "Cera para Móveis Talco",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "9135502-72-5",
+    "nome": "Desengordurante Frutas Vermelhas",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "5349887-86-3",
+    "nome": "Amaciante Lavanda",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "9797718-39-2",
+    "nome": "Limpador de Aço Inox Pinho",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "3681125-83-6",
+    "nome": "Sabonete Líquido Lavanda",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "6019392-85-0",
+    "nome": "Lustra Móveis Pinho",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "2945363-72-0",
+    "nome": "Sabonete Líquido Neutro",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "8832350-71-0",
+    "nome": "Limpa Estofados Lavanda",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "999193-12-2",
+    "nome": "Amaciante Pinho",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "6267823-94-6",
+    "nome": "Desengordurante Eucalipto",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "2642486-65-7",
+    "nome": "Álcool Gel Cítrico",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "6348241-49-4",
+    "nome": "Lustra Móveis Cítrico",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "9520790-14-2",
+    "nome": "Lustra Móveis Talco",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "8324613-28-5",
+    "nome": "Lustra Móveis Eucalipto",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "5632951-67-0",
+    "nome": "Amaciante Eucalipto",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "4306015-23-0",
+    "nome": "Água Sanitária Pinho",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "6946098-73-6",
+    "nome": "Polidor de Metais Cítrico",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "2728933-67-1",
+    "nome": "Lustra Móveis Floral",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "1244886-53-2",
+    "nome": "Cera para Móveis Eucalipto",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "9966188-88-7",
+    "nome": "Água Sanitária Pinho",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "898526-22-5",
+    "nome": "Polidor de Metais Cítrico",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "4723183-48-3",
+    "nome": "Sabonete Líquido Neutro",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "2576821-16-5",
+    "nome": "Sabonete Líquido Frutas Vermelhas",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "3349997-22-0",
+    "nome": "Odorizador Frutas Vermelhas",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "5173321-60-7",
+    "nome": "Anti-mofo Eucalipto",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "3101802-57-6",
+    "nome": "Sabonete Líquido Talco",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "7802387-43-3",
+    "nome": "Cera para Móveis Frutas Vermelhas",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "5767872-79-6",
+    "nome": "Limpador de Vidros Eucalipto",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "8984450-97-7",
+    "nome": "Limpador de Aço Inox Talco",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "582657-74-9",
+    "nome": "Água Sanitária Talco",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "3554936-34-2",
+    "nome": "Amaciante Cítrico",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "2480995-86-4",
+    "nome": "Polidor de Metais Floral",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "9261942-51-4",
+    "nome": "Sabonete Líquido Talco",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "1887762-63-2",
+    "nome": "Odorizador Talco",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "8986448-54-6",
+    "nome": "Limpador de Vidros Neutro",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "628579-32-4",
+    "nome": "Odorizador Frutas Vermelhas",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "3985929-16-7",
+    "nome": "Limpa Alumínio Pinho",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "4703446-72-1",
+    "nome": "Limpador de Pisos Neutro",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "4520127-63-9",
+    "nome": "Inseticida Pinho",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "8665465-57-0",
+    "nome": "Polidor de Metais Frutas Vermelhas",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "2275836-77-9",
+    "nome": "Limpador de Aço Inox Talco",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "554850-68-0",
+    "nome": "Desinfetante Floral",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "2078251-97-0",
+    "nome": "Inseticida Talco",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "7962179-85-8",
+    "nome": "Inseticida Cítrico",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "460552-59-0",
+    "nome": "Água Sanitária Neutro",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "4514483-93-6",
+    "nome": "Limpa Estofados Floral",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "142007-38-4",
+    "nome": "Sabão em Pó Cítrico",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "7700718-42-3",
+    "nome": "Limpa Alumínio Pinho",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "8581786-94-5",
+    "nome": "Limpador de Vidros Lavanda",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "1071018-53-4",
+    "nome": "Limpador de Vidros Frutas Vermelhas",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "2515406-76-3",
+    "nome": "Limpador de Pisos Floral",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "8344541-47-4",
+    "nome": "Sabão em Pó Lavanda",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "5757397-38-8",
+    "nome": "Desinfetante Floral",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "4928888-22-7",
+    "nome": "Sabonete Líquido Cítrico",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "3728805-55-3",
+    "nome": "Álcool Gel Eucalipto",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "7780622-25-7",
+    "nome": "Cera para Móveis Neutro",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "6403356-77-4",
+    "nome": "Limpador de Aço Inox Eucalipto",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "6865109-82-7",
+    "nome": "Removedor de Gordura Pinho",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "2966628-50-0",
+    "nome": "Anti-mofo Pinho",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "8213750-21-2",
+    "nome": "Amaciante Cítrico",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "6430992-10-0",
+    "nome": "Polidor de Metais Frutas Vermelhas",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "300592-96-0",
+    "nome": "Álcool Gel Floral",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "6434919-74-9",
+    "nome": "Sabão em Pó Eucalipto",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "7649184-76-9",
+    "nome": "Limpador de Pisos Neutro",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "8223843-55-3",
+    "nome": "Sabão em Pó Pinho",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "3543194-12-9",
+    "nome": "Limpa Estofados Cítrico",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "4291440-78-9",
+    "nome": "Desinfetante Talco",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "1942640-63-7",
+    "nome": "Detergente Multiuso Lavanda",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "156114-48-6",
+    "nome": "Sabão em Pó Floral",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "4743042-24-1",
+    "nome": "Limpador de Vidros Eucalipto",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "6004941-62-4",
+    "nome": "Limpador de Aço Inox Floral",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "3934355-10-0",
+    "nome": "Anti-mofo Pinho",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "1699382-42-3",
+    "nome": "Água Sanitária Eucalipto",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "2931019-15-4",
+    "nome": "Desinfetante Eucalipto",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "769901-11-2",
+    "nome": "Limpador de Vidros Eucalipto",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "1559474-57-5",
+    "nome": "Odorizador Neutro",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "6471242-98-7",
+    "nome": "Inseticida Neutro",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "1740027-63-9",
+    "nome": "Desinfetante Cítrico",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "483466-97-2",
+    "nome": "Limpa Alumínio Pinho",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "1062612-43-5",
+    "nome": "Inseticida Lavanda",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "7261992-94-3",
+    "nome": "Limpador de Aço Inox Eucalipto",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "195378-92-2",
+    "nome": "Sabonete Líquido Lavanda",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "5379352-40-5",
+    "nome": "Água Sanitária Frutas Vermelhas",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "3942655-20-7",
+    "nome": "Limpa Alumínio Talco",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "1991580-73-0",
+    "nome": "Inseticida Pinho",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "1524984-87-9",
+    "nome": "Sabonete Líquido Lavanda",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "3739955-68-5",
+    "nome": "Desengordurante Lavanda",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "1634731-94-3",
+    "nome": "Inseticida Eucalipto",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "1783801-15-2",
+    "nome": "Limpador de Pisos Pinho",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "3146466-25-6",
+    "nome": "Cera para Móveis Floral",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "6953668-15-9",
+    "nome": "Álcool Gel Eucalipto",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "8368965-10-8",
+    "nome": "Lustra Móveis Cítrico",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "2153898-23-6",
+    "nome": "Amaciante Cítrico",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "4590187-60-5",
+    "nome": "Odorizador Floral",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "9190669-50-8",
+    "nome": "Polidor de Metais Neutro",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "2225872-93-2",
+    "nome": "Limpador de Pisos Pinho",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "9777876-83-6",
+    "nome": "Sabonete Líquido Frutas Vermelhas",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "424006-58-2",
+    "nome": "Limpador de Aço Inox Eucalipto",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "4203726-28-0",
+    "nome": "Amaciante Neutro",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "9426875-38-8",
+    "nome": "Inseticida Eucalipto",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "6502098-63-5",
+    "nome": "Desinfetante Talco",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "7433387-38-5",
+    "nome": "Cera para Móveis Floral",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "1249392-33-2",
+    "nome": "Inseticida Cítrico",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "9338185-43-2",
+    "nome": "Polidor de Metais Neutro",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "670101-29-5",
+    "nome": "Inseticida Cítrico",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "1222746-50-8",
+    "nome": "Lustra Móveis Pinho",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "9111383-78-6",
+    "nome": "Amaciante Talco",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "6053193-47-3",
+    "nome": "Álcool Gel Pinho",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "4032378-92-9",
+    "nome": "Desengordurante Frutas Vermelhas",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "1902110-59-4",
+    "nome": "Álcool Gel Talco",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "8167237-15-4",
+    "nome": "Desengordurante Frutas Vermelhas",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "1098444-36-3",
+    "nome": "Amaciante Lavanda",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "2579583-13-7",
+    "nome": "Polidor de Metais Eucalipto",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "4226324-81-1",
+    "nome": "Desinfetante Cítrico",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "6785521-65-5",
+    "nome": "Limpa Alumínio Frutas Vermelhas",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "9824882-15-1",
+    "nome": "Detergente Multiuso Eucalipto",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "4723088-66-6",
+    "nome": "Limpador de Pisos Eucalipto",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "2288111-60-8",
+    "nome": "Sabonete Líquido Floral",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "9286604-81-2",
+    "nome": "Desengordurante Lavanda",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "9011925-80-1",
+    "nome": "Odorizador Talco",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "2700376-33-3",
+    "nome": "Polidor de Metais Cítrico",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "9208203-69-8",
+    "nome": "Amaciante Lavanda",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "9740788-72-5",
+    "nome": "Limpador de Vidros Floral",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "3246377-50-7",
+    "nome": "Limpador de Pisos Eucalipto",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "9488398-82-5",
+    "nome": "Lustra Móveis Cítrico",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "3716594-92-6",
+    "nome": "Álcool Gel Floral",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "7765317-67-5",
+    "nome": "Álcool Gel Frutas Vermelhas",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "4707964-27-8",
+    "nome": "Odorizador Eucalipto",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "8509050-90-0",
+    "nome": "Água Sanitária Lavanda",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "9117912-79-7",
+    "nome": "Sabonete Líquido Neutro",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "2246164-69-8",
+    "nome": "Lustra Móveis Neutro",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "4007764-88-2",
+    "nome": "Limpador de Aço Inox Lavanda",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "8111851-55-0",
+    "nome": "Amaciante Cítrico",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "3926191-15-3",
+    "nome": "Cera para Móveis Pinho",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "669499-93-5",
+    "nome": "Inseticida Lavanda",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "6319308-93-6",
+    "nome": "Sabonete Líquido Cítrico",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "5920656-54-7",
+    "nome": "Limpa Estofados Talco",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "1293335-75-4",
+    "nome": "Amaciante Floral",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "3864580-63-5",
+    "nome": "Desengordurante Eucalipto",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "6893754-12-3",
+    "nome": "Removedor de Gordura Cítrico",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "9601095-28-0",
+    "nome": "Limpador de Aço Inox Lavanda",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "4755589-20-3",
+    "nome": "Limpa Alumínio Lavanda",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "2394322-84-2",
+    "nome": "Limpa Estofados Talco",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "9908566-18-3",
+    "nome": "Álcool Gel Frutas Vermelhas",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "8769651-74-6",
+    "nome": "Detergente Multiuso Floral",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "8915925-74-1",
+    "nome": "Odorizador Lavanda",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "7239325-76-6",
+    "nome": "Sabonete Líquido Lavanda",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "5880723-85-9",
+    "nome": "Anti-mofo Talco",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "1406235-46-9",
+    "nome": "Anti-mofo Floral",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "9697025-76-1",
+    "nome": "Detergente Multiuso Lavanda",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "6859292-56-1",
+    "nome": "Removedor de Gordura Pinho",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "9473604-56-9",
+    "nome": "Sabonete Líquido Talco",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "2998427-57-8",
+    "nome": "Sabonete Líquido Frutas Vermelhas",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "6679518-27-1",
+    "nome": "Lustra Móveis Pinho",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "5678054-80-9",
+    "nome": "Removedor de Gordura Talco",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "2438216-70-9",
+    "nome": "Detergente Multiuso Eucalipto",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 2L de água."
+  },
+  {
+    "cas_number": "1342853-87-0",
+    "nome": "Limpa Estofados Pinho",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "2940571-91-7",
+    "nome": "Odorizador Lavanda",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "3267314-14-9",
+    "nome": "Limpador de Aço Inox Neutro",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "4014070-93-0",
+    "nome": "Desinfetante Pinho",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "6802348-85-3",
+    "nome": "Desengordurante Talco",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "9380384-84-5",
+    "nome": "Sabonete Líquido Neutro",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "6777274-83-0",
+    "nome": "Removedor de Gordura Frutas Vermelhas",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "8441787-47-5",
+    "nome": "Limpador de Vidros Eucalipto",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "9448411-71-3",
+    "nome": "Inseticida Talco",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "1950668-43-1",
+    "nome": "Detergente Multiuso Frutas Vermelhas",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "8665512-78-0",
+    "nome": "Polidor de Metais Pinho",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "1275561-80-2",
+    "nome": "Limpa Alumínio Pinho",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "3066624-97-3",
+    "nome": "Lustra Móveis Neutro",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "3469179-39-3",
+    "nome": "Limpa Estofados Neutro",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "8265554-88-0",
+    "nome": "Limpador de Vidros Eucalipto",
+    "marca": "Sanifort",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "8260110-83-4",
+    "nome": "Odorizador Pinho",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "908465-77-6",
+    "nome": "Limpa Estofados Cítrico",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "2019452-99-8",
+    "nome": "Amaciante Frutas Vermelhas",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "9747710-22-5",
+    "nome": "Removedor de Gordura Talco",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "4519930-70-9",
+    "nome": "Cera para Móveis Floral",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "7031222-99-5",
+    "nome": "Polidor de Metais Floral",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "9661886-97-3",
+    "nome": "Amaciante Cítrico",
+    "marca": "Brilho Total",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "3289404-28-2",
+    "nome": "Polidor de Metais Talco",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 2L de água."
+  },
+  {
+    "cas_number": "8673947-78-5",
+    "nome": "Anti-mofo Cítrico",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 5L de água."
+  },
+  {
+    "cas_number": "6684084-22-2",
+    "nome": "Lustra Móveis Lavanda",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "5614615-43-5",
+    "nome": "Limpador de Vidros Frutas Vermelhas",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "5890330-96-9",
+    "nome": "Polidor de Metais Eucalipto",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "7498253-20-6",
+    "nome": "Álcool Gel Frutas Vermelhas",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "5660446-63-9",
+    "nome": "Sabão em Pó Cítrico",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "3828871-50-5",
+    "nome": "Amaciante Pinho",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 2L de água."
+  },
+  {
+    "cas_number": "9846889-76-7",
+    "nome": "Inseticida Pinho",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "4221946-99-1",
+    "nome": "Sabão em Pó Floral",
+    "marca": "EcoLimp",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 1L de água."
+  },
+  {
+    "cas_number": "7938750-80-0",
+    "nome": "Limpador de Vidros Eucalipto",
+    "marca": "CleanMax",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 1L de água."
+  },
+  {
+    "cas_number": "1414518-93-6",
+    "nome": "Cera para Móveis Cítrico",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "2120846-26-8",
+    "nome": "Limpador de Pisos Frutas Vermelhas",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 2 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 10ml em 5L de água."
+  },
+  {
+    "cas_number": "7988560-69-8",
+    "nome": "Desengordurante Pinho",
+    "marca": "Aroma Casa",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 5L de água."
+  },
+  {
+    "cas_number": "9912508-86-7",
+    "nome": "Sabonete Líquido Cítrico",
+    "marca": "Multibrilho",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "1502477-66-4",
+    "nome": "Anti-mofo Floral",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "1559-76-2",
+    "nome": "Limpador de Pisos Lavanda",
+    "marca": "Sem informação",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 50ml em 5L de água."
+  },
+  {
+    "cas_number": "8003867-48-0",
+    "nome": "Detergente Multiuso Frutas Vermelhas",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 10 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "3163706-62-8",
+    "nome": "Sabonete Líquido Pinho",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 15 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 20ml em 1L de água."
+  },
+  {
+    "cas_number": "3700936-43-1",
+    "nome": "Limpa Alumínio Talco",
+    "marca": "Purific",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 2L de água."
+  },
+  {
+    "cas_number": "6927387-34-1",
+    "nome": "Sabonete Líquido Neutro",
+    "marca": "Higiplus",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  },
+  {
+    "cas_number": "4565663-99-9",
+    "nome": "Inseticida Frutas Vermelhas",
+    "marca": "Lavtec",
+    "intrucoes_de_uso": "Aplicar sobre a superfície e espalhar com pano limpo. Aguardar 5 minutos antes de enxaguar.",
+    "dosagem_tecnica": "Diluir 30ml em 1L de água."
+  }
+]

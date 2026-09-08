@@ -1,0 +1,1002 @@
+[
+  {
+    "cnpj": "10433218196001",
+    "nome": "Alves e Filhos",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "38908386379402",
+    "nome": "da Cruz",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "54235116155940",
+    "nome": "Carvalho Sousa S/A",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "81618495931034",
+    "nome": "Pastor - ME",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "31647525534192",
+    "nome": "Alves S/A",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "32764835030564",
+    "nome": "da Conceição Montenegro - EI",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "39537672423884",
+    "nome": "Novais S.A.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "69653287101226",
+    "nome": "Câmara",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "16697848018451",
+    "nome": "Pastor",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "62704828148932",
+    "nome": "Abreu",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "28809570154303",
+    "nome": "Sampaio Lima Ltda.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "11718227824896",
+    "nome": "Cassiano",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "83465787133150",
+    "nome": "Teixeira Fernandes S/A",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "83930103105183",
+    "nome": "Garcia S/A",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "73829973763116",
+    "nome": "Ferreira",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "66701065133387",
+    "nome": "Aparecida",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "62473178108013",
+    "nome": "Nascimento",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "67736026064746",
+    "nome": "Garcia S/A",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "72343098050097",
+    "nome": "Pires",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "82081219136193",
+    "nome": "Oliveira",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "90916998543534",
+    "nome": "Santos Azevedo S/A",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "24751079911838",
+    "nome": "Vargas da Rocha S/A",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "25135427849808",
+    "nome": "Brito Garcia Ltda.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "12411824493534",
+    "nome": "Porto",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "74016400524278",
+    "nome": "Castro",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "80112805982620",
+    "nome": "Fogaça",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "50533158692322",
+    "nome": "Rios da Mata e Filhos",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "02563421607337",
+    "nome": "Pereira e Filhos",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "43303654145868",
+    "nome": "Nascimento Siqueira S.A.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "01429401965569",
+    "nome": "Martins Garcia Ltda.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "16934060883561",
+    "nome": "Rodrigues Duarte S/A",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "95148465648236",
+    "nome": "Andrade Dias - ME",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "29946804436995",
+    "nome": "Azevedo",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "77387214895134",
+    "nome": "Nunes Silva Ltda.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "32003791769367",
+    "nome": "Rezende Monteiro - ME",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "32016328708317",
+    "nome": "Casa Grande",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "78895798687277",
+    "nome": "Carvalho",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "34873471434558",
+    "nome": "Souza Novais - EI",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "22362316658760",
+    "nome": "Souza",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "66909670546688",
+    "nome": "Pacheco",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "37346706562729",
+    "nome": "Fonseca",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "06990162720465",
+    "nome": "Carvalho Moraes - ME",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "75564641708053",
+    "nome": "Sá S/A",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "00330923271937",
+    "nome": "Cassiano e Filhos",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "52991241904966",
+    "nome": "Vieira Rodrigues - ME",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "19314919058651",
+    "nome": "Gomes - ME",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "50671657262849",
+    "nome": "Moura",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "77694531473799",
+    "nome": "Novaes",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "50752735454948",
+    "nome": "Rodrigues e Filhos",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "83136783777014",
+    "nome": "Rodrigues - EI",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "63495788568557",
+    "nome": "Vargas",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "44313518233749",
+    "nome": "Camargo",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "94134352408240",
+    "nome": "Lopes",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "84271094777520",
+    "nome": "Marques Abreu e Filhos",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "71167190229413",
+    "nome": "Montenegro",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "86999386774964",
+    "nome": "Montenegro Caldeira e Filhos",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "90913341232812",
+    "nome": "Porto",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "67974034471349",
+    "nome": "Cassiano Freitas S.A.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "61832421024994",
+    "nome": "Peixoto Ltda.",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "17464887719065",
+    "nome": "Almeida",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "40139904902787",
+    "nome": "Fonseca Ltda.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "29671756551256",
+    "nome": "Araújo da Costa - EI",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "46807154516808",
+    "nome": "Barros e Filhos",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "60385977034824",
+    "nome": "Azevedo",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "71093248086131",
+    "nome": "Cardoso Ribeiro - ME",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "12748467737826",
+    "nome": "da Luz Moura - EI",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "98214658404499",
+    "nome": "Cunha",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "27875588675339",
+    "nome": "Silva das Neves - ME",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "36057662702895",
+    "nome": "Macedo",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "71870262174596",
+    "nome": "Campos",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "58657809134316",
+    "nome": "Câmara Azevedo Ltda.",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "17240050455623",
+    "nome": "Pastor - EI",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "69222196937923",
+    "nome": "Pastor Câmara S/A",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "47407482175946",
+    "nome": "Santos e Filhos",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "74367136959440",
+    "nome": "da Conceição S/A",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "40909743953394",
+    "nome": "Farias S/A",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "10470952145623",
+    "nome": "da Mota Rios - ME",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "85884247451712",
+    "nome": "Nogueira Cardoso e Filhos",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "68516048175496",
+    "nome": "da Cruz",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "13709859317461",
+    "nome": "Jesus",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "00471138267586",
+    "nome": "Brito Brito e Filhos",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "26179640537735",
+    "nome": "Fogaça",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "58506431713900",
+    "nome": "Jesus",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "32931839335290",
+    "nome": "Siqueira",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "22842102053950",
+    "nome": "Rocha e Filhos",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "40268117758917",
+    "nome": "Araújo - ME",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "39084700766177",
+    "nome": "Caldeira",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "15921249985698",
+    "nome": "Correia Correia - EI",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "78961183673657",
+    "nome": "Carvalho",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "61565452711116",
+    "nome": "Cirino",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "52809885165604",
+    "nome": "Martins",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "45198327315851",
+    "nome": "Barbosa Macedo - EI",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "93689980940244",
+    "nome": "Aragão e Filhos",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "50229612018366",
+    "nome": "Borges S.A.",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "52545991022901",
+    "nome": "Jesus Mendonça - ME",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "76797643815614",
+    "nome": "Guerra Araújo S.A.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "78403690034324",
+    "nome": "Abreu",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "51076226838851",
+    "nome": "da Luz",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "06071596966416",
+    "nome": "da Paz",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "52975161369681",
+    "nome": "Sampaio",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "45352181883552",
+    "nome": "Cassiano",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "12432921277997",
+    "nome": "da Rocha Cunha S/A",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "95527177449058",
+    "nome": "Souza Ltda.",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "47700541199867",
+    "nome": "Aragão - EI",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "80793597820715",
+    "nome": "Montenegro",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "82037788925546",
+    "nome": "Araújo Moraes S/A",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "59051518644925",
+    "nome": "Azevedo Peixoto S/A",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "92546291486528",
+    "nome": "Guerra Campos - EI",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "68505423573322",
+    "nome": "Pacheco Peixoto S/A",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "41888059296222",
+    "nome": "Leão e Filhos",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "27065379473834",
+    "nome": "da Luz",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "35977468862392",
+    "nome": "Rios Silva Ltda.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "07581814124782",
+    "nome": "da Luz Gonçalves S.A.",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "13750606853615",
+    "nome": "Marques",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "05152204727790",
+    "nome": "Sá",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "04328986143410",
+    "nome": "Albuquerque - ME",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "69711798089324",
+    "nome": "Barbosa - EI",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "09539621851888",
+    "nome": "Montenegro da Luz S.A.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "80670654051531",
+    "nome": "Azevedo",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "52058527722170",
+    "nome": "Freitas da Paz S.A.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "30305486874034",
+    "nome": "Nogueira",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "05415667652775",
+    "nome": "Pimenta",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "41616928451154",
+    "nome": "Rios - EI",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "79627570596401",
+    "nome": "Ribeiro",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "58202970213556",
+    "nome": "Carvalho Ltda.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "09275571928565",
+    "nome": "Caldeira e Filhos",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "31027868144739",
+    "nome": "da Mata da Paz - EI",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "73121727155188",
+    "nome": "Silva Fernandes S.A.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "42258313237058",
+    "nome": "Montenegro",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "57829114678669",
+    "nome": "da Cunha",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "25177852892268",
+    "nome": "Borges e Filhos",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "18242253584143",
+    "nome": "da Mota",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "42498182992299",
+    "nome": "Abreu Ltda.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "90010943969078",
+    "nome": "Porto da Luz S.A.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "47364710276773",
+    "nome": "Novaes",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "92555625881537",
+    "nome": "Novais",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "47321046963259",
+    "nome": "Camargo S/A",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "32787747016873",
+    "nome": "Nogueira Andrade Ltda.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "95004797480162",
+    "nome": "Lopes Cardoso S/A",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "56506098358416",
+    "nome": "Fonseca",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "78499121655852",
+    "nome": "Fogaça S.A.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "98680002578729",
+    "nome": "Rios Caldeira Ltda.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "25952694958887",
+    "nome": "Pinto",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "47055169409749",
+    "nome": "da Costa Castro S.A.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "30972896230913",
+    "nome": "Alves",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "75626368970283",
+    "nome": "Sousa Farias - ME",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "57865278585497",
+    "nome": "da Mata Castro e Filhos",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "34843443757584",
+    "nome": "Garcia S/A",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "19866524041574",
+    "nome": "Câmara",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "33848421993308",
+    "nome": "Marques Ferreira Ltda.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "30165712082677",
+    "nome": "Câmara Alves e Filhos",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "45401938026206",
+    "nome": "Guerra Farias Ltda.",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "24004991547887",
+    "nome": "Vargas Ltda.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "87431527420549",
+    "nome": "Ramos",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "29668516122753",
+    "nome": "Rocha",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "46374549904530",
+    "nome": "Alves",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "74268414593327",
+    "nome": "da Luz S.A.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "79568783391878",
+    "nome": "Andrade",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "19108839822587",
+    "nome": "Peixoto - ME",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "39718707286790",
+    "nome": "Siqueira",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "74064039106518",
+    "nome": "Lopes",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "17046226567661",
+    "nome": "Gomes - EI",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "25128682300478",
+    "nome": "da Cunha Aparecida e Filhos",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "86337524310690",
+    "nome": "Abreu",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "31190790306738",
+    "nome": "Fonseca Lopes S/A",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "02843959953428",
+    "nome": "Pinto",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "64408926870568",
+    "nome": "Ribeiro",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "66246287334270",
+    "nome": "Silveira Ltda.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "66882634351751",
+    "nome": "Rios",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "30469901398373",
+    "nome": "Duarte",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "40331739363854",
+    "nome": "Sampaio",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "78544587717535",
+    "nome": "Novaes",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "60932048996423",
+    "nome": "Correia Leão e Filhos",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "36937854777252",
+    "nome": "Rocha",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "87280801006231",
+    "nome": "Pimenta Nunes Ltda.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "03875099770088",
+    "nome": "Novaes",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "00848408621182",
+    "nome": "da Rosa Ltda.",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "39845461567933",
+    "nome": "Lopes Viana - EI",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "10166687002176",
+    "nome": "Martins",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "91803397401489",
+    "nome": "Macedo",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "25039261429396",
+    "nome": "Moraes Melo e Filhos",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "56218501631599",
+    "nome": "Ribeiro Barros Ltda.",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "65047735866296",
+    "nome": "Borges",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "94311426265511",
+    "nome": "Rocha das Neves S.A.",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "47541212678886",
+    "nome": "Casa Grande Alves S/A",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "01581995604661",
+    "nome": "Melo Pimenta S/A",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "39826224447212",
+    "nome": "Leão",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "46471543799371",
+    "nome": "Silva Sampaio - ME",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "40659657569245",
+    "nome": "Guerra",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "37526547935646",
+    "nome": "Casa Grande Rezende e Filhos",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "19398280737416",
+    "nome": "Sá S/A",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "24342661797968",
+    "nome": "Câmara",
+    "porte": "Desconhecido"
+  },
+  {
+    "cnpj": "68058911352909",
+    "nome": "Sampaio Moreira - ME",
+    "porte": "Grande"
+  },
+  {
+    "cnpj": "56101438889937",
+    "nome": "Novais S.A.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "67982507146112",
+    "nome": "Marques S.A.",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "45738757177514",
+    "nome": "Rios",
+    "porte": "Micro"
+  },
+  {
+    "cnpj": "10512382825867",
+    "nome": "Sá",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "62266093796603",
+    "nome": "Pimenta",
+    "porte": "Pequeno"
+  },
+  {
+    "cnpj": "41918255371478",
+    "nome": "Novaes",
+    "porte": "Médio"
+  },
+  {
+    "cnpj": "96969155792499",
+    "nome": "Castro",
+    "porte": "Micro"
+  }
+]
