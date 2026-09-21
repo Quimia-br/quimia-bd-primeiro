@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS comodo CASCADE;
+
