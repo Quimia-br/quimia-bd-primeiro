@@ -1,0 +1,13 @@
+ALTER TABLE produto RENAME TO produtos;
+ALTER TABLE usuario RENAME TO usuarios;
+ALTER TABLE admin RENAME TO admins;
+ALTER TABLE estante RENAME TO estantes;
+ALTER TABLE historico RENAME TO historicos;
+ALTER TABLE localizacao RENAME TO localizacoes;
+ALTER TABLE admin_log_edicao RENAME TO admin_log_edicoes;
+ALTER TABLE descarte_fds RENAME TO descartes_fds;
+ALTER TABLE historico RENAME TO historicos;
+ALTER TABLE historico_produto_mistura RENAME TO historicos_produtos_misturas;
+ALTER TABLE produto_usuario RENAME TO produtos_usuarios;
+ALTER TABLE tipo_historico RENAME TO tipos_historicos. 
+ALTER TABLE usuarios_empresas RENAME TO usuarios_empresa;

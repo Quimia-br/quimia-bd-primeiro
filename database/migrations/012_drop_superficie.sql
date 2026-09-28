@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS produto_superficie CASCADE;
+DROP TABLE IF EXISTS superficie CASCADE;
