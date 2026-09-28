@@ -1,1 +1,0 @@
-DROP TABLE IF EXISTS composto_fds CASCADE;
