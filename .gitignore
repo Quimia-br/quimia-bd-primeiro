@@ -59,3 +59,9 @@ certs/
 
 # ---------- Prompts de trabalho (locais) ----------
 prompt*.md
+
+# Claude
+
+.claude/
+CLAUDE.*
+CLAUDE.md

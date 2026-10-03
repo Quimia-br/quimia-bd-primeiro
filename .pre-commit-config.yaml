@@ -21,6 +21,12 @@ repos:
         args: [--fix=lf]
   - repo: local
     hooks:
+      # Bloqueia mensagens de commit com linha de coautoria ou assinatura do Claude Code.
+      - id: sem-coautoria-claude
+        name: mensagem de commit sem coautoria do Claude
+        language: pygrep
+        entry: '(?i)(co-authored-by:\s*claude|generated with \[?claude code)'
+        stages: [commit-msg]
       - id: mypy
         name: mypy
         entry: uv run mypy

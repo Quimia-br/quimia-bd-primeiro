@@ -30,6 +30,16 @@ Cada entrada registra um erro real encontrado no projeto: sintoma, causa, soluç
 - **Causa:** o `.pre-commit-config.yaml` tinha alterações que não estavam no stage. O pre-commit se recusa a rodar com uma configuração diferente da que vai ser commitada.
 - **Solução:** `git add .pre-commit-config.yaml` e repetir o commit.
 
+## Commits com linha de coautoria do Claude
+
+- **Sintoma:** os commits `chore: move scripts SQL...`, `chore: ajusta dependências e lint` e `docs: estrutura de documentação...` terminavam com `Co-Authored-By: Claude ... <noreply@anthropic.com>`.
+- **Causa:** o Claude Code acrescenta essa linha às mensagens de commit por padrão, e nada no projeto impedia.
+- **Solução:** os três commits ainda não tinham sido enviados ao remoto. As mensagens foram reescritas com `git filter-branch --msg-filter` sobre o intervalo `origin/feat/folder-structure..feat/folder-structure`, removendo a linha e a linha em branco que sobrava no fim. O código (hash da árvore), o autor, as datas e a ordem dos commits ficaram iguais; só os hashes dos commits mudaram. Nenhum commit já enviado tinha a linha.
+- **Prevenção, em três camadas:**
+  1. **Configuração `attribution`** em `.claude/settings.local.json` (fora do Git), com `commit` e `pr` vazios: o Claude Code deixa de gerar a linha. O mesmo arquivo nega `git push` e a leitura de `.env*` e `certs/`.
+  2. **Regra no `CLAUDE.md`** (arquivo local, fora do Git): nunca incluir `Co-Authored-By`, "Generated with Claude Code" nem links de sessão, e nunca fazer push.
+  3. **Hook `commit-msg`** no `.pre-commit-config.yaml` (`sem-coautoria-claude`, `language: pygrep`): rejeita a mensagem se ela tiver essas linhas, sem diferenciar maiúsculas. O `pre-commit install` padrão só instala o hook `pre-commit`; este exige `uv run pre-commit install --hook-type commit-msg` em cada clone.
+
 ## Hooks de espaço em branco alteravam os scripts `sql/`
 
 - **Sintoma:** ao commitar `sql/01_ddl.sql` e `sql/02_fks.sql`, o hook `mixed-line-ending` trocou CRLF por LF, e o `trailing-whitespace` também alteraria linhas com espaço no fim (por exemplo, `CREATE TABLE usuarios(   `).

@@ -11,6 +11,7 @@ Requisitos: [uv](https://docs.astral.sh/uv/) e Python 3.14 (o uv instala, se fal
 ```powershell
 uv sync                      # cria .venv e instala dependências + grupo dev
 uv run pre-commit install    # ativa os hooks de qualidade no git commit
+uv run pre-commit install --hook-type commit-msg   # ativa a verificação da mensagem de commit
 ```
 
 O grupo `catalog` (httpx) só é necessário para o script offline do catálogo: `uv sync --group catalog`.
