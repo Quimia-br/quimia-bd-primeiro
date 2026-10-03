@@ -1,6 +1,6 @@
 # 0001. Sem Docker; bancos test e main em serviços separados do Aiven, com SSL verify-full
 
-- **Status:** aceita
+- **Status:** aceita; o modo SSL passou de `verify-full` para `verify-ca` na [ADR 0017](0017-ssl-verify-ca.md)
 - **Data:** 2026-10-03
 
 ## Contexto

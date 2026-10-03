@@ -16,7 +16,7 @@ def test_seed_url(ca_file: Path) -> None:
     assert url.username == "avnadmin"
     assert url.port == 15432
     assert url.database == "defaultdb"
-    assert url.query == {"sslmode": "verify-full", "sslrootcert": str(ca_file)}
+    assert url.query == {"sslmode": "verify-ca", "sslrootcert": str(ca_file)}
 
 
 def test_url_hides_password_when_rendered() -> None:

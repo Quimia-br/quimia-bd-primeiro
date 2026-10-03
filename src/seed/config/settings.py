@@ -64,7 +64,9 @@ class Settings(BaseSettings):
     db_password: SecretStr
     db_name: str = Field(min_length=1)
     db_schema: str = "public"
-    db_sslmode: Literal["verify-full", "verify-ca"] = "verify-full"
+    # verify-ca por padrão: o libpq do psycopg-binary no Windows rejeita o IPv6 do
+    # certificado do Aiven com verify-full (ADR 0017).
+    db_sslmode: Literal["verify-full", "verify-ca"] = "verify-ca"
     db_sslrootcert: Path
     db_pool_size: int = Field(default=2, ge=1, le=10)
     db_max_overflow: int = Field(default=1, ge=0, le=10)

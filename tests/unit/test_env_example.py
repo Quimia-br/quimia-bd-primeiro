@@ -24,5 +24,5 @@ def test_env_example_loads_as_test_target(tmp_path: Path, ca_file: Path) -> None
     settings = load_settings(Target.TEST)
 
     assert settings.db_sslrootcert == Path("certs/ca-test.pem")
-    assert settings.db_sslmode == "verify-full"
+    assert settings.db_sslmode == "verify-ca"
     assert settings.timezone == "UTC"

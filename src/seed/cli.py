@@ -60,11 +60,8 @@ def check(ctx: typer.Context) -> None:
         _fail(str(exc), ExitCode.CONFIGURACAO)
     except (DBAPIError, OSError) as exc:
         cause = exc.orig if isinstance(exc, DBAPIError) and exc.orig is not None else exc
-        _fail(
-            f"Falha ao conectar: {settings.redact(str(cause)).strip()}\n"
-            "Confira a allowlist de IPs do serviço no Aiven, a porta e o certificado CA.",
-            ExitCode.CONEXAO,
-        )
+        message = settings.redact(str(cause)).strip()
+        _fail(f"Falha ao conectar: {message}\n{connection_hint(message)}", ExitCode.CONEXAO)
 
     table = Table(title="Diagnóstico do banco", show_header=False)
     table.add_column("Item", style="bold")
@@ -102,6 +99,26 @@ def check(ctx: typer.Context) -> None:
 def main() -> None:
     """Ponto de entrada do comando ``seed``."""
     app()
+
+
+def connection_hint(message: str) -> str:
+    """Dica para o erro de conexão, a partir do texto do driver."""
+    text = message.lower()
+    if "certificate" in text or "ssl" in text:
+        return (
+            "Erro de SSL/certificado: confira se SEED_DB_SSLROOTCERT aponta para o CA "
+            "deste serviço e se SEED_DB_SSLMODE é verify-ca (ADR 0017)."
+        )
+    if "password authentication failed" in text:
+        return "Usuário ou senha recusados: confira SEED_DB_USER e SEED_DB_PASSWORD."
+    if "does not exist" in text:
+        return "Banco inexistente: confira SEED_DB_NAME (normalmente defaultdb)."
+    if "translate host name" in text or "name or service not known" in text:
+        return "Host não encontrado: confira SEED_DB_HOST."
+    return (
+        "Confira a allowlist de IPs do serviço no Aiven, SEED_DB_HOST e SEED_DB_PORT "
+        "(a porta do Aiven não é 5432)."
+    )
 
 
 def _load_settings(ctx: typer.Context) -> Settings:

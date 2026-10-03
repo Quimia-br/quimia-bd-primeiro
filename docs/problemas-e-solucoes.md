@@ -57,3 +57,10 @@ Cada entrada registra um erro real encontrado no projeto: sintoma, causa, soluç
 - **Sintoma:** `uv run seed --help` mostrou `padr�o` em vez de `padrão` quando a saída foi redirecionada (pipe ou arquivo).
 - **Causa:** no Windows, quando a saída não é um console interativo, o Python usa a codificação local (`cp1252`), e quem lê espera UTF-8. No terminal do PowerShell/Cursor, o Python escreve direto no console e os acentos aparecem certos.
 - **Solução:** ativar o modo UTF-8 do Python com a variável `PYTHONUTF8=1` (PowerShell: `$env:PYTHONUTF8 = "1"`; para ficar permanente: `setx PYTHONUTF8 1`).
+
+## `certificate contains IP address with invalid length 16` ao conectar no Aiven
+
+- **Sintoma:** o primeiro `seed check` falhou com `connection to server at "***", port ... failed: certificate contains IP address with invalid length 16`. A dica da CLI na época sugeria a allowlist, o que não era a causa.
+- **Causa:** com `sslmode=verify-full`, o libpq confere os nomes e IPs listados no certificado do servidor. O certificado do Aiven inclui um endereço IPv6 (16 bytes), e o libpq embutido no `psycopg-binary` 3.3.6 para Windows (libpq 18.4) rejeita essa entrada em vez de ignorá-la. A senha, a porta, a allowlist e o CA estavam corretos.
+- **Solução:** `SEED_DB_SSLMODE=verify-ca` em cada `.env` (agora é o padrão, [ADR 0017](decisoes/0017-ssl-verify-ca.md)). A conexão continua criptografada e o certificado continua validado contra o CA do projeto; só a conferência do nome do host deixa de ser feita.
+- **Prevenção:** o `seed check` agora dá uma dica específica para erros de SSL/certificado, senha, banco, host e rede.

@@ -28,6 +28,7 @@
 | [0014](decisoes/0014-seed-usa-o-usuario-do-servico.md) | O seed usa o usuário do serviço, sem criar `quimia_seed` |
 | [0015](decisoes/0015-main-recebe-dados-ficticios.md) | O `main` recebe dados fictícios, exceto auditoria, com `--allow-synthetic` |
 | [0016](decisoes/0016-env-e-o-arquivo-do-principal.md) | O `.env` é o arquivo do banco principal, com proteções contra injeção automática |
+| [0017](decisoes/0017-ssl-verify-ca.md) | SSL `verify-ca` em vez de `verify-full`, por limitação do libpq no Windows |
 
 ## Regra de documentação
 

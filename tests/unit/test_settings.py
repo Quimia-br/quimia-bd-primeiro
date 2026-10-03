@@ -29,7 +29,7 @@ def test_defaults() -> None:
     assert settings.target is Target.TEST
     assert settings.db_port == 15432
     assert settings.db_schema == "public"
-    assert settings.db_sslmode == "verify-full"
+    assert settings.db_sslmode == "verify-ca"
     assert settings.db_pool_size == 2
     assert settings.db_max_overflow == 1
     assert settings.batch_size == 1000

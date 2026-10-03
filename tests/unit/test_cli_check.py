@@ -4,7 +4,7 @@ import pytest
 from sqlalchemy.exc import OperationalError
 from typer.testing import CliRunner
 
-from seed.cli import ExitCode, app
+from seed.cli import ExitCode, app, connection_hint
 from seed.config import Settings
 from seed.db import diagnostics
 from seed.db.diagnostics import ServerInfo
@@ -138,3 +138,18 @@ def test_invalid_target_is_usage_error() -> None:
     result = runner.invoke(app, ["--target", "producao", "check"])
 
     assert result.exit_code == ExitCode.USO
+
+
+@pytest.mark.parametrize(
+    ("message", "expected"),
+    [
+        ("certificate contains IP address with invalid length 16", "SEED_DB_SSLMODE"),
+        ("SSL error: certificate verify failed", "SEED_DB_SSLROOTCERT"),
+        ('password authentication failed for user "avnadmin"', "SEED_DB_PASSWORD"),
+        ('database "outro" does not exist', "SEED_DB_NAME"),
+        ('could not translate host name "x" to address', "SEED_DB_HOST"),
+        ("timeout expired", "allowlist"),
+    ],
+)
+def test_connection_hint(message: str, expected: str) -> None:
+    assert expected in connection_hint(message)
