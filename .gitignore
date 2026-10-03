@@ -54,7 +54,8 @@ desktop.ini
 *.log
 *.tmp
 
-fks.*
-ddl.*
+# ---------- Certificados do Aiven ----------
+certs/
 
-prompt.*
+# ---------- Prompts de trabalho (locais) ----------
+prompt*.md

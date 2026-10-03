@@ -8,10 +8,17 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: check-yaml
+      - id: detect-private-key
       - id: check-added-large-files
+      # Os scripts SQL são a fonte da verdade e ficam exatamente como foram entregues.
+      - id: end-of-file-fixer
+        exclude: ^sql/0[12]_.*\.sql$
+      - id: trailing-whitespace
+        exclude: ^sql/0[12]_.*\.sql$
+      - id: check-yaml
+      - id: check-toml
+      - id: mixed-line-ending
+        args: [--fix=lf]
   - repo: local
     hooks:
       - id: mypy
