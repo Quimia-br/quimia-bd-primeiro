@@ -1,6 +1,6 @@
 # 0002. Schema public, usuário quimia_seed e credenciais separadas para o Alembic
 
-- **Status:** aceita
+- **Status:** substituída em parte pela [ADR 0014](0014-seed-usa-o-usuario-do-servico.md) (o usuário `quimia_seed` não será criado; o schema `public` continua valendo)
 - **Data:** 2026-10-03
 
 ## Contexto

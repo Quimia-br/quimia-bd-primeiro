@@ -65,20 +65,22 @@ As consultas que verificam se os dados atuais violariam uma mudança de schema f
 
 - **Como interpretar:** deve ser igual ao `head` do repositório (`uv run alembic heads`). Se a tabela não existir, o banco ainda não recebeu o `stamp` da baseline.
 
-### A5. Privilégios do usuário do seed
+### A5. Usuário conectado e dono das tabelas
 
-- **Objetivo:** conferir que `quimia_seed` tem só o que precisa ([ADR 0002](../decisoes/0002-schema-public-e-usuario-quimia-seed.md)).
+- **Objetivo:** conferir com qual usuário o seed está conectado e se ele é dono das tabelas ([ADR 0014](../decisoes/0014-seed-usa-o-usuario-do-servico.md)). Ser dono é o que permite o `TRUNCATE ... RESTART IDENTITY` do `seed reset` no `test`.
 - **Consulta:**
 
   ```sql
-  SELECT table_name, string_agg(privilege_type, ', ' ORDER BY privilege_type) AS privilegios
-  FROM information_schema.role_table_grants
-  WHERE grantee = 'quimia_seed' AND table_schema = 'public'
-  GROUP BY table_name
-  ORDER BY table_name;
+  SELECT current_user AS usuario_conectado,
+         tablename,
+         tableowner,
+         tableowner = current_user AS usuario_e_dono
+  FROM pg_tables
+  WHERE schemaname = 'public'
+  ORDER BY tablename;
   ```
 
-- **Como interpretar:** no `test`, cada tabela mostra `DELETE, INSERT, SELECT, TRUNCATE`; no `main`, só `INSERT, SELECT`.
+- **Como interpretar:** `usuario_e_dono` deve ser `true` nas 13 tabelas. Se for `false`, o `seed reset` vai falhar por falta de permissão.
 
 ---
 

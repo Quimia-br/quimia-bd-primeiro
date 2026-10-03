@@ -16,10 +16,18 @@ uv run pre-commit install --hook-type commit-msg   # ativa a verificação da me
 
 O grupo `catalog` (httpx) só é necessário para o script offline do catálogo: `uv sync --group catalog`.
 
+## Configuração dos bancos
+
+1. **Certificados:** no console do Aiven (serviço > *Overview* > *CA certificate*), baixe o CA de cada serviço e salve em `certs/ca-test.pem` e `certs/ca-main.pem`. A pasta fica fora do Git.
+2. **Allowlist:** em *Overview* > *Allowed IP addresses*, libere o IP da sua máquina nos dois serviços. Sem isso, a conexão termina em timeout.
+3. **Variáveis:** `Copy-Item .env.example .env.test` e `Copy-Item .env.example .env.main`, e preencha host, porta, usuário, senha e caminho do CA de cada serviço (o usuário do serviço, por exemplo `avnadmin`). O alvo padrão é sempre `test`.
+4. **Conferência:** `uv run seed check` (test) e `uv run seed --target main check` (main). O comando só lê.
+
 ## Comandos principais
 
 ```powershell
-uv run seed                  # CLI do seed (comandos completos a partir da fase 2)
+uv run seed check                    # diagnóstico do banco de teste (somente leitura)
+uv run seed --target main check      # diagnóstico do banco principal (somente leitura)
 uv run ruff check            # lint
 uv run ruff format --check   # formatação
 uv run mypy                  # tipos

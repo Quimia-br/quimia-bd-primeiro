@@ -13,7 +13,7 @@
 | Nº | Título |
 |---|---|
 | [0001](decisoes/0001-sem-docker-aiven-dois-servicos.md) | Sem Docker; `test` e `main` em serviços separados do Aiven, com SSL verify-full |
-| [0002](decisoes/0002-schema-public-e-usuario-quimia-seed.md) | Schema `public`, usuário `quimia_seed` e credenciais separadas para o Alembic |
+| [0002](decisoes/0002-schema-public-e-usuario-quimia-seed.md) | Schema `public`, usuário `quimia_seed` e credenciais separadas para o Alembic (substituída em parte pela 0014) |
 | [0003](decisoes/0003-sql-como-fonte-da-verdade.md) | `sql/` como fonte da verdade, teste de paridade e baseline por `stamp` |
 | [0004](decisoes/0004-cas-number-unique-mantido.md) | `cas_number UNIQUE` mantido por enquanto |
 | [0005](decisoes/0005-nenhuma-melhoria-de-schema-agora.md) | Nenhuma melhoria de schema agora |
@@ -25,6 +25,7 @@
 | [0011](decisoes/0011-tipos-de-historico-por-migracao.md) | Tipos de histórico inseridos por migração |
 | [0012](decisoes/0012-valores-de-comodo-e-tipos-de-historico.md) | Valores provisórios de cômodo e tipos de histórico |
 | [0013](decisoes/0013-main-sem-dados-sinteticos.md) | O `main` recebe só referência e catálogo revisado |
+| [0014](decisoes/0014-seed-usa-o-usuario-do-servico.md) | O seed usa o usuário do serviço, sem criar `quimia_seed` |
 
 ## Regra de documentação
 

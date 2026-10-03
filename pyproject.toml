@@ -18,6 +18,8 @@ dependencies = [
     "pyyaml>=6.0.3",
     "sqlalchemy>=2.1.3",
     "typer>=0.27.2",
+    "rich>=15.0.0",
+    "tzdata>=2026.5",
 ]
 
 [project.scripts]
@@ -51,12 +53,13 @@ src = ["src", "tests"]
 select = ["E", "F", "I", "UP", "B", "SIM", "S"]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/**" = ["S101"]
+# S101: assert; S105/S106: senhas fictícias usadas de propósito nos testes.
+"tests/**" = ["S101", "S105", "S106"]
 
 [tool.mypy]
 python_version = "3.14"
 strict = true
-files = ["src"]
+files = ["src", "tests"]
 plugins = ["pydantic.mypy"]
 
 [tool.pytest.ini_options]

@@ -45,3 +45,15 @@ Cada entrada registra um erro real encontrado no projeto: sintoma, causa, soluç
 - **Sintoma:** ao commitar `sql/01_ddl.sql` e `sql/02_fks.sql`, o hook `mixed-line-ending` trocou CRLF por LF, e o `trailing-whitespace` também alteraria linhas com espaço no fim (por exemplo, `CREATE TABLE usuarios(   `).
 - **Causa:** os scripts foram salvos no Windows com CRLF e têm espaços no fim de algumas linhas.
 - **Solução:** a troca CRLF → LF foi aceita, porque o `.gitattributes` (`* text=auto eol=lf`) já normalizaria no repositório; foi conferido com `git diff --ignore-cr-at-eol` que nada mais mudou. Os hooks `trailing-whitespace` e `end-of-file-fixer` excluem `sql/0[12]_*.sql`, para os scripts continuarem iguais aos entregues.
+
+## mypy não analisava os testes: `module is installed, but missing library stubs or py.typed marker`
+
+- **Sintoma:** `uv run mypy tests` acusava `import-untyped` em todo `import seed...`.
+- **Causa:** pela PEP 561, o mypy só usa os tipos de um pacote instalado se ele tiver o arquivo marcador `py.typed`. O `src/seed` não tinha.
+- **Solução:** criar `src/seed/py.typed` (vazio) e incluir `tests` em `[tool.mypy] files`, para os testes também serem checados no `uv run mypy`, no pre-commit e no CI.
+
+## Acentos quebrados na saída da CLI (`O padr�o � sempre test`)
+
+- **Sintoma:** `uv run seed --help` mostrou `padr�o` em vez de `padrão` quando a saída foi redirecionada (pipe ou arquivo).
+- **Causa:** no Windows, quando a saída não é um console interativo, o Python usa a codificação local (`cp1252`), e quem lê espera UTF-8. No terminal do PowerShell/Cursor, o Python escreve direto no console e os acentos aparecem certos.
+- **Solução:** ativar o modo UTF-8 do Python com a variável `PYTHONUTF8=1` (PowerShell: `$env:PYTHONUTF8 = "1"`; para ficar permanente: `setx PYTHONUTF8 1`).
