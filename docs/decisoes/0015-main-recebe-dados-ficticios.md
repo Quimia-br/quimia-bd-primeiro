@@ -13,7 +13,7 @@ A ADR 0013 previa que o banco principal recebesse só dados de referência e o c
 - A carga fictícia no `main` exige a opção **`--allow-synthetic`** e uma confirmação digitando o nome do banco. Sem a opção, o `main` recebe só referência e catálogo revisado.
 - Continuam proibidos no `main`, garantido pelo código: `seed reset`, o perfil `perf` e qualquer `TRUNCATE`/`DELETE`.
 - Os textos de segurança (descarte, precaução, restrição) continuam vindo só de entradas do catálogo com `revisado: true`.
-- `SEED_PASSWORD_PLAIN` passa a ser aceita no `.env.main`, com uma senha **diferente** da do `.env.test`. Se a senha de teste vazar, ela não dá acesso às contas fictícias do `main`.
+- `SEED_PASSWORD_PLAIN` passa a ser aceita no arquivo do `main` (o `.env`, [ADR 0016](0016-env-e-o-arquivo-do-principal.md)), com uma senha **diferente** da do `.env.test`. Se a senha de teste vazar, ela não dá acesso às contas fictícias do `main`.
 - O assistente continua sem executar nada contra o `main`: ele prepara o comando e o Nicolas executa.
 
 ## Alternativas descartadas

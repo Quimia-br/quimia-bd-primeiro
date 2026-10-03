@@ -1,7 +1,7 @@
 """Fixtures compartilhadas.
 
 Todo teste roda isolado: sem variáveis ``SEED_*`` do ambiente real, numa pasta
-temporária (então nunca lê o ``.env.test`` nem o ``.env.main`` do projeto) e com o
+temporária (então nunca lê o ``.env.test`` nem o ``.env`` do projeto) e com o
 cache de ``get_settings`` limpo.
 """
 

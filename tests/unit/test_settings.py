@@ -11,9 +11,9 @@ def _write_env(directory: Path, target: Target, **values: str) -> None:
     (directory / target.env_file_name).write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def _complete_env(ca_file: Path, db_name: str) -> dict[str, str]:
+def _complete_env(ca_file: Path, db_name: str, host: str = FAKE_HOST) -> dict[str, str]:
     return {
-        "db_host": FAKE_HOST,
+        "db_host": host,
         "db_port": "15432",
         "db_user": "avnadmin",
         "db_password": FAKE_PASSWORD,
@@ -40,7 +40,8 @@ def test_defaults() -> None:
 @pytest.mark.parametrize("target", list(Target))
 def test_reads_env_file_of_target(tmp_path: Path, ca_file: Path, target: Target) -> None:
     _write_env(tmp_path, Target.TEST, **_complete_env(ca_file, "banco_test"))
-    _write_env(tmp_path, Target.MAIN, **_complete_env(ca_file, "banco_main"))
+    main_env = _complete_env(ca_file, "banco_main", host="pg-principal.example.com")
+    _write_env(tmp_path, Target.MAIN, **main_env)
 
     settings = load_settings(target)
 
@@ -191,3 +192,43 @@ def test_get_settings_is_cached() -> None:
     assert get_settings(Target.TEST) is get_settings(Target.TEST)
     get_settings.cache_clear()
     assert get_settings(Target.TEST).db_name == "defaultdb"
+
+
+def test_main_target_reads_plain_env_file() -> None:
+    assert Target.MAIN.env_file_name == ".env"
+    assert Target.TEST.env_file_name == ".env.test"
+
+
+@pytest.mark.usefixtures("seed_env")
+def test_test_target_aborts_when_pointing_to_main_server(tmp_path: Path) -> None:
+    # Simula o .env do principal com o mesmo servidor que o ambiente resolveu para test.
+    (tmp_path / ".env").write_text(
+        f"SEED_DB_HOST={FAKE_HOST.upper()}\nSEED_DB_PORT=15432\n", encoding="utf-8"
+    )
+
+    with pytest.raises(ConfigError, match="mesmo servidor do banco principal") as info:
+        load_settings(Target.TEST)
+
+    assert FAKE_HOST not in str(info.value)
+
+
+@pytest.mark.usefixtures("seed_env")
+@pytest.mark.parametrize(
+    "main_env",
+    [
+        "SEED_DB_HOST=pg-principal.example.com\nSEED_DB_PORT=15432\n",
+        f"SEED_DB_HOST={FAKE_HOST}\nSEED_DB_PORT=25432\n",
+        "OUTRA_VARIAVEL=1\n",
+    ],
+)
+def test_test_target_allows_different_main_server(tmp_path: Path, main_env: str) -> None:
+    (tmp_path / ".env").write_text(main_env, encoding="utf-8")
+
+    assert load_settings(Target.TEST).target is Target.TEST
+
+
+@pytest.mark.usefixtures("seed_env")
+def test_main_target_is_not_blocked_by_guard(tmp_path: Path) -> None:
+    (tmp_path / ".env").write_text(f"SEED_DB_HOST={FAKE_HOST}\nSEED_DB_PORT=15432\n")
+
+    assert load_settings(Target.MAIN).target is Target.MAIN

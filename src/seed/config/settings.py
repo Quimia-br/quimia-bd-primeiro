@@ -1,7 +1,8 @@
 """Configuração do seed por alvo (``test`` ou ``main``).
 
-Cada alvo tem o seu arquivo (``.env.test`` ou ``.env.main``) na pasta de onde o
-comando é executado. Variáveis de ambiente reais têm prioridade sobre o arquivo.
+Cada alvo tem o seu arquivo na pasta de onde o comando é executado: ``.env.test``
+para o teste e ``.env`` para o principal (ADR 0016). Variáveis de ambiente reais têm
+prioridade sobre o arquivo.
 Todos os campos usam o prefixo ``SEED_`` (por exemplo, ``SEED_DB_HOST``).
 
 As mensagens de erro desta camada nunca exibem valores: só os nomes das variáveis.
@@ -16,6 +17,7 @@ from pathlib import Path
 from typing import Final, Literal, Self
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
+from dotenv import dotenv_values
 from pydantic import Field, SecretStr, ValidationError, field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -35,8 +37,8 @@ class Target(StrEnum):
 
     @property
     def env_file_name(self) -> str:
-        """Nome do arquivo de configuração do alvo."""
-        return f".env.{self.value}"
+        """Nome do arquivo de configuração do alvo (o principal usa o ``.env``)."""
+        return ".env" if self is Target.MAIN else f".env.{self.value}"
 
 
 class ConfigError(Exception):
@@ -148,22 +150,49 @@ def resolve_target(value: str | None = None) -> Target:
 
 
 def load_settings(target: Target, env_dir: Path | None = None) -> Settings:
-    """Carrega a configuração do alvo a partir do ``.env.<alvo>`` e do ambiente."""
-    env_file = (env_dir or Path.cwd()) / target.env_file_name
+    """Carrega a configuração do alvo a partir do arquivo do alvo e do ambiente."""
+    directory = env_dir or Path.cwd()
+    env_file = directory / target.env_file_name
     try:
-        return Settings(
+        settings = Settings(
             _env_file=env_file if env_file.is_file() else None,
             target=target,
         )
     except ValidationError as exc:
         # ``from None``: a ValidationError original inclui os valores recebidos.
         raise ConfigError(_describe_errors(exc, target, env_file)) from None
+    if target is Target.TEST:
+        _ensure_test_is_not_main(settings, directory / Target.MAIN.env_file_name)
+    return settings
 
 
 @lru_cache(maxsize=2)
 def get_settings(target: Target | None = None) -> Settings:
     """Configuração do alvo, carregada uma vez por processo (os testes usam ``cache_clear``)."""
     return load_settings(target if target is not None else resolve_target())
+
+
+def _ensure_test_is_not_main(settings: Settings, main_env_file: Path) -> None:
+    """Aborta se o alvo test resolveu para o mesmo servidor configurado no ``.env``.
+
+    O ``.env`` é carregado automaticamente por várias ferramentas (por exemplo, a
+    extensão Python do Cursor/VS Code). Se as variáveis dele forem injetadas no
+    ambiente, elas teriam prioridade sobre o ``.env.test`` e o alvo test apontaria
+    para o banco principal sem aviso.
+    """
+    if not main_env_file.is_file():
+        return
+    main = dotenv_values(main_env_file)
+    main_host = (main.get(f"{ENV_PREFIX}DB_HOST") or "").strip().lower()
+    main_port = (main.get(f"{ENV_PREFIX}DB_PORT") or "").strip()
+    if main_host == settings.db_host.strip().lower() and main_port == str(settings.db_port):
+        msg = (
+            "O alvo test está apontando para o mesmo servidor do banco principal "
+            f"(configurado em {main_env_file.name}). Confira SEED_DB_HOST e SEED_DB_PORT "
+            f"no {Target.TEST.env_file_name} e se há variáveis SEED_* definidas no ambiente "
+            "(o editor pode carregar o .env automaticamente)."
+        )
+        raise ConfigError(msg)
 
 
 def _describe_errors(exc: ValidationError, target: Target, env_file: Path) -> str:

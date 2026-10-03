@@ -12,7 +12,7 @@ O projeto precisa de um banco para desenvolvimento e testes e de outro para a ca
 - Dois serviços distintos no Aiven: `test` (desenvolvimento, testes de integração, perfis grandes) e `main` (banco principal).
 - O alvo padrão de todos os comandos é `test`.
 - Conexão sempre com SSL `sslmode=verify-full` e `sslrootcert` apontando para o CA de cada serviço em `certs/` (fora do Git).
-- Credenciais em `.env.test` e `.env.main` (fora do Git), com `.env.example` versionado contendo só nomes e valores fictícios.
+- Credenciais em `.env.test` e `.env.main` (fora do Git; o do `main` passou a ser o `.env`, [ADR 0016](0016-env-e-o-arquivo-do-principal.md)), com `.env.example` versionado contendo só nomes e valores fictícios.
 - Sem Docker nem Testcontainers. Os testes de integração usam schemas temporários no serviço `test`.
 
 ## Alternativas descartadas

@@ -20,7 +20,7 @@ O grupo `catalog` (httpx) só é necessário para o script offline do catálogo:
 
 1. **Certificados:** no console do Aiven (serviço > *Overview* > *CA certificate*), baixe o CA de cada serviço e salve em `certs/ca-test.pem` e `certs/ca-main.pem`. A pasta fica fora do Git.
 2. **Allowlist:** em *Overview* > *Allowed IP addresses*, libere o IP da sua máquina nos dois serviços. Sem isso, a conexão termina em timeout.
-3. **Variáveis:** `Copy-Item .env.example .env.test` e `Copy-Item .env.example .env.main`, e preencha host, porta, usuário, senha e caminho do CA de cada serviço (o usuário do serviço, por exemplo `avnadmin`). O alvo padrão é sempre `test`.
+3. **Variáveis:** `Copy-Item .env.example .env.test` (banco de teste) e `Copy-Item .env.example .env` (banco principal), e preencha host, porta, usuário, senha e caminho do CA de cada serviço (o usuário do serviço, por exemplo `avnadmin`). O alvo padrão é sempre `test`.
 4. **Conferência:** `uv run seed check` (test) e `uv run seed --target main check` (main). O comando só lê.
 
 ## Comandos principais
