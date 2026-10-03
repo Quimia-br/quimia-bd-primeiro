@@ -1,6 +1,6 @@
 # 0013. O main recebe só referência e catálogo revisado
 
-- **Status:** aceita
+- **Status:** substituída pela [ADR 0015](0015-main-recebe-dados-ficticios.md)
 - **Data:** 2026-10-03
 
 ## Contexto

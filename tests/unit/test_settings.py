@@ -128,12 +128,16 @@ def test_rejects_invalid_values(monkeypatch: pytest.MonkeyPatch, variable: str, 
 
 
 @pytest.mark.usefixtures("seed_env")
-def test_password_plain_only_in_test(monkeypatch: pytest.MonkeyPatch) -> None:
+@pytest.mark.parametrize("target", list(Target))
+def test_password_plain_accepted_in_both_targets(
+    monkeypatch: pytest.MonkeyPatch, target: Target
+) -> None:
     monkeypatch.setenv("SEED_PASSWORD_PLAIN", "senha-de-teste")
 
-    assert load_settings(Target.TEST).password_plain is not None
-    with pytest.raises(ConfigError, match="só pode ser definida no alvo test"):
-        load_settings(Target.MAIN)
+    settings = load_settings(target)
+
+    assert settings.password_plain is not None
+    assert "senha-de-teste" not in repr(settings)
 
 
 @pytest.mark.usefixtures("seed_env")

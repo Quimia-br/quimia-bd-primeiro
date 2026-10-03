@@ -24,8 +24,9 @@
 | [0010](decisoes/0010-fuso-horario-das-colunas-timestamp.md) | Fuso horário das colunas TIMESTAMP sem fuso |
 | [0011](decisoes/0011-tipos-de-historico-por-migracao.md) | Tipos de histórico inseridos por migração |
 | [0012](decisoes/0012-valores-de-comodo-e-tipos-de-historico.md) | Valores provisórios de cômodo e tipos de histórico |
-| [0013](decisoes/0013-main-sem-dados-sinteticos.md) | O `main` recebe só referência e catálogo revisado |
+| [0013](decisoes/0013-main-sem-dados-sinteticos.md) | O `main` recebe só referência e catálogo revisado (substituída pela 0015) |
 | [0014](decisoes/0014-seed-usa-o-usuario-do-servico.md) | O seed usa o usuário do serviço, sem criar `quimia_seed` |
+| [0015](decisoes/0015-main-recebe-dados-ficticios.md) | O `main` recebe dados fictícios, exceto auditoria, com `--allow-synthetic` |
 
 ## Regra de documentação
 

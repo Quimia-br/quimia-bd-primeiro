@@ -97,9 +97,6 @@ class Settings(BaseSettings):
 
     @model_validator(mode="after")
     def _check_target_rules(self) -> Self:
-        if self.target is Target.MAIN and self.password_plain is not None:
-            msg = "SEED_PASSWORD_PLAIN só pode ser definida no alvo test"
-            raise ValueError(msg)
         if (self.migration_db_user is None) != (self.migration_db_password is None):
             msg = "defina SEED_MIGRATION_DB_USER e SEED_MIGRATION_DB_PASSWORD juntas"
             raise ValueError(msg)
