@@ -30,7 +30,7 @@ Os itens estão em ordem de prioridade.
 
 **Impacto:**
 
-- Opções 2 e 3: uma migração simples; o backend só precisa tratar o novo erro de duplicidade. Os dados atuais continuam válidos (o único atual é mais restrito que os novos).
+- Opções 2 e 3: uma alteração simples (`ALTER TABLE`); o backend só precisa tratar o novo erro de duplicidade. Os dados atuais continuam válidos (o único atual é mais restrito que os novos).
 - Opção 4: muda o modelo; o backend precisa ler e gravar em duas tabelas novas, e os dados atuais precisam ser migrados (cada produto vira uma linha em `produtos_substancias`). É a mais correta para produtos com várias substâncias.
 - Seed: o gerador já está preparado; basta trocar a regra de chave natural e o limite de volume.
 
@@ -102,7 +102,7 @@ Cada linha retornada é um produto guardado na estante de quem não o possui.
 
 **Impacto:**
 
-- Opção 2: uma migração simples; o backend não muda, mas passa a receber erro de duplicidade nesses casos.
+- Opção 2: uma alteração simples (`ALTER TABLE`); o backend não muda, mas passa a receber erro de duplicidade nesses casos.
 - Opção 3: exige habilitar a extensão `citext` e alterar o tipo da coluna.
 - Dados existentes: duplicatas precisam ser resolvidas antes.
 - Seed: já gera e-mails em minúsculas.
@@ -210,8 +210,8 @@ WHERE c.contype = 'f'
 
 **Impacto:**
 
-- Opção 2: a migração precisa dizer em que fuso estão os dados atuais (`ALTER COLUMN ... TYPE timestamptz USING data_cadastro AT TIME ZONE '<fuso>'`). O backend passa a receber datas com fuso.
-- Seed: já gera datas com fuso e converte para o fuso configurado ([ADR 0010](decisoes/0010-fuso-horario-das-colunas-timestamp.md)).
+- Opção 2: a alteração precisa dizer em que fuso estão os dados atuais (`ALTER COLUMN ... TYPE timestamptz USING data_cadastro AT TIME ZONE '<fuso>'`). O backend passa a receber datas com fuso.
+- Seed: já gera datas com fuso e converte para o fuso configurado (README, Decisões).
 
 **Pergunta para o time:** o backend configura o fuso da sessão ao conectar? Qual?
 
@@ -242,7 +242,7 @@ SELECT now() AS agora_com_fuso, localtimestamp AS agora_sem_fuso;
 **Impacto:**
 
 - Backend: passa a enviar JSON (a maioria das bibliotecas já faz isso).
-- Dados existentes: textos que não são JSON válido impedem a migração e precisam ser corrigidos antes.
+- Dados existentes: textos que não são JSON válido impedem a alteração e precisam ser corrigidos antes.
 - Seed: só troca o tipo.
 
 **Verificação antes de aplicar** (Postgres 16 ou mais recente):
@@ -272,7 +272,7 @@ WHERE dado_anterior IS NOT NULL
 2. Trocar por `TEXT` (no Postgres, `TEXT` e `VARCHAR` têm o mesmo desempenho).
 3. Aumentar o limite (por exemplo, 1000).
 
-**Impacto:** migração simples, sem efeito nos dados atuais. O backend só precisa ajustar a validação de tamanho.
+**Impacto:** alteração simples, sem efeito nos dados atuais. O backend só precisa ajustar a validação de tamanho.
 
 **Verificação antes de aplicar** (mostra se os textos já estão perto do limite):
 
@@ -319,7 +319,7 @@ WHERE latitude  NOT BETWEEN -33.8 AND 5.3
 
 ## 10. Data de nascimento nula versus idade mínima
 
-**Situação atual:** `usuarios.data_nascimento` aceita nulo. O app pretende exigir idade mínima de 18 anos. O seed deixa 10% dos usuários sem data e calcula a idade na data de cadastro ([ADR 0006](decisoes/0006-idade-minima-e-data-nascimento.md)).
+**Situação atual:** `usuarios.data_nascimento` aceita nulo. O app pretende exigir idade mínima de 18 anos. O seed deixa 10% dos usuários sem data e calcula a idade na data de cadastro (README, Decisões).
 
 **Problema:** se o usuário não informou a data, não há como verificar a idade mínima.
 
@@ -352,7 +352,7 @@ FROM usuarios;
 
 ## 11. Lista oficial de tipos de histórico e suas regras
 
-**Situação atual:** a tabela `tipos_historicos` não tem valores oficiais. O seed usa uma lista provisória, com uma regra por tipo ([ADR 0007](decisoes/0007-regras-por-tipo-de-historico.md)):
+**Situação atual:** a tabela `tipos_historicos` não tem valores oficiais. O seed usa uma lista provisória, com uma regra por tipo (README, Decisões):
 
 | Tipo | Produtos no histórico | Estante |
 |---|---|---|
@@ -375,7 +375,7 @@ FROM usuarios;
 1. Confirmar a lista e as regras como estão.
 2. Alterar a lista e as regras. No seed, basta editar o arquivo YAML em `data/reference/`.
 
-**Impacto:** os tipos entram no banco por migração; a lista final vira uma nova migração.
+**Impacto:** o seed insere os tipos a partir do YAML em `data/reference/`, sem apagar os que já existem; a lista final só exige editar o YAML. Tipos removidos da lista precisam ser apagados no banco à mão, se nenhum histórico os usar.
 
 **Verificação antes de aplicar** (quantos produtos cada tipo tem hoje):
 
@@ -403,7 +403,7 @@ ORDER BY t.nome;
 
 ## 12. Quem escreve a auditoria (`admin_log_edicoes`)
 
-**Situação atual:** a tabela registra edições feitas por admins: tabela afetada, ID do registro, ação (INSERT, UPDATE, DELETE), JSON anterior e data. `id_admin` é `NOT NULL`. O seed popula essa tabela **só no banco de teste** ([ADR 0008](decisoes/0008-admin-log-somente-no-test.md)).
+**Situação atual:** a tabela registra edições feitas por admins: tabela afetada, ID do registro, ação (INSERT, UPDATE, DELETE), JSON anterior e data. `id_admin` é `NOT NULL`. O seed popula essa tabela **só no banco de teste**, com 100 registros de INSERT (README, Decisões).
 
 **Perguntas para o time:**
 
@@ -417,7 +417,7 @@ ORDER BY t.nome;
 1. Auditoria pelo backend (mais simples, mas qualquer acesso direto ao banco fica sem registro).
 2. Auditoria por trigger (registra tudo, mas exige resolver o `id_admin`).
 
-**Impacto:** a opção 2 exige uma migração com o trigger e uma mudança no backend para informar o admin. O seed precisa tratar o trigger durante a carga.
+**Impacto:** a opção 2 exige criar o trigger nos dois bancos (ver item 13) e uma mudança no backend para informar o admin. O seed precisa tratar o trigger durante a carga.
 
 **Verificação antes de aplicar** (o que existe hoje):
 
@@ -433,6 +433,75 @@ WHERE trigger_schema = 'public';
 ```
 
 **Recomendação:** opção 1 por enquanto, com a lista de tabelas auditadas definida pelo time.
+
+**Decisão:**
+
+---
+
+## 13. Como aplicar mudanças de schema nos dois bancos sem ferramenta de migração
+
+**Situação atual:** o schema é definido por `sql/01_ddl.sql` e `sql/02_fks.sql`. Não há ferramenta de migração (o Alembic foi removido do seed, porque o seed não cria nem altera tabelas). O `01_ddl.sql` começa com `DROP TABLE ... CASCADE`, então só serve para criar um banco do zero.
+
+**Problema:** quando o time aprovar uma mudança (por exemplo, o índice em `lower(email)` do item 3), não existe um passo definido para aplicá-la nos bancos `test` e `main` que já têm dados. Exemplo: alguém roda o `01_ddl.sql` inteiro no `main` para "atualizar" e apaga todos os dados; ou altera só o `test`, e os dois bancos ficam diferentes sem ninguém perceber.
+
+**Opções:**
+
+1. **Scripts de alteração numerados** em `sql/alteracoes/` (`0001_indice_email.sql`, ...), cada um só com `ALTER`/`CREATE INDEX`, aplicados à mão primeiro no `test` e depois no `main`, com uma tabela de controle (`schema_alteracoes`) registrando quais já rodaram em cada banco.
+2. **Ferramenta de migração** (Alembic, Flyway, Sqitch) no projeto do backend, que é quem é dono do schema.
+3. **Manter como está:** cada mudança é aplicada manualmente, com cuidado.
+
+**Impacto:**
+
+- Opção 1: simples, sem dependência nova; exige disciplina para registrar cada script.
+- Opção 2: automatiza o controle de versão do schema, mas precisa ser adotada pelo backend.
+- Em todos os casos, o seed continua igual: depois de cada mudança, atualizar `sql/`, `modelos.py` e `contratos.py`; o `seed check` mostra se os modelos batem com cada banco.
+
+**Verificação antes de aplicar** (o que cada banco tem hoje, para comparar `test` e `main`):
+
+```sql
+SELECT table_name, column_name, data_type, character_maximum_length, is_nullable
+FROM information_schema.columns
+WHERE table_schema = 'public'
+ORDER BY table_name, ordinal_position;
+```
+
+Rodar nos dois bancos e comparar as saídas; qualquer diferença indica que já estão divergentes.
+
+**Recomendação:** opção 2, no projeto do backend. Até lá, opção 1.
+
+**Decisão:**
+
+---
+
+## 14. Hospedar as imagens num armazenamento próprio
+
+**Situação atual:** as fotos dos usuários sintéticos apontam para `randomuser.me` e as das empresas para `ui-avatars.com`, serviços gratuitos de terceiros. A coluna `url_foto` guarda o link completo.
+
+**Problema:** se um desses serviços mudar o formato das URLs, limitar o acesso ou sair do ar, todas as fotos do app quebram de uma vez. Também não há controle sobre o conteúdo nem garantia de disponibilidade.
+
+**Opções:**
+
+1. Manter os serviços externos (bom para dados de teste).
+2. Hospedar as imagens num armazenamento próprio (por exemplo, um bucket S3, Cloudflare R2 ou o armazenamento do backend) e gravar no banco só o caminho ou a URL desse armazenamento.
+3. Para o app real, gerar avatares no próprio frontend (iniciais do nome) quando o usuário não enviar foto, sem depender de URL.
+
+**Impacto:** a opção 2 exige criar o armazenamento, copiar as imagens e trocar o formato em `config.py` do seed (os geradores não mudam). As linhas já gravadas precisam ter a `url_foto` atualizada. O backend precisa servir as imagens.
+
+**Verificação antes de aplicar** (quais domínios aparecem hoje):
+
+```sql
+SELECT split_part(url_foto, '/', 3) AS dominio, count(*) AS quantidade
+FROM usuarios
+WHERE url_foto IS NOT NULL
+GROUP BY 1
+UNION ALL
+SELECT split_part(url_foto, '/', 3), count(*)
+FROM usuarios_empresas
+WHERE url_foto IS NOT NULL
+GROUP BY 1;
+```
+
+**Recomendação:** opção 1 enquanto os dados forem fictícios; opção 2 antes de usuários reais enviarem fotos.
 
 **Decisão:**
 
@@ -454,7 +523,9 @@ WHERE trigger_schema = 'public';
 | 10 | `data_nascimento` nula | Médio (usuários sem data) | Produto, backend, dados | Obrigatória, se estiver nos termos |
 | 11 | Tipos de histórico e regras | Baixo | Produto, backend | Confirmar a lista |
 | 12 | Quem escreve a auditoria | Médio | Backend, seed | Backend, com tabelas definidas |
+| 13 | Mudanças de schema sem ferramenta | Alto (risco de rodar o DDL com DROP) | Todos | Migrações no backend; até lá, scripts numerados |
+| 14 | Imagens em serviços externos | Baixo agora, alto com usuários reais | Frontend, backend | Armazenamento próprio antes de fotos reais |
 
 ## Como uma decisão vira mudança no banco
 
-Cada mudança aprovada vira uma **migração do Alembic** (um arquivo versionado que altera o banco de forma controlada) e, no mesmo commit, a atualização dos scripts `sql/01_ddl.sql` e `sql/02_fks.sql`. O **teste de paridade** do projeto compara o schema criado pelos scripts com o schema dos modelos Python e falha se os dois divergirem, então o DDL e o código nunca ficam desalinhados. A migração é aplicada primeiro no banco de teste; no banco principal, o SQL é revisado e executado por uma pessoa.
+Cada mudança aprovada é aplicada nos bancos fora deste projeto (ver item 13), primeiro no `test` e depois no `main`, com o SQL revisado e executado por uma pessoa. No mesmo commit, o seed atualiza três arquivos juntos: `sql/01_ddl.sql`/`sql/02_fks.sql`, `src/seed/modelos.py` e `src/seed/contratos.py`. Um teste unitário confere que os modelos batem com os scripts, e o `seed check` mostra se os modelos batem com cada banco real; o `seed run` se recusa a rodar se houver divergência.

@@ -1,32 +1,19 @@
-"""Fixtures compartilhadas.
+"""Constantes e fixtures compartilhadas.
 
-Todo teste roda isolado: sem variáveis ``SEED_*`` do ambiente real, numa pasta
-temporária (então nunca lê o ``.env.test`` nem o ``.env`` do projeto) e com o
-cache de ``get_settings`` limpo.
+O isolamento do ambiente (sem ``SEED_*`` reais, pasta temporária) fica em
+``tests/unit/conftest.py``. Os testes de integração usam o ``.env.test`` real.
 """
 
-import os
-from collections.abc import Iterator
 from pathlib import Path
+from typing import Final
 
 import pytest
 
-from seed.config import get_settings
+PROJECT_ROOT: Final = Path(__file__).resolve().parents[1]
+SQL_DIR: Final = PROJECT_ROOT / "sql"
 
 FAKE_HOST = "pg-ficticio.example.com"
 FAKE_PASSWORD = "senha-ficticia-123"
-FAKE_MIGRATION_PASSWORD = "senha-migracao-ficticia"
-
-
-@pytest.fixture(autouse=True)
-def isolated_env(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> Iterator[None]:
-    for name in list(os.environ):
-        if name.upper().startswith("SEED_"):
-            monkeypatch.delenv(name)
-    monkeypatch.chdir(tmp_path)
-    get_settings.cache_clear()
-    yield
-    get_settings.cache_clear()
 
 
 @pytest.fixture

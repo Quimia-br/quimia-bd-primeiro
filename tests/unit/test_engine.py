@@ -2,9 +2,15 @@ from pathlib import Path
 
 import pytest
 
-from seed.config import ConfigError, Target, load_settings
-from seed.db.engine import build_url, connect_args, create_db_engine
-from tests.conftest import FAKE_MIGRATION_PASSWORD, FAKE_PASSWORD
+from seed.config import (
+    ConfigError,
+    Target,
+    build_url,
+    connect_args,
+    create_db_engine,
+    load_settings,
+)
+from tests.conftest import FAKE_PASSWORD
 
 pytestmark = pytest.mark.usefixtures("seed_env")
 
@@ -26,23 +32,6 @@ def test_url_hides_password_when_rendered() -> None:
     assert FAKE_PASSWORD not in str(url)
     assert FAKE_PASSWORD not in repr(url)
     assert FAKE_PASSWORD not in url.render_as_string(hide_password=True)
-
-
-def test_migration_url_uses_migration_credentials(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("SEED_MIGRATION_DB_USER", "usuario_migracao")
-    monkeypatch.setenv("SEED_MIGRATION_DB_PASSWORD", FAKE_MIGRATION_PASSWORD)
-
-    url = build_url(load_settings(Target.TEST), role="migration")
-
-    assert url.username == "usuario_migracao"
-    assert url.password == FAKE_MIGRATION_PASSWORD
-
-
-def test_migration_url_falls_back_to_seed_credentials() -> None:
-    url = build_url(load_settings(Target.TEST), role="migration")
-
-    assert url.username == "avnadmin"
-    assert url.password == FAKE_PASSWORD
 
 
 def test_connect_args() -> None:

@@ -62,5 +62,18 @@ Cada entrada registra um erro real encontrado no projeto: sintoma, causa, soluç
 
 - **Sintoma:** o primeiro `seed check` falhou com `connection to server at "***", port ... failed: certificate contains IP address with invalid length 16`. A dica da CLI na época sugeria a allowlist, o que não era a causa.
 - **Causa:** com `sslmode=verify-full`, o libpq confere os nomes e IPs listados no certificado do servidor. O certificado do Aiven inclui um endereço IPv6 (16 bytes), e o libpq embutido no `psycopg-binary` 3.3.6 para Windows (libpq 18.4) rejeita essa entrada em vez de ignorá-la. A senha, a porta, a allowlist e o CA estavam corretos.
-- **Solução:** `SEED_DB_SSLMODE=verify-ca` em cada `.env` (agora é o padrão, [ADR 0017](decisoes/0017-ssl-verify-ca.md)). A conexão continua criptografada e o certificado continua validado contra o CA do projeto; só a conferência do nome do host deixa de ser feita.
+- **Solução:** `SEED_DB_SSLMODE=verify-ca` em cada `.env` (agora é o padrão; ver README, Decisões). A conexão continua criptografada e o certificado continua validado contra o CA do projeto; só a conferência do nome do host deixa de ser feita.
 - **Prevenção:** o `seed check` agora dá uma dica específica para erros de SSL/certificado, senha, banco, host e rede.
+
+## Simplificação: Alembic, Polyfactory e testes de integração removidos
+
+- **Sintoma:** o projeto acumulava peças que não tinham função para um seed de 100 registros por tabela: migrações com baseline e `stamp` para um schema que é gerenciado fora do projeto, credenciais separadas de migração, um teste de paridade que criava schemas temporários no banco de teste e uma biblioteca de fábricas.
+- **Causa:** o planejamento inicial supunha que o seed também versionaria o schema e geraria volumes grandes.
+- **Solução:** Alembic, Polyfactory, o grupo `catalog` (httpx), os testes de integração e as variáveis `SEED_MIGRATION_*` saíram. A comparação com o banco real passa a ser feita pelo `seed check` (somente leitura), e as regras de negócio pelo `seed verificar`. As decisões estão no README.
+- **Ação manual:** apagar `SEED_MIGRATION_DB_USER` e `SEED_MIGRATION_DB_PASSWORD` do `.env.test` e do `.env`, se existirem (o seed ignora variáveis desconhecidas, então elas só ficam sobrando).
+
+## Teste da CLI falhava só em alguns terminais (códigos de cor na saída)
+
+- **Sintoma:** `test_check_warns_on_timezone_mismatch` falhou sem nenhuma mudança na lógica: a frase `fuso do servidor (America/Sao_Paulo)` não era encontrada na saída.
+- **Causa:** o terminal tinha a variável `FORCE_COLOR` definida. Com ela, o Rich colore a saída mesmo quando não é um console de verdade (como no `CliRunner` dos testes) e destaca os parênteses com códigos ANSI, que partem a frase procurada.
+- **Solução:** os testes da CLI removem os códigos ANSI da saída antes de comparar (`_invoke` em `tests/unit/test_cli_check.py`). Os testes passam com e sem `FORCE_COLOR`.

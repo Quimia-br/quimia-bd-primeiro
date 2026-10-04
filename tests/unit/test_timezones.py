@@ -1,6 +1,6 @@
 import pytest
 
-from seed.domain.timezones import same_timezone
+from seed.validacao import same_timezone
 
 
 @pytest.mark.parametrize(

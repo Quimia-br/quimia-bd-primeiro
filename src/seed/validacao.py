@@ -1,4 +1,8 @@
-"""Comparação de nomes de fuso horário."""
+"""Validadores puros (sem banco, sem Faker, sem arquivos).
+
+Nesta etapa: comparação de fusos. CAS, CNPJ, CEP, coordenadas, URL e idade entram
+junto com os contratos.
+"""
 
 from typing import Final
 

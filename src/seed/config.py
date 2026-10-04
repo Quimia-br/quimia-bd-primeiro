@@ -1,11 +1,10 @@
-"""Configuração do seed por alvo (``test`` ou ``main``).
+"""Configuração do seed: alvos, conexão, quantidades e formatos de URL.
 
 Cada alvo tem o seu arquivo na pasta de onde o comando é executado: ``.env.test``
-para o teste e ``.env`` para o principal (ADR 0016). Variáveis de ambiente reais têm
-prioridade sobre o arquivo.
-Todos os campos usam o prefixo ``SEED_`` (por exemplo, ``SEED_DB_HOST``).
+para o banco de teste e ``.env`` para o principal. Variáveis de ambiente reais têm
+prioridade sobre o arquivo. Todos os campos usam o prefixo ``SEED_``.
 
-As mensagens de erro desta camada nunca exibem valores: só os nomes das variáveis.
+As mensagens de erro deste módulo nunca exibem valores: só os nomes das variáveis.
 """
 
 import ipaddress
@@ -14,16 +13,51 @@ import re
 from enum import StrEnum
 from functools import lru_cache
 from pathlib import Path
-from typing import Final, Literal, Self
+from typing import Final, Literal
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from dotenv import dotenv_values
-from pydantic import Field, SecretStr, ValidationError, field_validator, model_validator
+from pydantic import Field, SecretStr, ValidationError, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from sqlalchemy import Engine, create_engine
+from sqlalchemy.engine import URL
 
 ENV_PREFIX: Final = "SEED_"
 TARGET_ENV_VAR: Final = "SEED_TARGET"
 REDACTED: Final = "***"
+APPLICATION_NAME: Final = "quimia-seed"
+
+# ---------------------------------------------------------------------------
+# Quantidades da carga (fixas; altere aqui). tipos_historicos não aparece porque
+# recebe exatamente os tipos de data/reference.
+# ---------------------------------------------------------------------------
+QUANTIDADE_PADRAO: Final = 100
+QUANTIDADES: Final[dict[str, int]] = {
+    "usuarios_empresas": QUANTIDADE_PADRAO,
+    "admins": QUANTIDADE_PADRAO,
+    "usuarios": QUANTIDADE_PADRAO,
+    "produtos": QUANTIDADE_PADRAO,
+    "admin_log_edicoes": QUANTIDADE_PADRAO,
+    "localizacoes": QUANTIDADE_PADRAO,  # 1:1 com usuarios
+    "estantes": QUANTIDADE_PADRAO,
+    "produtos_usuarios": QUANTIDADE_PADRAO,
+    "descartes_fds": QUANTIDADE_PADRAO,  # 1 por produto
+    "produtos_estantes": QUANTIDADE_PADRAO,
+    "historicos": QUANTIDADE_PADRAO,
+    "historicos_produtos": QUANTIDADE_PADRAO,
+}
+SEMENTE_PADRAO: Final = 42
+IDADE_MINIMA: Final = 18
+FRACAO_SEM_DATA_NASCIMENTO: Final = 0.10
+FUSO_DE_GERACAO: Final = "America/Sao_Paulo"
+
+# ---------------------------------------------------------------------------
+# Fotos (troque o serviço aqui, sem mexer nos geradores).
+# ---------------------------------------------------------------------------
+FOTO_USUARIO: Final = "https://randomuser.me/api/portraits/{genero}/{indice}.jpg"
+FOTO_USUARIO_GENEROS: Final = {"feminino": "women", "masculino": "men"}
+FOTO_USUARIO_INDICES: Final = range(100)
+FOTO_EMPRESA: Final = "https://ui-avatars.com/api/?name={nome}&size=256"
 
 _IDENTIFIER = re.compile(r"^[a-z_][a-z0-9_]*$")
 _IPV4 = re.compile(r"\b(?:\d{1,3}\.){3}\d{1,3}\b")
@@ -46,7 +80,7 @@ class ConfigError(Exception):
 
 
 class Settings(BaseSettings):
-    """Configuração completa de um alvo."""
+    """Configuração de um alvo."""
 
     model_config = SettingsConfigDict(
         env_prefix=ENV_PREFIX,
@@ -57,7 +91,6 @@ class Settings(BaseSettings):
 
     target: Target = Target.TEST
 
-    # Conexão do seed (usuário definido no .env, ADR 0014).
     db_host: str = Field(min_length=1)
     db_port: int = Field(gt=0, lt=65536)
     db_user: str = Field(min_length=1)
@@ -65,19 +98,13 @@ class Settings(BaseSettings):
     db_name: str = Field(min_length=1)
     db_schema: str = "public"
     # verify-ca por padrão: o libpq do psycopg-binary no Windows rejeita o IPv6 do
-    # certificado do Aiven com verify-full (ADR 0017).
+    # certificado do Aiven com verify-full (ver README, Decisões).
     db_sslmode: Literal["verify-full", "verify-ca"] = "verify-ca"
     db_sslrootcert: Path
     db_pool_size: int = Field(default=2, ge=1, le=10)
     db_max_overflow: int = Field(default=1, ge=0, le=10)
     db_connect_timeout: int = Field(default=10, ge=1, le=120)
 
-    # Credencial opcional das migrações. Sem ela, o Alembic usa a mesma do seed.
-    migration_db_user: str | None = None
-    migration_db_password: SecretStr | None = None
-
-    # Carga.
-    batch_size: int = Field(default=1000, ge=1, le=50_000)
     timezone: str = "UTC"
     password_plain: SecretStr | None = None
 
@@ -99,16 +126,9 @@ class Settings(BaseSettings):
             raise ValueError(msg) from None
         return value
 
-    @model_validator(mode="after")
-    def _check_target_rules(self) -> Self:
-        if (self.migration_db_user is None) != (self.migration_db_password is None):
-            msg = "defina SEED_MIGRATION_DB_USER e SEED_MIGRATION_DB_PASSWORD juntas"
-            raise ValueError(msg)
-        return self
-
     @property
     def zone(self) -> ZoneInfo:
-        """Fuso usado para gravar as colunas TIMESTAMP sem fuso (ADR 0010)."""
+        """Fuso usado para gravar as colunas TIMESTAMP sem fuso."""
         return ZoneInfo(self.timezone)
 
     @property
@@ -118,8 +138,7 @@ class Settings(BaseSettings):
 
     def redact(self, text: str) -> str:
         """Remove host, endereços IP e senhas de um texto (por exemplo, mensagens de erro)."""
-        secrets = [self.db_password, self.migration_db_password, self.password_plain]
-        for secret in secrets:
+        for secret in (self.db_password, self.password_plain):
             if secret is not None and secret.get_secret_value():
                 text = text.replace(secret.get_secret_value(), REDACTED)
         text = text.replace(self.db_host, self.masked_host)
@@ -172,6 +191,59 @@ def load_settings(target: Target, env_dir: Path | None = None) -> Settings:
 def get_settings(target: Target | None = None) -> Settings:
     """Configuração do alvo, carregada uma vez por processo (os testes usam ``cache_clear``)."""
     return load_settings(target if target is not None else resolve_target())
+
+
+# ---------------------------------------------------------------------------
+# Conexão
+# ---------------------------------------------------------------------------
+
+
+def build_url(settings: Settings) -> URL:
+    """URL ``postgresql+psycopg`` com SSL. A senha nunca aparece em ``str(url)``."""
+    return URL.create(
+        drivername="postgresql+psycopg",
+        username=settings.db_user,
+        password=settings.db_password.get_secret_value(),
+        host=settings.db_host,
+        port=settings.db_port,
+        database=settings.db_name,
+        query={
+            "sslmode": settings.db_sslmode,
+            "sslrootcert": str(settings.db_sslrootcert),
+        },
+    )
+
+
+def connect_args(settings: Settings) -> dict[str, object]:
+    """Parâmetros extras do psycopg: nome da aplicação, timeout e ``search_path``."""
+    return {
+        "application_name": APPLICATION_NAME,
+        "connect_timeout": settings.db_connect_timeout,
+        # db_schema já foi validado como identificador simples em Settings.
+        "options": f"-c search_path={settings.db_schema}",
+    }
+
+
+def create_db_engine(settings: Settings) -> Engine:
+    """Cria a engine com pool pequeno e ``pool_pre_ping``. Não abre conexão ainda."""
+    if not settings.db_sslrootcert.is_file():
+        msg = (
+            f"Arquivo do CA não encontrado: {settings.db_sslrootcert}. "
+            "Baixe o certificado CA do serviço no console do Aiven e salve em certs/."
+        )
+        raise ConfigError(msg)
+    return create_engine(
+        build_url(settings),
+        pool_size=settings.db_pool_size,
+        max_overflow=settings.db_max_overflow,
+        pool_pre_ping=True,
+        connect_args=connect_args(settings),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Auxiliares
+# ---------------------------------------------------------------------------
 
 
 def _ensure_test_is_not_main(settings: Settings, main_env_file: Path) -> None:

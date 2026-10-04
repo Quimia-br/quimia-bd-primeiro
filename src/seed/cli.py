@@ -9,10 +9,10 @@ from rich.panel import Panel
 from rich.table import Table
 from sqlalchemy.exc import DBAPIError
 
+from seed import verificacao
 from seed.config import ConfigError, Settings, Target, get_settings
-from seed.db import diagnostics
-from seed.db.table_names import EXPECTED_TABLES
-from seed.domain.timezones import same_timezone
+from seed.modelos import table_names
+from seed.validacao import same_timezone
 
 
 class ExitCode(IntEnum):
@@ -55,7 +55,7 @@ def check(ctx: typer.Context) -> None:
     settings = _load_settings(ctx)
     _print_target_header(settings)
     try:
-        info = diagnostics.fetch_server_info(settings)
+        info = verificacao.fetch_server_info(settings)
     except ConfigError as exc:
         _fail(str(exc), ExitCode.CONFIGURACAO)
     except (DBAPIError, OSError) as exc:
@@ -74,25 +74,19 @@ def check(ctx: typer.Context) -> None:
     table.add_row("Tamanho", _format_bytes(info.database_size_bytes))
     table.add_row("Fuso do servidor", info.timezone)
     table.add_row("Fuso do seed", settings.timezone)
-    table.add_row("Revisão Alembic", info.alembic_revision or "(sem alembic_version)")
     table.add_row("Tabelas esperadas", _tables_summary(info.missing_tables))
     console.print(table)
 
     if not same_timezone(info.timezone, settings.timezone):
         console.print(
             f"[yellow]Aviso: o fuso do servidor ({info.timezone}) é diferente de "
-            f"SEED_TIMEZONE ({settings.timezone}). O seed run vai recusar a carga "
-            "(ADR 0010).[/yellow]"
+            f"SEED_TIMEZONE ({settings.timezone}). O seed run vai recusar a carga."
+            "[/yellow]"
         )
     if info.missing_tables:
         console.print(
             "[yellow]Aviso: tabelas ausentes ou sem permissão para o usuário: "
             f"{', '.join(info.missing_tables)}.[/yellow]"
-        )
-    if info.alembic_revision is None:
-        console.print(
-            "[yellow]Aviso: o banco ainda não tem revisão do Alembic "
-            "(o stamp da baseline vem na Fase 3).[/yellow]"
         )
 
 
@@ -107,7 +101,7 @@ def connection_hint(message: str) -> str:
     if "certificate" in text or "ssl" in text:
         return (
             "Erro de SSL/certificado: confira se SEED_DB_SSLROOTCERT aponta para o CA "
-            "deste serviço e se SEED_DB_SSLMODE é verify-ca (ADR 0017)."
+            "deste serviço e se SEED_DB_SSLMODE é verify-ca."
         )
     if "password authentication failed" in text:
         return "Usuário ou senha recusados: confira SEED_DB_USER e SEED_DB_PASSWORD."
@@ -156,7 +150,7 @@ def _format_bytes(size: int) -> str:
 
 
 def _tables_summary(missing: tuple[str, ...]) -> str:
-    total = len(EXPECTED_TABLES)
+    total = len(table_names())
     if not missing:
         return f"todas as {total} presentes"
     return f"{total - len(missing)} de {total} presentes"

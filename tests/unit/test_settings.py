@@ -32,9 +32,7 @@ def test_defaults() -> None:
     assert settings.db_sslmode == "verify-ca"
     assert settings.db_pool_size == 2
     assert settings.db_max_overflow == 1
-    assert settings.batch_size == 1000
     assert settings.timezone == "UTC"
-    assert settings.migration_db_user is None
 
 
 @pytest.mark.parametrize("target", list(Target))
@@ -118,7 +116,6 @@ def test_invalid_value_message_hides_input(monkeypatch: pytest.MonkeyPatch) -> N
         ("SEED_DB_SCHEMA", "Public"),
         ("SEED_TIMEZONE", "Brasil/Inventado"),
         ("SEED_DB_POOL_SIZE", "0"),
-        ("SEED_BATCH_SIZE", "0"),
     ],
 )
 def test_rejects_invalid_values(monkeypatch: pytest.MonkeyPatch, variable: str, value: str) -> None:
@@ -139,14 +136,6 @@ def test_password_plain_accepted_in_both_targets(
 
     assert settings.password_plain is not None
     assert "senha-de-teste" not in repr(settings)
-
-
-@pytest.mark.usefixtures("seed_env")
-def test_migration_credentials_must_come_together(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setenv("SEED_MIGRATION_DB_USER", "usuario_migracao")
-
-    with pytest.raises(ConfigError, match="juntas"):
-        load_settings(Target.TEST)
 
 
 @pytest.mark.usefixtures("seed_env")
