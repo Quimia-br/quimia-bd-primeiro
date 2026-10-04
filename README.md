@@ -91,6 +91,16 @@ Decisões já tomadas, com o motivo. As que dependem do time estão em [docs/pau
 - **Fotos:** usuários com `https://randomuser.me/api/portraits/{men|women}/{0-99}.jpg`, com o gênero da foto combinando com o nome e sem repetir índice; empresas com `https://ui-avatars.com/api/?name=<nome>&size=256`. A tabela `admins` não tem coluna de foto. Os formatos ficam em `config.py`. **Risco:** são links externos; se um serviço mudar ou sair do ar, as imagens quebram. A pauta tem um item sobre hospedar as imagens.
 - **`admin_log_edicoes`:** 100 registros só de INSERT (registro existente, `dado_anterior` nulo, data igual à criação do registro), **somente no `test`**. Auditoria falsa no principal é pior que auditoria vazia.
 
+### Geradores
+
+- **IDs provisórios:** os geradores não conhecem os IDs reais, que o banco cria no insert. Cada linha recebe o ID `posição + 1` da sua tabela, e as chaves estrangeiras usam esses IDs; a carga troca pelos IDs reais devolvidos pelo `RETURNING`.
+- **Determinismo:** a mesma semente e o mesmo momento de carga geram exatamente os mesmos dados (as datas são relativas ao momento da carga). O `senha_hash` usa um salt derivado da semente, para também ser reproduzível; a senha é a mesma em todas as contas sintéticas, então isso não expõe nada.
+- **Produtos concentrados em parte dos usuários:** 100 posses para 100 usuários não permitiriam misturas (2 a 4 produtos). Por isso entre 25 e 37 usuários têm de 2 a 4 produtos cada, e os outros não têm nenhum (nem históricos com produtos).
+- **Estantes:** todo dono de produto tem de 1 a 3 estantes, e as restantes vão para outros usuários (vazias). Cada produto possuído fica em exatamente uma estante do dono, então `produtos_estantes` tem uma linha por posse.
+- **Históricos:** primeiro é planejado o tipo e o número de produtos de cada um, para somarem exatamente 100 em `historicos_produtos` respeitando o mínimo e o máximo de cada tipo. Nos tipos com estante obrigatória (ARMAZENAMENTO, VERIFICACAO), os produtos são os guardados naquela estante, com `data_adicao` até a data do histórico. Nos outros, são produtos do usuário. Se as regras não permitirem as quantidades pedidas, o seed para com um erro em vez de quebrar uma regra. Testado com 300 sementes diferentes, sem falha.
+- **Descrições dos históricos:** frases neutras de registro ("Uso registrado.", "Estante verificada."), sem descrever reações, efeitos ou procedimentos; 20% ficam sem descrição.
+- **Fotos:** os índices 0 a 99 do randomuser.me (pastas `women` e `men`) e o formato do ui-avatars foram conferidos em 04/10/2026.
+
 ### Banco principal
 
 - O `main` pode receber dados fictícios (exceto auditoria), só com `--allow-synthetic` e confirmação digitando o nome do banco. Sem a opção, recebe só referência e catálogo revisado.
