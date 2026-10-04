@@ -19,8 +19,20 @@ AGORA = datetime(2026, 10, 1, 12, 0, tzinfo=UTC)
 
 
 class _Result:
+    """Imita o Result do SQLAlchemy, inclusive ter ``keys()`` e não aceitar ``[]``.
+
+    Por isso ``dict(result)`` falha aqui como falha no banco real: o código precisa
+    chamar ``.all()`` antes.
+    """
+
     def __init__(self, rows: list[Any]) -> None:
         self._rows = rows
+
+    def keys(self) -> list[str]:
+        return ["coluna"]
+
+    def __iter__(self) -> Any:
+        return iter(self._rows)
 
     def scalars(self) -> _Result:
         return self
@@ -28,8 +40,8 @@ class _Result:
     def all(self) -> list[Any]:
         return list(self._rows)
 
-    def tuples(self) -> list[Any]:
-        return list(self._rows)
+    def tuples(self) -> _Result:
+        return self
 
     def scalar_one(self) -> Any:
         return self._rows[0]

@@ -207,10 +207,13 @@ def _inserir_tipos(
     )
     novos = len(resultado.all())
     nomes = [v["nome"] for v in valores]
+    # .all() é necessário: o Result tem keys(), e dict(result) o trataria como mapeamento.
     ids = dict(
         conn.execute(
             select(tabela.c.nome, tabela.c.id_tipo_historico).where(tabela.c.nome.in_(nomes))
-        ).tuples()
+        )
+        .tuples()
+        .all()
     )
     return [ids[nome] for nome in nomes], novos
 

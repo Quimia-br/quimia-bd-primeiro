@@ -84,3 +84,10 @@ Cada entrada registra um erro real encontrado no projeto: sintoma, causa, soluç
 - **Causa:** a ordem de carga vem das FKs, e nela `admin_log_edicoes` fica no nível 2, ao lado de `produtos`. Mas `admin_log_edicoes.id_registro` aponta para registros de `produtos` e `descartes_fds` (nível 3) sem ser FK, então a ordem não enxergava essa dependência: o log era traduzido antes de os produtos terem IDs reais.
 - **Solução:** `carga.ordem_de_insercao` coloca `admin_log_edicoes` sempre por último, e um teste garante que ela vem depois de todas as tabelas auditáveis.
 - **Prevenção:** colunas que referenciam outra tabela sem FK precisam ser tratadas à mão na ordem de carga.
+
+## Primeiro `seed run` no banco de teste falhou nos tipos de histórico
+
+- **Sintoma:** `TypeError: 'CursorResult' object is not subscriptable` em `carga._inserir_tipos`, logo na primeira tabela gravada. Nada ficou no banco: o erro aconteceu dentro de `engine.begin()`, que desfez a transação.
+- **Causa:** o código fazia `dict(conn.execute(...).tuples())`. O `Result` do SQLAlchemy tem o método `keys()`, então o `dict()` o tratou como um dicionário (tentando `result[chave]`) em vez de uma lista de pares. Os testes não pegaram porque a conexão simulada devolvia uma lista comum.
+- **Solução:** chamar `.all()` antes (`dict(result.tuples().all())`). A conexão simulada de `tests/unit/test_carga.py` passou a imitar o `Result` real (com `keys()` e sem `[]`): sem a correção, o teste falha com o mesmo erro do banco.
+- **Prevenção:** dublês de teste precisam imitar o comportamento que o código usa do objeto real, não só os dados que ele devolve.
