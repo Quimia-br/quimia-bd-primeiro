@@ -10,8 +10,17 @@ from seed.cli import ExitCode, app, connection_hint
 from seed.config import Settings
 from seed.verificacao import ServerInfo
 from tests.conftest import FAKE_HOST, FAKE_PASSWORD
+from tests.unit.conftest import HEALTHY, FakeDb
 
 runner = CliRunner()
+
+
+@pytest.fixture(autouse=True)
+def _sem_banco(fake_db: FakeDb) -> FakeDb:
+    """Todos os testes deste arquivo usam o banco simulado."""
+    return fake_db
+
+
 _ANSI = re.compile(r"\x1b\[[0-9;]*m")
 
 
@@ -23,19 +32,6 @@ def _invoke(args: list[str]) -> tuple[int, str]:
     """
     result = runner.invoke(app, args)
     return result.exit_code, _ANSI.sub("", result.output)
-
-
-HEALTHY = ServerInfo(
-    database="defaultdb",
-    user="avnadmin",
-    current_schema="public",
-    server_version="17.6",
-    max_connections=20,
-    open_connections=3,
-    database_size_bytes=8 * 1024 * 1024,
-    timezone="UTC",
-    missing_tables=(),
-)
 
 
 def _fake_fetch(info: ServerInfo, monkeypatch: pytest.MonkeyPatch) -> list[Settings]:

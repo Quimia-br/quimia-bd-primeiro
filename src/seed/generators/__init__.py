@@ -16,7 +16,7 @@ import hashlib
 import json
 from collections.abc import Mapping
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import UTC, datetime
 
 from seed.config import QUANTIDADES
 from seed.contratos import Contrato
@@ -122,3 +122,16 @@ def gerar_tudo(
     }
     tabelas = {tabela: por_tabela[tabela] for tabela in load_order()}
     return DadosGerados(semente=semente, agora=ctx.agora, tabelas=tabelas)
+
+
+def gerar_referencia(
+    referencia: Referencia, *, semente: int, agora: datetime | None = None
+) -> DadosGerados:
+    """Só os dados de referência (tipos de histórico); as demais tabelas ficam vazias.
+
+    É o que o alvo main recebe sem ``--allow-synthetic``: os produtos do catálogo
+    precisam de uma empresa dona, e as empresas são sintéticas.
+    """
+    tabelas: dict[str, list[Contrato]] = {nome: [] for nome in load_order()}
+    tabelas["tipos_historicos"] = list(historicos.gerar_tipos(referencia))
+    return DadosGerados(semente=semente, agora=agora or datetime.now(UTC), tabelas=tabelas)

@@ -77,3 +77,10 @@ Cada entrada registra um erro real encontrado no projeto: sintoma, causa, soluç
 - **Sintoma:** `test_check_warns_on_timezone_mismatch` falhou sem nenhuma mudança na lógica: a frase `fuso do servidor (America/Sao_Paulo)` não era encontrada na saída.
 - **Causa:** o terminal tinha a variável `FORCE_COLOR` definida. Com ela, o Rich colore a saída mesmo quando não é um console de verdade (como no `CliRunner` dos testes) e destaca os parênteses com códigos ANSI, que partem a frase procurada.
 - **Solução:** os testes da CLI removem os códigos ANSI da saída antes de comparar (`_invoke` em `tests/unit/test_cli_check.py`). Os testes passam com e sem `FORCE_COLOR`.
+
+## Log de auditoria apontava para produtos ainda não inseridos
+
+- **Sintoma:** o teste da carga com conexão simulada falhou com `ID provisório 16 de produtos não está no registro de IDs`.
+- **Causa:** a ordem de carga vem das FKs, e nela `admin_log_edicoes` fica no nível 2, ao lado de `produtos`. Mas `admin_log_edicoes.id_registro` aponta para registros de `produtos` e `descartes_fds` (nível 3) sem ser FK, então a ordem não enxergava essa dependência: o log era traduzido antes de os produtos terem IDs reais.
+- **Solução:** `carga.ordem_de_insercao` coloca `admin_log_edicoes` sempre por último, e um teste garante que ela vem depois de todas as tabelas auditáveis.
+- **Prevenção:** colunas que referenciam outra tabela sem FK precisam ser tratadas à mão na ordem de carga.

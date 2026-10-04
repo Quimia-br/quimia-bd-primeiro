@@ -51,6 +51,9 @@ select = ["E", "F", "I", "UP", "B", "SIM", "S"]
 [tool.ruff.lint.per-file-ignores]
 # S101: assert; S105/S106: senhas fictícias usadas de propósito nos testes.
 "tests/**" = ["S101", "S105", "S106"]
+# S608: as consultas só interpolam a constante _AGORA e nomes de tabela de uma tupla
+# fixa no código; valores externos vão sempre como parâmetros.
+"src/seed/verificacao/regras.py" = ["S608"]
 
 [tool.mypy]
 python_version = "3.14"
