@@ -9,7 +9,7 @@ from rich.panel import Panel
 from rich.table import Table
 from sqlalchemy.exc import DBAPIError
 
-from seed import verificacao
+from seed import dados, verificacao
 from seed.config import ConfigError, Settings, Target, get_settings
 from seed.modelos import table_names
 from seed.validacao import same_timezone
@@ -23,6 +23,7 @@ class ExitCode(IntEnum):
     USO = 2  # usado pelo próprio Typer/Click para opções inválidas
     CONFIGURACAO = 3
     CONEXAO = 4
+    DADOS = 5
 
 
 app = typer.Typer(
@@ -87,6 +88,36 @@ def check(ctx: typer.Context) -> None:
         console.print(
             "[yellow]Aviso: tabelas ausentes ou sem permissão para o usuário: "
             f"{', '.join(info.missing_tables)}.[/yellow]"
+        )
+
+
+@app.command()
+def validate(ctx: typer.Context) -> None:
+    """Valida data/reference e data/catalog sem conectar ao banco."""
+    target: Target = ctx.obj
+    try:
+        carregados = dados.carregar_dados()
+    except dados.DadosError as exc:
+        _fail(f"Dados inválidos:\n{exc}", ExitCode.DADOS)
+
+    referencia, catalogo = carregados.referencia, carregados.catalogo
+    revisados = len(catalogo.revisados)
+    table = Table(title="Dados de referência e catálogo", show_header=False)
+    table.add_column("Item", style="bold")
+    table.add_column("Valor")
+    table.add_row("Tipos de histórico", ", ".join(t.nome for t in referencia.tipos_historicos))
+    table.add_row("Cômodos", str(len(referencia.comodos)))
+    table.add_row("Cidades", str(len(referencia.cidades)))
+    table.add_row("Tabelas auditáveis", ", ".join(referencia.tabelas_auditaveis))
+    table.add_row("Produtos no catálogo", str(len(catalogo.produtos)))
+    table.add_row("Revisados", str(revisados))
+    table.add_row("Pendentes de revisão", str(len(catalogo.produtos) - revisados))
+    console.print(table)
+    console.print("[green]Todos os arquivos são válidos.[/green]")
+    if target is Target.MAIN:
+        console.print(
+            f"[yellow]Alvo main: só as {revisados} entradas revisadas do catálogo "
+            "podem ser carregadas.[/yellow]"
         )
 
 

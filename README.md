@@ -29,10 +29,11 @@ uv run seed --target main check      # diagnóstico do banco principal (somente 
 uv run ruff check                    # lint
 uv run ruff format --check           # formatação
 uv run mypy                          # tipos
+uv run seed validate                 # valida data/reference e data/catalog (não conecta ao banco)
 uv run pytest                        # testes unitários (nenhum conecta a banco)
 ```
 
-Os comandos `validate`, `run`, `reset`, `verificar` e `stats` entram nas próximas etapas.
+Os comandos `run`, `reset`, `verificar` e `stats` entram nas próximas etapas.
 
 ## Estrutura
 
@@ -85,7 +86,8 @@ Decisões já tomadas, com o motivo. As que dependem do time estão em [docs/pau
 - **Tipos de histórico pelo seed**, a partir de `data/reference`, com `ON CONFLICT (nome) DO NOTHING`, nos dois alvos. Valores provisórios: USO, MISTURA, DESCARTE, ARMAZENAMENTO, VERIFICACAO. Cômodos: COZINHA, LAVANDERIA, AREA_SERVICO, BANHEIRO, GARAGEM, DESPENSA, QUARTO, SALA.
 - **Regras por tipo de histórico** em YAML: USO, DESCARTE e ARMAZENAMENTO com exatamente 1 produto; VERIFICACAO com 0 a 3; MISTURA com 2 a 4. ARMAZENAMENTO e VERIFICACAO exigem estante. Um ARMAZENAMENTO exige o produto na estante (`produtos_estantes`) com `data_adicao` até a data do histórico.
 - **Idade mínima de 18 anos**, calculada na data de cadastro; 10% dos usuários sem `data_nascimento`. Os dois valores ficam em `config.py`.
-- **Catálogo de produtos** escrito à mão em `data/catalog`, com CAS reais validados pelo dígito verificador. Toda entrada começa com `"revisado": false` e `"fonte": "pendente de conferência"`, e os campos de descarte com "pendente de revisão". Textos de segurança nunca são inventados.
+- **Catálogo de produtos** escrito à mão em `data/catalog/produtos.json`: 100 substâncias distintas usadas em produtos de limpeza (alvejantes, desinfetantes, ácidos, álcalis, tensoativos, solventes, sequestrantes, espessantes, conservantes e fragrâncias), com CAS reais validados pelo dígito verificador. O nome do produto é genérico (`categoria (substância)`) e as marcas são claramente fictícias (`Marca Exemplo Alfa`...). Toda entrada começa com `"revisado": false`, `"fonte": "pendente de conferência"` e `data_consulta` nula. **Instrução de uso, dosagem técnica e os quatro campos de descarte ficam "pendente de revisão"**: são informação de segurança e nunca são inventados. Uma entrada só pode ser marcada como revisada com fonte, data de consulta e nenhum campo pendente, e só entradas revisadas vão para o `main`.
+- **Cidades de referência** (`data/reference/cidades.yaml`): 14 cidades com faixa de CEP e coordenadas do centro, para o CEP gerado combinar com a cidade. As faixas e coordenadas são aproximadas e devem ser conferidas antes de uso fora do banco de teste.
 - **Fotos:** usuários com `https://randomuser.me/api/portraits/{men|women}/{0-99}.jpg`, com o gênero da foto combinando com o nome e sem repetir índice; empresas com `https://ui-avatars.com/api/?name=<nome>&size=256`. A tabela `admins` não tem coluna de foto. Os formatos ficam em `config.py`. **Risco:** são links externos; se um serviço mudar ou sair do ar, as imagens quebram. A pauta tem um item sobre hospedar as imagens.
 - **`admin_log_edicoes`:** 100 registros só de INSERT (registro existente, `dado_anterior` nulo, data igual à criação do registro), **somente no `test`**. Auditoria falsa no principal é pior que auditoria vazia.
 

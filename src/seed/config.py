@@ -47,6 +47,9 @@ QUANTIDADES: Final[dict[str, int]] = {
     "historicos_produtos": QUANTIDADE_PADRAO,
 }
 SEMENTE_PADRAO: Final = 42
+# Pasta data/ do projeto (reference/ e catalog/). O projeto é instalado em modo
+# editável pelo uv, então o caminho é relativo ao código-fonte.
+DATA_DIR: Final = Path(__file__).resolve().parents[2] / "data"
 IDADE_MINIMA: Final = 18
 FRACAO_SEM_DATA_NASCIMENTO: Final = 0.10
 FUSO_DE_GERACAO: Final = "America/Sao_Paulo"
