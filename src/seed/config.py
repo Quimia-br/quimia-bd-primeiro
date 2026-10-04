@@ -50,6 +50,8 @@ SEMENTE_PADRAO: Final = 42
 IDADE_MINIMA: Final = 18
 FRACAO_SEM_DATA_NASCIMENTO: Final = 0.10
 FUSO_DE_GERACAO: Final = "America/Sao_Paulo"
+# Domínios reservados para exemplos (RFC 2606): e-mails sintéticos nunca são reais.
+EMAIL_DOMINIOS: Final = frozenset({"example.com", "example.org"})
 
 # ---------------------------------------------------------------------------
 # Fotos (troque o serviço aqui, sem mexer nos geradores).
