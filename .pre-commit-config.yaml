@@ -8,12 +8,25 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
-      - id: end-of-file-fixer
-      - id: trailing-whitespace
-      - id: check-yaml
+      - id: detect-private-key
       - id: check-added-large-files
+      # Os scripts SQL são a fonte da verdade e ficam exatamente como foram entregues.
+      - id: end-of-file-fixer
+        exclude: ^sql/0[12]_.*\.sql$
+      - id: trailing-whitespace
+        exclude: ^sql/0[12]_.*\.sql$
+      - id: check-yaml
+      - id: check-toml
+      - id: mixed-line-ending
+        args: [--fix=lf]
   - repo: local
     hooks:
+      # Bloqueia mensagens de commit com linha de coautoria ou assinatura do Claude Code.
+      - id: sem-coautoria-claude
+        name: mensagem de commit sem coautoria do Claude
+        language: pygrep
+        entry: '(?i)(co-authored-by:\s*claude|generated with \[?claude code)'
+        stages: [commit-msg]
       - id: mypy
         name: mypy
         entry: uv run mypy
