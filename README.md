@@ -43,12 +43,12 @@ Os comandos `validate`, `run`, `reset`, `verificar` e `stats` entram nas próxim
 | `contratos.py` | Contratos Pydantic por tabela (validação antes do insert) |
 | `validacao.py` | Validadores puros: CAS, CNPJ, CEP, coordenadas, URL, idade, fuso |
 | `dados.py` | Leitura de `data/reference/` (YAML) e `data/catalog/` (JSON) |
-| `geradores/` | Dados sintéticos com Faker pt_BR e `random.Random(seed)`, um arquivo por grupo de tabelas: `contas.py`, `produtos.py`, `estantes.py`, `historicos.py` |
+| `generators/` | Dados sintéticos com Faker pt_BR e `random.Random(seed)`, um arquivo por grupo de tabelas: `contas.py`, `produtos.py`, `estantes.py`, `historicos.py` |
 | `carga.py` | Inserts em lote (Core + `RETURNING`), registro de IDs, transação única |
 | `verificacao.py` | Consultas somente leitura: `check`, `verificar`, `stats` |
 | `cli.py` | Linha de comando (Typer) |
 
-Os módulos ficam no nível de `src/seed/`; um módulo vira pasta quando passa de cerca de 300 linhas ou tem partes claramente separadas, como `geradores/`.
+Os módulos ficam no nível de `src/seed/`; um módulo vira pasta quando passa de cerca de 300 linhas ou tem partes claramente separadas, como `generators/`.
 
 ## Decisões
 
