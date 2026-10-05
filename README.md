@@ -24,15 +24,26 @@ uv run pre-commit install --hook-type commit-msg   # verificação da mensagem d
 ## Comandos
 
 ```powershell
-uv run seed check                    # diagnóstico do banco de teste (somente leitura)
-uv run seed --target main check      # diagnóstico do banco principal (somente leitura)
+# Somente leitura
+uv run seed validate                 # valida data/reference e data/catalog (não conecta)
+uv run seed check                    # diagnóstico + comparação modelos × banco (test)
+uv run seed --target main check      # o mesmo no banco principal
+uv run seed verificar                # regras de negócio: aprovada/reprovada por regra
+uv run seed stats                    # linhas por tabela
+
+# Carga (alvo test por padrão)
+uv run seed run --dry-run            # gera e valida tudo, sem conectar nem gravar
+uv run seed reset                    # esvazia as 13 tabelas (só no test, pede confirmação)
+uv run seed run --seed 42            # carga completa numa única transação
+
+# Qualidade
 uv run ruff check                    # lint
 uv run ruff format --check           # formatação
 uv run mypy                          # tipos
 uv run pytest                        # testes unitários (nenhum conecta a banco)
 ```
 
-Os comandos `validate`, `run`, `reset`, `verificar` e `stats` entram nas próximas etapas.
+Códigos de saída: 0 ok, 1 erro, 2 uso inválido, 3 configuração, 4 conexão, 5 dados, 6 modelos × banco divergentes, 7 bloqueado por trava, 8 regra reprovada.
 
 ## Estrutura
 
@@ -45,10 +56,10 @@ Os comandos `validate`, `run`, `reset`, `verificar` e `stats` entram nas próxim
 | `dados.py` | Leitura de `data/reference/` (YAML) e `data/catalog/` (JSON) |
 | `generators/` | Dados sintéticos com Faker pt_BR e `random.Random(seed)`, um arquivo por grupo de tabelas: `contas.py`, `produtos.py`, `estantes.py`, `historicos.py` |
 | `carga.py` | Inserts em lote (Core + `RETURNING`), registro de IDs, transação única |
-| `verificacao.py` | Consultas somente leitura: `check`, `verificar`, `stats` |
-| `cli.py` | Linha de comando (Typer) |
+| `verificacao/` | Consultas somente leitura: `diagnostico.py` (servidor), `schema.py` (modelos × banco), `regras.py` (regras de negócio e contagens) |
+| `cli/` | Linha de comando (Typer): `app.py`, `consulta.py` (comandos de leitura), `escrita.py` (`run` e `reset`), `auxiliares.py` |
 
-Os módulos ficam no nível de `src/seed/`; um módulo vira pasta quando passa de cerca de 300 linhas ou tem partes claramente separadas, como `generators/`.
+Os módulos ficam no nível de `src/seed/`; um módulo vira pasta quando passa de cerca de 300 linhas ou tem partes claramente separadas, como `generators/`, `verificacao/` e `cli/`.
 
 ## Decisões
 
@@ -70,6 +81,10 @@ Decisões já tomadas, com o motivo. As que dependem do time estão em [docs/pau
 - **Modelos ORM (SQLAlchemy 2.0) ficaram**, só para descrever as tabelas: dão a ordem de carga (`metadata.sorted_tables`), a tipagem e a base da comparação com o banco real feita pelo `seed check`. Eles não criam tabelas. Os inserts usam o Core (`insert(Modelo.__table__)` com lista de dicionários e `RETURNING`), nunca `session.add` linha a linha.
 - **Contratos Pydantic ficaram**, para validar cada linha antes do insert: tamanhos, valores dos CHECKs, CAS, CNPJ, CEP, e-mail, URL e datas. Um erro aparece com o nome do campo antes de chegar ao banco.
 - **Mudança de schema exige atualizar três lugares juntos:** `sql/`, `modelos.py` e `contratos.py`. O `seed check` mostra divergências entre os modelos e o banco, e o `seed run` se recusa a rodar se houver alguma. Um teste unitário confere modelos × DDL e contratos × modelos.
+- **Enums só para os CHECKs do DDL** (`status`, `porte`, `acao`); um teste confere os valores contra `sql/01_ddl.sql`. `comodo` e o nome dos tipos de histórico não têm CHECK no banco: os valores válidos ficam em `data/reference`, para mudarem sem alterar código.
+- **Datas com fuso nos contratos:** os contratos recusam datas sem fuso ou no futuro. A conversão para o horário sem fuso das colunas `TIMESTAMP` acontece só na carga.
+- **CNPJ alfanumérico** (formato da Receita Federal em vigor desde 31/07/2026): 12 caracteres `[0-9A-Z]` e 2 dígitos verificadores numéricos, módulo 11, com cada caractere valendo o código ASCII menos 48. Os CNPJs numéricos continuam válidos. Testado com o exemplo oficial `12.ABC.345/01DE-35`.
+- **E-mails sintéticos** só com os domínios reservados `example.com` e `example.org` (lista em `config.py`), em minúsculas.
 - **Nenhuma melhoria de schema agora.** Todas estão na pauta para o time decidir.
 - **`cas_number` é UNIQUE:** um produto por substância. O catálogo tem 100 substâncias distintas. As alternativas estão na pauta (item 1).
 - **Colunas `TIMESTAMP` sem fuso:** as datas são geradas com fuso em `America/Sao_Paulo`, convertidas para `SEED_TIMEZONE` (padrão UTC) e gravadas sem fuso. O `seed check` avisa se o fuso do servidor for diferente, e o `seed run` se recusa a rodar nesse caso.
@@ -81,13 +96,33 @@ Decisões já tomadas, com o motivo. As que dependem do time estão em [docs/pau
 - **Tipos de histórico pelo seed**, a partir de `data/reference`, com `ON CONFLICT (nome) DO NOTHING`, nos dois alvos. Valores provisórios: USO, MISTURA, DESCARTE, ARMAZENAMENTO, VERIFICACAO. Cômodos: COZINHA, LAVANDERIA, AREA_SERVICO, BANHEIRO, GARAGEM, DESPENSA, QUARTO, SALA.
 - **Regras por tipo de histórico** em YAML: USO, DESCARTE e ARMAZENAMENTO com exatamente 1 produto; VERIFICACAO com 0 a 3; MISTURA com 2 a 4. ARMAZENAMENTO e VERIFICACAO exigem estante. Um ARMAZENAMENTO exige o produto na estante (`produtos_estantes`) com `data_adicao` até a data do histórico.
 - **Idade mínima de 18 anos**, calculada na data de cadastro; 10% dos usuários sem `data_nascimento`. Os dois valores ficam em `config.py`.
-- **Catálogo de produtos** escrito à mão em `data/catalog`, com CAS reais validados pelo dígito verificador. Toda entrada começa com `"revisado": false` e `"fonte": "pendente de conferência"`, e os campos de descarte com "pendente de revisão". Textos de segurança nunca são inventados.
+- **Catálogo de produtos** escrito à mão em `data/catalog/produtos.json`: 100 substâncias distintas usadas em produtos de limpeza (alvejantes, desinfetantes, ácidos, álcalis, tensoativos, solventes, sequestrantes, espessantes, conservantes e fragrâncias), com CAS reais validados pelo dígito verificador. O nome do produto é genérico (`categoria (substância)`) e as marcas são claramente fictícias (`Marca Exemplo Alfa`...). Toda entrada começa com `"revisado": false`, `"fonte": "pendente de conferência"` e `data_consulta` nula. **Instrução de uso, dosagem técnica e os quatro campos de descarte ficam "pendente de revisão"**: são informação de segurança e nunca são inventados. Uma entrada só pode ser marcada como revisada com fonte, data de consulta e nenhum campo pendente, e só entradas revisadas vão para o `main`.
+- **Cidades de referência** (`data/reference/cidades.yaml`): 14 cidades com faixa de CEP e coordenadas do centro, para o CEP gerado combinar com a cidade. As faixas e coordenadas são aproximadas e devem ser conferidas antes de uso fora do banco de teste.
 - **Fotos:** usuários com `https://randomuser.me/api/portraits/{men|women}/{0-99}.jpg`, com o gênero da foto combinando com o nome e sem repetir índice; empresas com `https://ui-avatars.com/api/?name=<nome>&size=256`. A tabela `admins` não tem coluna de foto. Os formatos ficam em `config.py`. **Risco:** são links externos; se um serviço mudar ou sair do ar, as imagens quebram. A pauta tem um item sobre hospedar as imagens.
 - **`admin_log_edicoes`:** 100 registros só de INSERT (registro existente, `dado_anterior` nulo, data igual à criação do registro), **somente no `test`**. Auditoria falsa no principal é pior que auditoria vazia.
 
+### Geradores
+
+- **IDs provisórios:** os geradores não conhecem os IDs reais, que o banco cria no insert. Cada linha recebe o ID `posição + 1` da sua tabela, e as chaves estrangeiras usam esses IDs; a carga troca pelos IDs reais devolvidos pelo `RETURNING`.
+- **Determinismo:** a mesma semente e o mesmo momento de carga geram exatamente os mesmos dados (as datas são relativas ao momento da carga). O `senha_hash` usa um salt derivado da semente, para também ser reproduzível; a senha é a mesma em todas as contas sintéticas, então isso não expõe nada.
+- **Produtos concentrados em parte dos usuários:** 100 posses para 100 usuários não permitiriam misturas (2 a 4 produtos). Por isso entre 25 e 37 usuários têm de 2 a 4 produtos cada, e os outros não têm nenhum (nem históricos com produtos).
+- **Estantes:** todo dono de produto tem de 1 a 3 estantes, e as restantes vão para outros usuários (vazias). Cada produto possuído fica em exatamente uma estante do dono, então `produtos_estantes` tem uma linha por posse.
+- **Históricos:** primeiro é planejado o tipo e o número de produtos de cada um, para somarem exatamente 100 em `historicos_produtos` respeitando o mínimo e o máximo de cada tipo. Nos tipos com estante obrigatória (ARMAZENAMENTO, VERIFICACAO), os produtos são os guardados naquela estante, com `data_adicao` até a data do histórico. Nos outros, são produtos do usuário. Se as regras não permitirem as quantidades pedidas, o seed para com um erro em vez de quebrar uma regra. Testado com 300 sementes diferentes, sem falha.
+- **Descrições dos históricos:** frases neutras de registro ("Uso registrado.", "Estante verificada."), sem descrever reações, efeitos ou procedimentos; 20% ficam sem descrição.
+- **Fotos:** os índices 0 a 99 do randomuser.me (pastas `women` e `men`) e o formato do ui-avatars foram conferidos em 04/10/2026.
+
+### Carga
+
+- **Uma transação para a carga toda:** cada tabela é inserida com um único `insert(Modelo.__table__)` com a lista de linhas e `RETURNING` das PKs (`sort_by_parameter_order=True` garante a ordem dos IDs). Se qualquer tabela falhar, nada fica gravado.
+- **`admin_log_edicoes` é inserida por último:** o `id_registro` aponta para `produtos`, `descartes_fds` e outras tabelas, mas não é FK, então a ordem calculada pelas FKs não enxerga essa dependência.
+- **`tipos_historicos`** usa `ON CONFLICT (nome) DO NOTHING` e depois busca os IDs pelo nome, porque os tipos podem já existir.
+- **Antes de gravar, o `seed run` recusa a carga quando:** os modelos divergem do banco; o fuso do servidor é diferente de `SEED_TIMEZONE` (a menos que se use `--ignorar-fuso`); no `test`, as tabelas não estão vazias (é preciso rodar `seed reset` antes); no `main`, algum e-mail, CNPJ ou CAS gerado já existe. No `main` a carga só acrescenta: nunca sobrescreve nem apaga.
+- **`seed verificar`** confere no banco as regras de negócio (estante e produtos do mesmo usuário, regras por tipo de histórico, um descarte por produto, datas, idade mínima, uma estante por cômodo, logs coerentes, e-mails, CNPJ e CAS) e mostra aprovada ou reprovada por regra.
+
 ### Banco principal
 
-- O `main` pode receber dados fictícios (exceto auditoria), só com `--allow-synthetic` e confirmação digitando o nome do banco. Sem a opção, recebe só referência e catálogo revisado.
+- O `main` pode receber dados fictícios (exceto auditoria), só com `--allow-synthetic`, uma confirmação extra e o nome do banco digitado. **Sem a opção, recebe só os tipos de histórico:** os produtos do catálogo precisam de uma empresa dona (`id_usuario_empresa` é NOT NULL), e as empresas são sintéticas.
+- Com `--allow-synthetic`, os produtos do `main` vêm só das entradas revisadas do catálogo; enquanto nenhuma estiver revisada, a carga sintética no `main` é recusada.
 - `reset` é bloqueado no `main` pelo código. Nada é executado pelo assistente contra o `main`.
 - `SEED_PASSWORD_PLAIN` (senha dos usuários fictícios) deve ser diferente em cada arquivo.
 

@@ -1,0 +1,25 @@
+# Tipos de histórico e a regra de cada um (valores provisórios; ver pauta, item 11).
+# O seed insere os tipos com ON CONFLICT (nome) DO NOTHING, nos dois alvos.
+#   produtos_min / produtos_max: quantos produtos o histórico tem em historicos_produtos
+#   estante_obrigatoria: se historicos.id_estante precisa ser preenchido
+tipos:
+  - nome: "USO"
+    produtos_min: 1
+    produtos_max: 1
+    estante_obrigatoria: false
+  - nome: "DESCARTE"
+    produtos_min: 1
+    produtos_max: 1
+    estante_obrigatoria: false
+  - nome: "ARMAZENAMENTO"
+    produtos_min: 1
+    produtos_max: 1
+    estante_obrigatoria: true
+  - nome: "VERIFICACAO"
+    produtos_min: 0
+    produtos_max: 3
+    estante_obrigatoria: true
+  - nome: "MISTURA"
+    produtos_min: 2
+    produtos_max: 4
+    estante_obrigatoria: false

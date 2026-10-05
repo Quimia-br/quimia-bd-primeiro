@@ -1,8 +1,4 @@
-"""Consultas somente leitura no banco: diagnóstico do ``seed check``.
-
-Nas próximas etapas: comparação modelos × banco por reflexão, regras de negócio do
-``seed verificar`` e contagens do ``seed stats``.
-"""
+"""Diagnóstico do servidor para o ``seed check`` (somente leitura)."""
 
 from collections.abc import Iterable
 from dataclasses import dataclass

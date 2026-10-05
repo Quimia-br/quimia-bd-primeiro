@@ -47,9 +47,28 @@ QUANTIDADES: Final[dict[str, int]] = {
     "historicos_produtos": QUANTIDADE_PADRAO,
 }
 SEMENTE_PADRAO: Final = 42
+# Pasta data/ do projeto (reference/ e catalog/). O projeto é instalado em modo
+# editável pelo uv, então o caminho é relativo ao código-fonte.
+DATA_DIR: Final = Path(__file__).resolve().parents[2] / "data"
 IDADE_MINIMA: Final = 18
 FRACAO_SEM_DATA_NASCIMENTO: Final = 0.10
 FUSO_DE_GERACAO: Final = "America/Sao_Paulo"
+# Cadastros sorteados nos últimos N dias antes do momento da carga.
+JANELA_CADASTRO_DIAS: Final = 3 * 365
+# Pesos do status das contas (usuarios, admins, usuarios_empresas).
+PESOS_STATUS: Final = {
+    "ATIVO": 80,
+    "INATIVO": 8,
+    "PENDENTE": 5,
+    "BLOQUEADO": 4,
+    "DESATIVADO": 3,
+}
+FRACAO_CNPJ_ALFANUMERICO: Final = 0.3
+FRACAO_LOCALIZACAO_COM_COORDENADAS: Final = 0.9
+FRACAO_HISTORICO_SEM_DESCRICAO: Final = 0.2
+IDADE_MAXIMA: Final = 80
+# Domínios reservados para exemplos (RFC 2606): e-mails sintéticos nunca são reais.
+EMAIL_DOMINIOS: Final = frozenset({"example.com", "example.org"})
 
 # ---------------------------------------------------------------------------
 # Fotos (troque o serviço aqui, sem mexer nos geradores).

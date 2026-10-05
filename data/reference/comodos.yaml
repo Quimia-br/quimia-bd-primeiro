@@ -1,0 +1,11 @@
+# Cômodos válidos para estantes.comodo (o banco não tem CHECK; valores provisórios).
+# "DESCONHECIDO" é só o default do banco e não é gerado pelo seed.
+comodos:
+  - "COZINHA"
+  - "LAVANDERIA"
+  - "AREA_SERVICO"
+  - "BANHEIRO"
+  - "GARAGEM"
+  - "DESPENSA"
+  - "QUARTO"
+  - "SALA"
