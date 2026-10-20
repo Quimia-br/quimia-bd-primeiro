@@ -153,10 +153,12 @@ def test_carregar_inserts_every_table_with_real_ids(gerados: DadosGerados) -> No
     inseridas = carga.carregar(conn, gerados, ZoneInfo("UTC"))  # type: ignore[arg-type]
 
     assert inseridas["tipos_historicos"] == 4  # USO já existia
-    assert all(inseridas[t] == 100 for t in inseridas if t != "tipos_historicos")
-    # Ordem de carga, com o log de auditoria por último (id_registro não é FK).
-    assert list(conn.inserts) == carga.ordem_de_insercao(list(gerados.tabelas))
-    assert list(conn.inserts)[-1] == "admin_log_edicoes"
+    vazias = {"admins", "admin_log_edicoes"}
+    assert all(inseridas[t] == 100 for t in inseridas if t not in vazias | {"tipos_historicos"})
+    assert all(inseridas[t] == 0 for t in vazias)
+    # Tabelas vazias não geram INSERT; as demais seguem a ordem de carga.
+    ordem = carga.ordem_de_insercao(list(gerados.tabelas))
+    assert list(conn.inserts) == [t for t in ordem if t not in vazias]
 
     # Nenhuma coluna identity é enviada.
     assert "id_usuario" not in conn.inserts["usuarios"][0]
@@ -165,8 +167,6 @@ def test_carregar_inserts_every_table_with_real_ids(gerados: DadosGerados) -> No
     assert {e["id_usuario"] for e in conn.inserts["estantes"]} <= ids_usuarios
     ids_tipos = set(conn.tipos.values())
     assert {h["id_tipo_historico"] for h in conn.inserts["historicos"]} <= ids_tipos
-    for log in conn.inserts["admin_log_edicoes"]:
-        assert log["id_registro"] in set(conn.ids.get(log["tabela_afetada"], conn.tipos.values()))
 
 
 def test_carregar_maps_existing_history_types_by_name(gerados: DadosGerados) -> None:

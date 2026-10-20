@@ -60,6 +60,8 @@ def _t[T](gerados: DadosGerados, tabela: str, tipo: type[T]) -> list[T]:
 def test_exactly_100_rows_per_table(gerados: DadosGerados, dados: Dados) -> None:
     contagens = gerados.contagens()
     assert contagens.pop("tipos_historicos") == len(dados.referencia.tipos_historicos) == 5
+    # admins fica vazia, e sem admins não há admin_log_edicoes (id_admin é NOT NULL).
+    assert contagens.pop("admins") == contagens.pop("admin_log_edicoes") == 0
     assert set(contagens.values()) == {100}
 
 

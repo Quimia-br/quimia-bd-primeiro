@@ -60,7 +60,7 @@ def test_run_loads_everything_in_one_transaction(fake_db: FakeDb) -> None:
     assert fake_db.conexoes == [True]  # uma conexão, com transação
     gerados = fake_db.carregados[0]
     assert gerados.semente == 7
-    assert gerados.contagens()["admin_log_edicoes"] == 100
+    assert gerados.contagens()["admin_log_edicoes"] == 0
     assert "Carga concluída" in saida
 
 

@@ -34,10 +34,10 @@ APPLICATION_NAME: Final = "quimia-seed"
 QUANTIDADE_PADRAO: Final = 100
 QUANTIDADES: Final[dict[str, int]] = {
     "usuarios_empresas": QUANTIDADE_PADRAO,
-    "admins": QUANTIDADE_PADRAO,
+    "admins": 0,  # a tabela fica vazia: os admins são cadastrados fora do seed
     "usuarios": QUANTIDADE_PADRAO,
     "produtos": QUANTIDADE_PADRAO,
-    "admin_log_edicoes": QUANTIDADE_PADRAO,
+    "admin_log_edicoes": 0,  # id_admin é NOT NULL: sem admins não há log
     "localizacoes": QUANTIDADE_PADRAO,  # 1:1 com usuarios
     "estantes": QUANTIDADE_PADRAO,
     "produtos_usuarios": QUANTIDADE_PADRAO,
