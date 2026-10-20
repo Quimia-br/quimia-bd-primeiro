@@ -36,7 +36,6 @@ CHAVES_NATURAIS: Mapping[str, tuple[str, ...]] = {
     "usuarios_empresas": ("cnpj", "email"),
     "admins": ("email",),
     "usuarios": ("email",),
-    "produtos": ("cas_number",),
 }
 """Colunas UNIQUE que identificam uma linha; usadas para recusar duplicatas no main."""
 

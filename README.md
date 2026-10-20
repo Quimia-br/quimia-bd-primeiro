@@ -86,7 +86,7 @@ Decisões já tomadas, com o motivo. As que dependem do time estão em [docs/pau
 - **CNPJ alfanumérico** (formato da Receita Federal em vigor desde 31/07/2026): 12 caracteres `[0-9A-Z]` e 2 dígitos verificadores numéricos, módulo 11, com cada caractere valendo o código ASCII menos 48. Os CNPJs numéricos continuam válidos. Testado com o exemplo oficial `12.ABC.345/01DE-35`.
 - **E-mails sintéticos** só com os domínios reservados `example.com` e `example.org` (lista em `config.py`), em minúsculas.
 - **Nenhuma melhoria de schema agora.** Todas estão na pauta para o time decidir.
-- **`cas_number` é UNIQUE:** um produto por substância. O catálogo tem 100 substâncias distintas. As alternativas estão na pauta (item 1).
+- **`cas_number` não é UNIQUE no banco** (removido pelo Nicolas): várias marcas podem ter a mesma substância. O catálogo continua com 100 substâncias distintas e o seed gera um produto por entrada.
 - **Colunas `TIMESTAMP` sem fuso:** as datas são geradas com fuso em `America/Sao_Paulo`, convertidas para `SEED_TIMEZONE` (padrão UTC) e gravadas sem fuso. O `seed check` avisa se o fuso do servidor for diferente, e o `seed run` se recusa a rodar nesse caso.
 
 ### Dados
