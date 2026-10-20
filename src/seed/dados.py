@@ -189,7 +189,7 @@ class Catalogo(_Modelo):
 
     @model_validator(mode="after")
     def _unique_keys(self) -> Self:
-        # cas_number é UNIQUE em produtos: é a chave natural de cada entrada.
+        # O banco não impõe UNIQUE em cas_number, mas o catálogo usa o CAS como identidade.
         _unique([p.cas_number for p in self.produtos], "CAS")
         _unique([p.nome for p in self.produtos], "nomes de produto")
         return self

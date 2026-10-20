@@ -14,10 +14,10 @@ demais usuários ficam sem produtos (e, portanto, sem históricos com produtos).
 
 
 def chave_natural_produto(entrada: EntradaCatalogo) -> str:
-    """Chave natural de ``produtos``: hoje, o CAS (``cas_number`` é UNIQUE).
+    """Chave natural de ``produtos``: o CAS (o banco não impõe UNIQUE; é a identidade no catálogo).
 
-    Se o time mudar o UNIQUE (pauta, item 1), basta mudar esta função e o limite em
-    ``limite_produtos``; o resto dos geradores e da carga não muda.
+    Se um dia o catálogo tiver várias entradas por CAS, basta mudar esta função e o limite
+    em ``limite_produtos``; o resto dos geradores e da carga não muda.
     """
     return entrada.cas_number
 

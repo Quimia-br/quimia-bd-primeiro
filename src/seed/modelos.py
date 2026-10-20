@@ -140,7 +140,7 @@ class User(Base):
 
 
 class Product(Base):
-    """``produtos``: um produto por CAS (``cas_number`` é UNIQUE; ver pauta, item 1)."""
+    """``produtos``: ``cas_number`` não é UNIQUE (várias marcas podem ter a mesma substância)."""
 
     __tablename__ = "produtos"
     __table_args__ = (
@@ -153,7 +153,7 @@ class Product(Base):
 
     id_produto: Mapped[int] = _identity_pk()
     id_usuario_empresa: Mapped[int] = mapped_column(Integer)
-    cas_number: Mapped[str] = mapped_column(String(12), unique=True)
+    cas_number: Mapped[str] = mapped_column(String(12))
     nome: Mapped[str] = mapped_column(String(150))
     marca: Mapped[str] = mapped_column(String(150), server_default=_UNKNOWN)
     instrucao_de_uso: Mapped[str] = mapped_column(Text)
