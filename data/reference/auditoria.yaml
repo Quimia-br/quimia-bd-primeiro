@@ -1,0 +1,8 @@
+# Tabelas cujos registros podem aparecer em admin_log_edicoes (provisório; ver pauta,
+# item 12). O seed gera só logs de INSERT e só no alvo test.
+tabelas:
+  - "usuarios"
+  - "usuarios_empresas"
+  - "produtos"
+  - "descartes_fds"
+  - "tipos_historicos"
