@@ -15,13 +15,33 @@ from seed.contratos import DescarteFds, Estante, Produto, TipoHistorico
 from seed.dados import DadosError, carregar_catalogo, carregar_dados, carregar_referencia
 from seed.validacao import cas_valido, cep_valido
 
+CAMPOS_DE_TEXTO = (
+    "instrucao_de_uso",
+    "dosagem_tecnica",
+    "metodo_descarte_produto",
+    "metodo_descarte_embalagem",
+    "restricao_descarte",
+    "precaucao_ambiental",
+)
+
 
 @pytest.fixture
 def data_copy(tmp_path: Path) -> Path:
-    """Cópia da pasta data/ para os testes poderem estragar os arquivos."""
+    """Cópia da pasta data/ com o catálogo todo pendente, para os testes estragarem os arquivos."""
     destino = tmp_path / "data"
     shutil.copytree(DATA_DIR, destino)
+    _edit_catalog(destino, _tornar_pendente)
     return destino
+
+
+def _tornar_pendente(doc: dict[str, Any]) -> None:
+    for produto in doc["produtos"]:
+        produto.update(
+            revisado=False,
+            fonte=dados.PENDENTE_CONFERENCIA,
+            data_consulta=None,
+            **dict.fromkeys(CAMPOS_DE_TEXTO, dados.PENDENTE_REVISAO),
+        )
 
 
 def _edit_catalog(data_copy: Path, change: Any) -> None:
@@ -64,20 +84,27 @@ def test_real_catalog_has_100_distinct_valid_cas() -> None:
     assert all(cas_valido(c) for c in cas)
 
 
-def test_real_catalog_is_pending_review() -> None:
+def test_real_catalog_main_gets_only_reviewed_entries() -> None:
     catalogo = carregar_catalogo()
+
+    assert len(catalogo.para_alvo(Target.TEST)) == 100
+    assert catalogo.para_alvo(Target.MAIN) == catalogo.revisados
+    for produto in catalogo.produtos:
+        if produto.revisado:
+            assert produto.fonte != dados.PENDENTE_CONFERENCIA
+            assert produto.data_consulta is not None
+
+
+def test_pending_catalog_has_no_invented_texts(data_copy: Path) -> None:
+    catalogo = carregar_catalogo(data_copy / "catalog")
 
     assert catalogo.revisados == []
     assert catalogo.para_alvo(Target.MAIN) == []
-    assert len(catalogo.para_alvo(Target.TEST)) == 100
     for produto in catalogo.produtos:
         assert produto.fonte == dados.PENDENTE_CONFERENCIA
         assert produto.data_consulta is None
-        # Nenhum texto de uso, dosagem ou descarte foi inventado.
-        assert produto.instrucao_de_uso == dados.PENDENTE_REVISAO
-        assert produto.dosagem_tecnica == dados.PENDENTE_REVISAO
-        assert produto.metodo_descarte_produto == dados.PENDENTE_REVISAO
-        assert produto.precaucao_ambiental == dados.PENDENTE_REVISAO
+        for campo in CAMPOS_DE_TEXTO:
+            assert getattr(produto, campo) == dados.PENDENTE_REVISAO
 
 
 def test_catalog_entries_fit_the_table_contracts() -> None:

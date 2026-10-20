@@ -33,6 +33,14 @@ def _catalogo_revisado(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(dados, "carregar_dados", lambda: replace(carregados, catalogo=catalogo))
 
 
+def _catalogo_pendente(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Simula um catálogo sem nenhuma entrada revisada."""
+    carregados = dados.carregar_dados()
+    pendentes = [p.model_copy(update={"revisado": False}) for p in carregados.catalogo.produtos]
+    catalogo = carregados.catalogo.model_copy(update={"produtos": pendentes})
+    monkeypatch.setattr(dados, "carregar_dados", lambda: replace(carregados, catalogo=catalogo))
+
+
 # ------------------------------------------------------------------ run no test
 
 
@@ -144,8 +152,11 @@ def test_main_synthetic_never_includes_audit_logs(
     assert contagens["usuarios"] == 100
 
 
-def test_main_synthetic_needs_reviewed_catalog(fake_db: FakeDb) -> None:
-    # O catálogo real ainda não tem entradas revisadas: não há produtos para o main.
+def test_main_synthetic_needs_reviewed_catalog(
+    fake_db: FakeDb, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    # Sem entradas revisadas não há produtos para o main.
+    _catalogo_pendente(monkeypatch)
     codigo, saida = _invoke(
         ["--target", "main", "run", "--allow-synthetic"], entrada="y\ndefaultdb\n"
     )
