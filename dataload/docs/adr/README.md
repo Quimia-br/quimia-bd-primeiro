@@ -6,7 +6,7 @@ Este diretório registra as decisões técnicas do projeto **data-load-quimia**,
 - **Decisão:** o que foi escolhido.
 - **Consequências:** o que passa a valer por causa da escolha, incluindo riscos e limitações.
 
-Os arquivos são numerados na ordem em que aparecem aqui (`0001-...`, `0002-...`). Uma decisão que mudar deve ganhar um novo ADR que substitui o anterior, em vez de reescrever o histórico. Para visão geral, instalação e comandos, veja o [README do projeto](../../README.md).
+Os arquivos são numerados na ordem em que aparecem aqui (`0001-...`, `0002-...`). Uma decisão que mudar deve ganhar um novo ADR que substitui o anterior, em vez de reescrever o histórico. Para visão geral, instalação e comandos, veja o [README do projeto](../../../README.md).
 
 ## Ambiente e conexão
 

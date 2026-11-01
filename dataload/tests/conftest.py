@@ -10,7 +10,7 @@ from typing import Final
 import pytest
 
 PROJECT_ROOT: Final = Path(__file__).resolve().parents[1]
-SQL_DIR: Final = PROJECT_ROOT / "database" / "sql"
+SQL_DIR: Final = PROJECT_ROOT.parent / "database" / "sql"
 
 FAKE_HOST = "pg-ficticio.example.com"
 FAKE_PASSWORD = "senha-ficticia-123"

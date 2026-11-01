@@ -277,13 +277,15 @@ Você pode conferir sem tocar no banco com `uv run seed run --dry-run`.
 
 ## Instalação
 
-Requisitos: [uv](https://docs.astral.sh/uv/getting-started/installation/) (Windows, macOS ou Linux) e Git. O uv instala o Python 3.14 sozinho, se faltar. Os comandos abaixo funcionam igual em PowerShell, Bash e Zsh.
+Requisitos: [uv](https://docs.astral.sh/uv/getting-started/installation/) (Windows, macOS ou Linux) e Git. O uv instala o Python 3.14 sozinho, se faltar. Os comandos abaixo funcionam igual em PowerShell, Bash e Zsh. O repositório tem duas pastas: [`database/`](database/README.md) (schema) e [`dataload/`](dataload/README.md) (ferramenta de carga). **Todos os comandos `uv` deste README rodam dentro de `dataload/`.**
 
 ```bash
 git clone https://github.com/Quimia-br/quimia-bd-primeiro.git
 cd quimia-bd-primeiro
 git switch develop
 
+# a ferramenta de carga fica na pasta dataload/: todos os comandos uv abaixo rodam nela
+cd dataload
 uv sync                                            # cria .venv e instala dependências + grupo dev
 uv run pre-commit install                          # hooks de qualidade no git commit
 uv run pre-commit install --hook-type commit-msg   # verificação da mensagem de commit
@@ -295,9 +297,9 @@ uv run pre-commit install --hook-type commit-msg   # verificação da mensagem d
 
 | Passo | O que fazer |
 |:---:|---|
-| **1** | **Certificados:** no console do Aiven (*serviço → Overview → CA certificate*), baixe o CA de cada serviço e salve em `certs/ca-test.pem` e `certs/ca-main.pem`. A pasta fica fora do Git. |
+| **1** | **Certificados:** no console do Aiven (*serviço → Overview → CA certificate*), baixe o CA de cada serviço e salve em `dataload/certs/ca-test.pem` e `dataload/certs/ca-main.pem`. A pasta fica fora do Git. |
 | **2** | **Allowlist:** em *Service settings → Allowed IP addresses*, libere o IP da sua máquina nos dois serviços. Sem isso, a conexão termina em timeout. |
-| **3** | **Variáveis:** crie os dois arquivos a partir do modelo e preencha host, porta, usuário, senha e caminho do CA de cada serviço. |
+| **3** | **Variáveis:** crie os dois arquivos, dentro de `dataload/`, a partir do modelo e preencha host, porta, usuário, senha e caminho do CA de cada serviço. |
 | **4** | **Conferência:** rode `uv run seed check` (test) e `uv run seed --target main check` (main). O comando só lê. |
 
 | Sistema | Comandos |
@@ -318,7 +320,7 @@ uv run pre-commit install --hook-type commit-msg   # verificação da mensagem d
 | `SEED_DB_PASSWORD` | | Senha do serviço |
 | `SEED_DB_NAME` | `defaultdb` | Nome do banco |
 | `SEED_DB_SCHEMA` | `public` | Schema |
-| `SEED_DB_SSLMODE` | `verify-ca` | Modo SSL (ver [ADR 0003](docs/adr/0003-ssl-verify-ca.md)) |
+| `SEED_DB_SSLMODE` | `verify-ca` | Modo SSL (ver [ADR 0003](dataload/docs/adr/0003-ssl-verify-ca.md)) |
 | `SEED_DB_SSLROOTCERT` | `certs/ca-test.pem` | CA do serviço |
 | `SEED_DB_POOL_SIZE` / `SEED_DB_MAX_OVERFLOW` | `2` / `1` | Pool pequeno, pelo limite de conexões do Aiven |
 | `SEED_DB_CONNECT_TIMEOUT` | `10` | Segundos de espera ao conectar |
@@ -453,24 +455,26 @@ quimia-bd-primeiro/
 │   │   └── 03_views.sql      views do dashboard
 │   ├── docs/nomenclatura/    convenção de nomenclatura e padronização SQL
 │   └── legacy/               seeds JSON e requirements.txt antigos, só para consulta
-├── data/
-│   ├── reference/            YAML: cômodos, cidades, tipos de histórico, auditoria
-│   └── catalog/              JSON: catálogo de 100 produtos
-├── src/seed/
-│   ├── config.py             alvos, conexão, quantidades e formatos das URLs de foto
-│   ├── modelos.py            modelos ORM espelhando o DDL e ordem de carga
-│   ├── contratos.py          contratos Pydantic por tabela
-│   ├── validacao.py          validadores puros: CAS, CNPJ, CEP, coordenadas, URL, idade, fuso
-│   ├── dados.py              leitura de data/
-│   ├── generators/           contas, produtos, estantes, historicos, contexto
-│   ├── carga.py              inserts em lote, registro de IDs, transação única
-│   ├── verificacao/          diagnostico, schema (modelos × banco), regras de negócio
-│   └── cli/                  Typer: app, consulta (leitura), escrita (run e reset)
-├── tests/unit/               testes unitários, sem banco
-├── docs/adr/                 decisões de projeto (ADRs numerados)
-├── .env.example              modelo de configuração (valores fictícios)
-├── .pre-commit-config.yaml
-└── pyproject.toml
+├── dataload/                 ferramenta de carga (seed), em Python (ver dataload/README.md)
+│   ├── data/
+│   │   ├── reference/        YAML: cômodos, cidades, tipos de histórico, auditoria
+│   │   └── catalog/          JSON: catálogo de 100 produtos
+│   ├── src/seed/
+│   │   ├── config.py         alvos, conexão, quantidades e formatos das URLs de foto
+│   │   ├── modelos.py        modelos ORM espelhando o DDL e ordem de carga
+│   │   ├── contratos.py      contratos Pydantic por tabela
+│   │   ├── validacao.py      validadores puros: CAS, CNPJ, CEP, coordenadas, URL, idade, fuso
+│   │   ├── dados.py          leitura de data/
+│   │   ├── generators/       contas, produtos, estantes, historicos, contexto
+│   │   ├── carga.py          inserts em lote, registro de IDs, transação única
+│   │   ├── verificacao/      diagnostico, schema (modelos × banco), regras de negócio
+│   │   └── cli/              Typer: app, consulta (leitura), escrita (run e reset)
+│   ├── tests/unit/           testes unitários, sem banco
+│   ├── docs/adr/             decisões de projeto (ADRs numerados)
+│   ├── .env.example          modelo de configuração (valores fictícios)
+│   └── pyproject.toml
+├── LICENSE
+└── .pre-commit-config.yaml
 ```
 
 Um módulo vira pasta quando passa de cerca de 300 linhas ou tem partes claramente separadas, como `generators/`, `verificacao/` e `cli/`.
@@ -481,15 +485,15 @@ Um módulo vira pasta quando passa de cerca de 300 linhas ou tem partes claramen
 
 ## Decisões de projeto
 
-As decisões técnicas do projeto (ambiente e conexão, schema, dados, geradores, carga e proteção do banco principal) estão registradas, com contexto e consequências, em [docs/adr/](docs/adr/README.md). Cada decisão é um ADR numerado, no formato Contexto, Decisão e Consequências.
+As decisões técnicas do projeto (ambiente e conexão, schema, dados, geradores, carga e proteção do banco principal) estão registradas, com contexto e consequências, em [docs/adr/](dataload/docs/adr/README.md). Cada decisão é um ADR numerado, no formato Contexto, Decisão e Consequências.
 
 Alguns pontos que costumam gerar dúvida:
 
-- **SSL `verify-ca`, não `verify-full`:** [ADR 0003](docs/adr/0003-ssl-verify-ca.md).
-- **`database/sql/` é a fonte da verdade e não há Alembic:** [ADR 0006](docs/adr/0006-sql-fonte-da-verdade-sem-alembic.md).
-- **Catálogo de produtos de teste e revisão antes do `main`:** [ADR 0018](docs/adr/0018-catalogo-de-produtos-escrito-a-mao.md).
-- **`admins` e `admin_log_edicoes` vazias:** [ADR 0021](docs/adr/0021-admins-e-auditoria-vazias.md).
-- **Travas de proteção do banco principal:** [ADR 0028](docs/adr/0028-carga-sintetica-restrita-no-banco-principal.md) e [ADR 0029](docs/adr/0029-travas-do-banco-principal.md).
+- **SSL `verify-ca`, não `verify-full`:** [ADR 0003](dataload/docs/adr/0003-ssl-verify-ca.md).
+- **`database/sql/` é a fonte da verdade e não há Alembic:** [ADR 0006](dataload/docs/adr/0006-sql-fonte-da-verdade-sem-alembic.md).
+- **Catálogo de produtos de teste e revisão antes do `main`:** [ADR 0018](dataload/docs/adr/0018-catalogo-de-produtos-escrito-a-mao.md).
+- **`admins` e `admin_log_edicoes` vazias:** [ADR 0021](dataload/docs/adr/0021-admins-e-auditoria-vazias.md).
+- **Travas de proteção do banco principal:** [ADR 0028](dataload/docs/adr/0028-carga-sintetica-restrita-no-banco-principal.md) e [ADR 0029](dataload/docs/adr/0029-travas-do-banco-principal.md).
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 
@@ -501,7 +505,7 @@ Alguns pontos que costumam gerar dúvida:
 4. Abra a PR para a `develop` e peça a revisão de alguém da equipe.
 
 > [!TIP]
-> Mudou o schema? Atualize `database/sql/`, `modelos.py` e `contratos.py` no mesmo commit, rode `uv run pytest` e depois `uv run seed check` para confirmar que o banco de teste bate com os modelos.
+> Mudou o schema? Atualize `database/sql/`, `modelos.py` e `contratos.py` no mesmo commit, rode `uv run pytest` (em `dataload/`) e depois `uv run seed check` para confirmar que o banco de teste bate com os modelos.
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 

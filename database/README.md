@@ -1,6 +1,6 @@
 # database
 
-Schema PostgreSQL do **Quimia** e a documentação da modelagem. Esta pasta não tem código Python: a ferramenta que popula o banco está em [`../README.md`](../README.md) (carga `seed`).
+Schema PostgreSQL do **Quimia** e a documentação da modelagem. Esta pasta não tem código Python: a ferramenta que popula o banco está em [`../dataload/`](../dataload/README.md) (carga `seed`).
 
 > [!CAUTION]
 > Os scripts de `sql/` começam com `DROP TABLE ... CASCADE`. **Nunca os execute no Aiven** sobre um banco com dados.
@@ -19,6 +19,6 @@ Ordem de execução em um banco novo e vazio: `01_ddl.sql`, `02_fks.sql` e `03_v
 
 ## Mudou o schema?
 
-Atualize os scripts de `sql/` e, na ferramenta de carga, `src/seed/modelos.py` e `src/seed/contratos.py`, no mesmo commit. O `uv run pytest` confere modelos e contratos contra o `01_ddl.sql`.
+Atualize os scripts de `sql/` e, na ferramenta de carga, `dataload/src/seed/modelos.py` e `dataload/src/seed/contratos.py`, no mesmo commit. O `uv run pytest` confere modelos e contratos contra o `01_ddl.sql`.
 
 O histórico da antiga branch `database` foi incorporado a este repositório e continua visível no `git log`.
