@@ -51,11 +51,11 @@
 
 O **Quimia** é um aplicativo que ajuda a evitar misturas perigosas de produtos de limpeza. Este repositório guarda duas coisas:
 
-1. **O schema do banco** (`sql/01_ddl.sql` e `sql/02_fks.sql`), a fonte da verdade das 13 tabelas.
+1. **O schema do banco** (pasta [`database/`](database/README.md): `database/sql/01_ddl.sql` e `database/sql/02_fks.sql`), a fonte da verdade das 13 tabelas.
 2. **A ferramenta de carga `seed`**, uma linha de comando em Python que popula os bancos `test` e `main` (dois serviços no Aiven) com 100 registros por tabela, gerados de forma determinística e validados antes de chegar ao banco.
 
 > [!CAUTION]
-> Os scripts de `sql/` começam com `DROP TABLE ... CASCADE`. **Nunca execute esses scripts no Aiven** sobre um banco com dados. A ferramenta de carga nunca os executa.
+> Os scripts de `database/sql/` começam com `DROP TABLE ... CASCADE`. **Nunca execute esses scripts no Aiven** sobre um banco com dados. A ferramenta de carga nunca os executa.
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 
@@ -416,7 +416,7 @@ uv run mypy                 # tipos (modo com plugin do Pydantic)
 uv run pytest               # 318 testes, nenhum conecta a banco
 ```
 
-Os testes conferem, entre outras coisas, que os modelos ORM batem com o `sql/01_ddl.sql`, que os contratos batem com os modelos, que os enums batem com os `CHECK` do DDL, as travas da CLI e os validadores de CAS, CNPJ, CEP e fuso.
+Os testes conferem, entre outras coisas, que os modelos ORM batem com o `database/sql/01_ddl.sql`, que os contratos batem com os modelos, que os enums batem com os `CHECK` do DDL, as travas da CLI e os validadores de CAS, CNPJ, CEP e fuso.
 
 <details>
 <summary><b>Hooks do pre-commit</b></summary>
@@ -429,7 +429,7 @@ Os testes conferem, entre outras coisas, que os modelos ORM batem com o `sql/01_
 | `mypy` | Tipagem do projeto |
 | `detect-private-key` | Nenhuma chave privada no commit |
 | `check-added-large-files` | Nenhum arquivo grande por engano |
-| `end-of-file-fixer`, `trailing-whitespace`, `mixed-line-ending` | Arquivos com LF e sem espaços sobrando (os scripts de `sql/` ficam como foram entregues) |
+| `end-of-file-fixer`, `trailing-whitespace`, `mixed-line-ending` | Arquivos com LF e sem espaços sobrando (os scripts de `database/sql/` ficam como foram entregues) |
 | `check-yaml`, `check-toml` | YAML e TOML válidos |
 | `sem-coautoria-claude` | Mensagem de commit sem linha de coautoria de assistente de IA |
 
@@ -446,9 +446,13 @@ Os testes conferem, entre outras coisas, que os modelos ORM batem com o `sql/01_
 
 ```
 quimia-bd-primeiro/
-├── sql/
-│   ├── 01_ddl.sql            tabelas, CHECKs e UNIQUEs (fonte da verdade)
-│   └── 02_fks.sql            chaves estrangeiras
+├── database/                 schema e modelagem (ver database/README.md)
+│   ├── sql/
+│   │   ├── 01_ddl.sql        tabelas, CHECKs e UNIQUEs (fonte da verdade)
+│   │   ├── 02_fks.sql        chaves estrangeiras
+│   │   └── 03_views.sql      views do dashboard
+│   ├── docs/nomenclatura/    convenção de nomenclatura e padronização SQL
+│   └── legacy/               seeds JSON e requirements.txt antigos, só para consulta
 ├── data/
 │   ├── reference/            YAML: cômodos, cidades, tipos de histórico, auditoria
 │   └── catalog/              JSON: catálogo de 100 produtos
@@ -482,7 +486,7 @@ As decisões técnicas do projeto (ambiente e conexão, schema, dados, geradores
 Alguns pontos que costumam gerar dúvida:
 
 - **SSL `verify-ca`, não `verify-full`:** [ADR 0003](docs/adr/0003-ssl-verify-ca.md).
-- **`sql/` é a fonte da verdade e não há Alembic:** [ADR 0006](docs/adr/0006-sql-fonte-da-verdade-sem-alembic.md).
+- **`database/sql/` é a fonte da verdade e não há Alembic:** [ADR 0006](docs/adr/0006-sql-fonte-da-verdade-sem-alembic.md).
 - **Catálogo de produtos de teste e revisão antes do `main`:** [ADR 0018](docs/adr/0018-catalogo-de-produtos-escrito-a-mao.md).
 - **`admins` e `admin_log_edicoes` vazias:** [ADR 0021](docs/adr/0021-admins-e-auditoria-vazias.md).
 - **Travas de proteção do banco principal:** [ADR 0028](docs/adr/0028-carga-sintetica-restrita-no-banco-principal.md) e [ADR 0029](docs/adr/0029-travas-do-banco-principal.md).
@@ -497,7 +501,7 @@ Alguns pontos que costumam gerar dúvida:
 4. Abra a PR para a `develop` e peça a revisão de alguém da equipe.
 
 > [!TIP]
-> Mudou o schema? Atualize `sql/`, `modelos.py` e `contratos.py` no mesmo commit, rode `uv run pytest` e depois `uv run seed check` para confirmar que o banco de teste bate com os modelos.
+> Mudou o schema? Atualize `database/sql/`, `modelos.py` e `contratos.py` no mesmo commit, rode `uv run pytest` e depois `uv run seed check` para confirmar que o banco de teste bate com os modelos.
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 

@@ -1,0 +1,802 @@
+[
+  {
+    "horario": "14:17:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "23:27:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "07:15:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "13:37:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "18:09:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "00:26:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "01:30:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "16:02:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "16:25:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "22:52:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "14:31:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "02:35:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "22:46:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "06:08:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "09:15:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "02:01:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "21:19:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "22:29:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "23:37:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "14:29:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "22:25:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "11:40:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "22:40:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "20:04:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "22:21:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "01:18:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "08:44:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "17:36:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "21:05:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "10:47:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "16:58:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "11:56:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "03:24:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "14:39:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "11:23:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "20:35:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "02:35:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "06:08:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "07:34:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "20:30:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "18:55:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "06:48:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "07:20:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "08:32:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "13:17:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "02:23:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "14:31:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "16:53:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "15:45:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "21:52:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "09:28:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "11:51:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "22:51:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "06:57:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "02:05:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "05:18:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "03:10:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "03:44:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "15:09:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "16:40:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "09:26:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "17:59:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "15:22:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "14:47:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "00:18:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "02:01:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "16:41:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "13:37:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "20:41:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "15:37:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "22:33:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "14:29:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "18:08:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "05:50:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "07:30:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "09:49:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "04:22:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "14:10:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "05:45:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "09:11:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "22:44:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "04:10:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "03:02:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "18:08:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "08:23:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "06:35:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "01:42:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "11:09:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "14:34:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "17:19:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "00:25:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "04:29:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "04:00:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "17:32:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "20:45:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "15:57:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "18:42:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "18:46:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "10:44:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "23:30:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "04:43:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "03:19:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "12:39:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "14:22:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "10:03:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "20:12:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "16:14:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "06:01:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "17:54:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "21:42:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "16:25:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "15:20:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "19:32:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "21:23:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "04:45:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "11:24:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "00:18:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "11:19:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "17:05:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "23:56:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "23:26:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "09:10:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "13:46:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "04:53:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "19:05:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "06:19:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "16:21:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "18:48:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "02:00:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "20:58:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "13:11:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "14:45:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "04:12:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "12:18:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "15:02:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "18:19:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "17:47:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "07:01:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "04:16:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "20:53:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "15:07:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "21:57:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "13:11:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "22:41:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "00:07:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "15:04:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "23:23:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "15:36:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "08:40:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "15:44:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "11:32:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "18:01:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "05:37:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "04:20:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "22:08:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "05:03:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "11:26:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "11:03:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "09:33:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "02:32:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "20:11:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "19:48:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "17:20:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "21:51:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "08:43:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "22:23:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "17:37:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "04:00:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "16:18:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "15:26:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "05:06:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "04:32:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "06:50:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "19:44:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "17:45:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "22:48:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "13:29:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "03:52:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "00:30:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "09:44:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "04:52:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "19:33:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "05:45:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "00:47:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "07:08:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "04:44:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "09:08:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "04:05:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "22:48:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "02:01:00",
+    "descricao_resultado": "Estoque reposto no local designado."
+  },
+  {
+    "horario": "13:02:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "03:02:00",
+    "descricao_resultado": "Produto próximo da validade, sinalizado para uso prioritário."
+  },
+  {
+    "horario": "16:37:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "15:07:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "01:04:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "21:00:00",
+    "descricao_resultado": "Produto aplicado com sucesso, sem intercorrências."
+  },
+  {
+    "horario": "03:58:00",
+    "descricao_resultado": "Mistura realizada dentro dos parâmetros de segurança."
+  },
+  {
+    "horario": "06:37:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  },
+  {
+    "horario": "05:42:00",
+    "descricao_resultado": "Produto descartado conforme instruções da FDS."
+  },
+  {
+    "horario": "00:05:00",
+    "descricao_resultado": "Superfície limpa e sem resíduos aparentes."
+  }
+]
