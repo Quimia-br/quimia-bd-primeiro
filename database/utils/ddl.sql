@@ -71,7 +71,7 @@ CREATE TABLE usuarios(
 CREATE TABLE produtos(
     id_produto INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario_empresa INT NOT NULL,
-    cas_number VARCHAR(12) NOT NULL UNIQUE, 
+    cas_number VARCHAR(12) NOT NULL, 
     nome VARCHAR(150) NOT NULL,
     marca VARCHAR(150) NOT NULL DEFAULT 'DESCONHECIDO',
     instrucao_de_uso TEXT NOT NULL,
