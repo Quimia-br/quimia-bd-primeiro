@@ -1,0 +1,33 @@
+name: pre-commit
+
+# Roda os mesmos hooks do pre-commit que rodam na máquina de cada pessoa
+# (ruff, mypy, YAML/TOML, chaves privadas etc.). Não conecta a nenhum banco.
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          cache-dependency-glob: dataload/uv.lock
+
+      - name: Instalar dependências
+        run: uv sync --directory dataload --locked
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
+
+      - name: Rodar os hooks em todos os arquivos
+        run: uv run --directory dataload pre-commit run --all-files --show-diff-on-failure
