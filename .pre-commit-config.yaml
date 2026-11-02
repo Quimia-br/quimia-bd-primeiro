@@ -12,9 +12,9 @@ repos:
       - id: check-added-large-files
       # Os scripts SQL são a fonte da verdade e ficam exatamente como foram entregues.
       - id: end-of-file-fixer
-        exclude: ^sql/0[12]_.*\.sql$
+        exclude: ^database/sql/0[123]_.*\.sql$
       - id: trailing-whitespace
-        exclude: ^sql/0[12]_.*\.sql$
+        exclude: ^database/sql/0[123]_.*\.sql$
       - id: check-yaml
       - id: check-toml
       - id: mixed-line-ending
@@ -29,7 +29,7 @@ repos:
         stages: [commit-msg]
       - id: mypy
         name: mypy
-        entry: uv run mypy
+        entry: uv run --directory dataload mypy
         language: system
         types: [python]
         pass_filenames: false

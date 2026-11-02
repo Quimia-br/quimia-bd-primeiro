@@ -51,11 +51,11 @@
 
 O **Quimia** é um aplicativo que ajuda a evitar misturas perigosas de produtos de limpeza. Este repositório guarda duas coisas:
 
-1. **O schema do banco** (`sql/01_ddl.sql` e `sql/02_fks.sql`), a fonte da verdade das 13 tabelas.
+1. **O schema do banco** (pasta [`database/`](database/README.md): `database/sql/01_ddl.sql` e `database/sql/02_fks.sql`), a fonte da verdade das 13 tabelas.
 2. **A ferramenta de carga `seed`**, uma linha de comando em Python que popula os bancos `test` e `main` (dois serviços no Aiven) com 100 registros por tabela, gerados de forma determinística e validados antes de chegar ao banco.
 
 > [!CAUTION]
-> Os scripts de `sql/` começam com `DROP TABLE ... CASCADE`. **Nunca execute esses scripts no Aiven** sobre um banco com dados. A ferramenta de carga nunca os executa.
+> Os scripts de `database/sql/` começam com `DROP TABLE ... CASCADE`. **Nunca execute esses scripts no Aiven** sobre um banco com dados. A ferramenta de carga nunca os executa.
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 
@@ -277,13 +277,15 @@ Você pode conferir sem tocar no banco com `uv run seed run --dry-run`.
 
 ## Instalação
 
-Requisitos: [uv](https://docs.astral.sh/uv/). O uv instala o Python 3.14 sozinho, se faltar.
+Requisitos: [uv](https://docs.astral.sh/uv/getting-started/installation/) (Windows, macOS ou Linux) e Git. O uv instala o Python 3.14 sozinho, se faltar. Os comandos abaixo funcionam igual em PowerShell, Bash e Zsh. O repositório tem duas pastas: [`database/`](database/README.md) (schema) e [`dataload/`](dataload/README.md) (ferramenta de carga). **Todos os comandos `uv` deste README rodam dentro de `dataload/`.**
 
-```powershell
+```bash
 git clone https://github.com/Quimia-br/quimia-bd-primeiro.git
 cd quimia-bd-primeiro
 git switch develop
 
+# a ferramenta de carga fica na pasta dataload/: todos os comandos uv abaixo rodam nela
+cd dataload
 uv sync                                            # cria .venv e instala dependências + grupo dev
 uv run pre-commit install                          # hooks de qualidade no git commit
 uv run pre-commit install --hook-type commit-msg   # verificação da mensagem de commit
@@ -295,15 +297,15 @@ uv run pre-commit install --hook-type commit-msg   # verificação da mensagem d
 
 | Passo | O que fazer |
 |:---:|---|
-| **1** | **Certificados:** no console do Aiven (*serviço → Overview → CA certificate*), baixe o CA de cada serviço e salve em `certs/ca-test.pem` e `certs/ca-main.pem`. A pasta fica fora do Git. |
+| **1** | **Certificados:** no console do Aiven (*serviço → Overview → CA certificate*), baixe o CA de cada serviço e salve em `dataload/certs/ca-test.pem` e `dataload/certs/ca-main.pem`. A pasta fica fora do Git. |
 | **2** | **Allowlist:** em *Service settings → Allowed IP addresses*, libere o IP da sua máquina nos dois serviços. Sem isso, a conexão termina em timeout. |
-| **3** | **Variáveis:** crie os dois arquivos a partir do modelo e preencha host, porta, usuário, senha e caminho do CA de cada serviço. |
+| **3** | **Variáveis:** crie os dois arquivos, dentro de `dataload/`, a partir do modelo e preencha host, porta, usuário, senha e caminho do CA de cada serviço. |
 | **4** | **Conferência:** rode `uv run seed check` (test) e `uv run seed --target main check` (main). O comando só lê. |
 
-```powershell
-Copy-Item .env.example .env.test   # banco de teste (alvo padrão)
-Copy-Item .env.example .env        # banco principal
-```
+| Sistema | Comandos |
+|---|---|
+| Windows (PowerShell) | `Copy-Item .env.example .env.test` (banco de teste, alvo padrão) e `Copy-Item .env.example .env` (banco principal) |
+| macOS e Linux | `cp .env.example .env.test` (banco de teste, alvo padrão) e `cp .env.example .env` (banco principal) |
 
 <details>
 <summary><b>Variáveis do <code>.env</code></b></summary>
@@ -318,14 +320,14 @@ Copy-Item .env.example .env        # banco principal
 | `SEED_DB_PASSWORD` | | Senha do serviço |
 | `SEED_DB_NAME` | `defaultdb` | Nome do banco |
 | `SEED_DB_SCHEMA` | `public` | Schema |
-| `SEED_DB_SSLMODE` | `verify-ca` | Modo SSL (ver [Decisões](#decisões-de-projeto)) |
+| `SEED_DB_SSLMODE` | `verify-ca` | Modo SSL (ver [ADR 0003](dataload/docs/adr/0003-ssl-verify-ca.md)) |
 | `SEED_DB_SSLROOTCERT` | `certs/ca-test.pem` | CA do serviço |
 | `SEED_DB_POOL_SIZE` / `SEED_DB_MAX_OVERFLOW` | `2` / `1` | Pool pequeno, pelo limite de conexões do Aiven |
 | `SEED_DB_CONNECT_TIMEOUT` | `10` | Segundos de espera ao conectar |
 | `SEED_TIMEZONE` | `UTC` | Fuso das colunas `TIMESTAMP`; deve ser igual ao do servidor |
 | `SEED_PASSWORD_PLAIN` | | Senha dos usuários fictícios; use uma diferente em cada arquivo |
 
-Uma variável definida no ambiente (`$env:SEED_DB_NAME = "..."`) tem prioridade sobre o arquivo.
+Uma variável definida no ambiente tem prioridade sobre o arquivo (PowerShell: `$env:SEED_DB_NAME = "..."`; Bash e Zsh: `export SEED_DB_NAME=...`).
 
 </details>
 
@@ -409,14 +411,14 @@ flowchart TD
 
 ## Qualidade e testes
 
-```powershell
+```bash
 uv run ruff check           # lint (inclui regras de segurança do Bandit)
 uv run ruff format --check  # formatação
 uv run mypy                 # tipos (modo com plugin do Pydantic)
 uv run pytest               # 318 testes, nenhum conecta a banco
 ```
 
-Os testes conferem, entre outras coisas, que os modelos ORM batem com o `sql/01_ddl.sql`, que os contratos batem com os modelos, que os enums batem com os `CHECK` do DDL, as travas da CLI e os validadores de CAS, CNPJ, CEP e fuso.
+Os testes conferem, entre outras coisas, que os modelos ORM batem com o `database/sql/01_ddl.sql`, que os contratos batem com os modelos, que os enums batem com os `CHECK` do DDL, as travas da CLI e os validadores de CAS, CNPJ, CEP e fuso.
 
 <details>
 <summary><b>Hooks do pre-commit</b></summary>
@@ -429,7 +431,7 @@ Os testes conferem, entre outras coisas, que os modelos ORM batem com o `sql/01_
 | `mypy` | Tipagem do projeto |
 | `detect-private-key` | Nenhuma chave privada no commit |
 | `check-added-large-files` | Nenhum arquivo grande por engano |
-| `end-of-file-fixer`, `trailing-whitespace`, `mixed-line-ending` | Arquivos com LF e sem espaços sobrando (os scripts de `sql/` ficam como foram entregues) |
+| `end-of-file-fixer`, `trailing-whitespace`, `mixed-line-ending` | Arquivos com LF e sem espaços sobrando (os scripts de `database/sql/` ficam como foram entregues) |
 | `check-yaml`, `check-toml` | YAML e TOML válidos |
 | `sem-coautoria-claude` | Mensagem de commit sem linha de coautoria de assistente de IA |
 
@@ -446,26 +448,33 @@ Os testes conferem, entre outras coisas, que os modelos ORM batem com o `sql/01_
 
 ```
 quimia-bd-primeiro/
-├── sql/
-│   ├── 01_ddl.sql            tabelas, CHECKs e UNIQUEs (fonte da verdade)
-│   └── 02_fks.sql            chaves estrangeiras
-├── data/
-│   ├── reference/            YAML: cômodos, cidades, tipos de histórico, auditoria
-│   └── catalog/              JSON: catálogo de 100 produtos
-├── src/seed/
-│   ├── config.py             alvos, conexão, quantidades e formatos das URLs de foto
-│   ├── modelos.py            modelos ORM espelhando o DDL e ordem de carga
-│   ├── contratos.py          contratos Pydantic por tabela
-│   ├── validacao.py          validadores puros: CAS, CNPJ, CEP, coordenadas, URL, idade, fuso
-│   ├── dados.py              leitura de data/
-│   ├── generators/           contas, produtos, estantes, historicos, contexto
-│   ├── carga.py              inserts em lote, registro de IDs, transação única
-│   ├── verificacao/          diagnostico, schema (modelos × banco), regras de negócio
-│   └── cli/                  Typer: app, consulta (leitura), escrita (run e reset)
-├── tests/unit/               testes unitários, sem banco
-├── .env.example              modelo de configuração (valores fictícios)
-├── .pre-commit-config.yaml
-└── pyproject.toml
+├── database/                 schema e modelagem (ver database/README.md)
+│   ├── sql/
+│   │   ├── 01_ddl.sql        tabelas, CHECKs e UNIQUEs (fonte da verdade)
+│   │   ├── 02_fks.sql        chaves estrangeiras
+│   │   └── 03_views.sql      views do dashboard
+│   ├── docs/nomenclatura/    convenção de nomenclatura e padronização SQL
+│   └── legacy/               seeds JSON e requirements.txt antigos, só para consulta
+├── dataload/                 ferramenta de carga (seed), em Python (ver dataload/README.md)
+│   ├── data/
+│   │   ├── reference/        YAML: cômodos, cidades, tipos de histórico, auditoria
+│   │   └── catalog/          JSON: catálogo de 100 produtos
+│   ├── src/seed/
+│   │   ├── config.py         alvos, conexão, quantidades e formatos das URLs de foto
+│   │   ├── modelos.py        modelos ORM espelhando o DDL e ordem de carga
+│   │   ├── contratos.py      contratos Pydantic por tabela
+│   │   ├── validacao.py      validadores puros: CAS, CNPJ, CEP, coordenadas, URL, idade, fuso
+│   │   ├── dados.py          leitura de data/
+│   │   ├── generators/       contas, produtos, estantes, historicos, contexto
+│   │   ├── carga.py          inserts em lote, registro de IDs, transação única
+│   │   ├── verificacao/      diagnostico, schema (modelos × banco), regras de negócio
+│   │   └── cli/              Typer: app, consulta (leitura), escrita (run e reset)
+│   ├── tests/unit/           testes unitários, sem banco
+│   ├── docs/adr/             decisões de projeto (ADRs numerados)
+│   ├── .env.example          modelo de configuração (valores fictícios)
+│   └── pyproject.toml
+├── LICENSE
+└── .pre-commit-config.yaml
 ```
 
 Um módulo vira pasta quando passa de cerca de 300 linhas ou tem partes claramente separadas, como `generators/`, `verificacao/` e `cli/`.
@@ -476,81 +485,15 @@ Um módulo vira pasta quando passa de cerca de 300 linhas ou tem partes claramen
 
 ## Decisões de projeto
 
-Decisões já tomadas, com o motivo de cada uma.
+As decisões técnicas do projeto (ambiente e conexão, schema, dados, geradores, carga e proteção do banco principal) estão registradas, com contexto e consequências, em [docs/adr/](dataload/docs/adr/README.md). Cada decisão é um ADR numerado, no formato Contexto, Decisão e Consequências.
 
-<details>
-<summary><b>Ambiente e conexão</b></summary>
+Alguns pontos que costumam gerar dúvida:
 
-<br>
-
-- **Sem Docker.** Dois serviços separados no Aiven: `test` (padrão de todos os comandos) e `main`. Serviços separados isolam credenciais, limites e backups.
-- **`.env.test` para o teste e `.env` para o principal**, os dois fora do Git, com as proteções descritas em [Configuração dos bancos](#configuração-dos-bancos).
-- **SSL `verify-ca`, não `verify-full`:** o libpq do `psycopg-binary` para Windows rejeita o endereço IPv6 que o Aiven coloca no certificado (`certificate contains IP address with invalid length 16`). Com `verify-ca`, a conexão continua criptografada e o certificado continua validado contra o CA do projeto; só o nome do host deixa de ser conferido. O risco é baixo, porque cada projeto do Aiven tem um CA próprio. Vale testar `verify-full` de novo quando o `psycopg-binary` trouxer outro libpq.
-- **Usuário do serviço** (por exemplo `avnadmin`). A proteção do `main` contra apagar dados depende das travas do código, não de privilégios no banco.
-- **Pool pequeno** (2 + 1), porque os planos do Aiven têm limite de conexões. O `seed check` mostra versão, conexões abertas, `max_connections` e tamanho do banco.
-- **Schema `public`.**
-
-</details>
-
-<details>
-<summary><b>Schema</b></summary>
-
-<br>
-
-- **`sql/` é a fonte da verdade.** O seed nunca executa esses scripts.
-- **Sem Alembic.** O projeto não cria nem altera tabelas, então uma ferramenta de migração não teria função.
-- **Modelos ORM (SQLAlchemy 2.x) só para descrever as tabelas:** dão a ordem de carga (`metadata.sorted_tables`), a tipagem e a base da comparação com o banco real. Os inserts usam o Core (`insert(Modelo.__table__)` com `RETURNING`), nunca `session.add` linha a linha.
-- **Mudança de schema exige atualizar três lugares juntos:** `sql/`, `modelos.py` e `contratos.py`. O `seed check` mostra divergências, o `seed run` se recusa a rodar se houver alguma, e um teste confere modelos × DDL e contratos × modelos.
-- **Enums só para os `CHECK` do DDL** (`status`, `porte`, `acao`). `comodo` e o nome dos tipos de histórico não têm `CHECK`: os valores válidos ficam em `data/reference`, para mudarem sem alterar código.
-- **Datas com fuso nos contratos**, que recusam datas sem fuso ou no futuro. As datas são geradas em `America/Sao_Paulo`, convertidas para `SEED_TIMEZONE` (padrão UTC) e gravadas sem fuso nas colunas `TIMESTAMP`.
-- **CNPJ alfanumérico** (formato da Receita Federal em vigor desde julho de 2026): 12 caracteres `[0-9A-Z]` e 2 dígitos verificadores numéricos, módulo 11, com cada caractere valendo o código ASCII menos 48. Os CNPJs numéricos continuam válidos. Testado com o exemplo oficial `12.ABC.345/01DE-35`.
-- **E-mails sintéticos** só com os domínios reservados `example.com` e `example.org`, em minúsculas.
-- **`cas_number` não é `UNIQUE`:** várias marcas podem ter a mesma substância.
-
-</details>
-
-<details>
-<summary><b>Dados</b></summary>
-
-<br>
-
-- **100 registros por tabela**, fixos em `config.py` (fácil de mudar), com as exceções da tabela em [Como a carga funciona](#como-a-carga-funciona).
-- **Sem Polyfactory.** Para 100 linhas por tabela, funções simples com Faker e `random.Random` bastam.
-- **Tipos de histórico pelo seed**, a partir de `data/reference`, com `ON CONFLICT (nome) DO NOTHING`, nos dois alvos.
-- **Regras por tipo de histórico** em YAML: USO, DESCARTE e ARMAZENAMENTO com exatamente 1 produto; VERIFICACAO com 0 a 3; MISTURA com 2 a 4. ARMAZENAMENTO e VERIFICACAO exigem estante, e um ARMAZENAMENTO exige o produto na estante com `data_adicao` até a data do histórico.
-- **Cômodos:** COZINHA, LAVANDERIA, AREA_SERVICO, BANHEIRO, GARAGEM, DESPENSA, QUARTO, SALA.
-- **Cidades de referência:** 14 cidades com faixa de CEP e coordenadas do centro, para o CEP gerado combinar com a cidade. Os valores são aproximados.
-- **Fotos:** usuários com `randomuser.me` (gênero da foto combinando com o nome, sem repetir índice) e empresas com `ui-avatars.com`. São links externos: se um serviço mudar ou sair do ar, as imagens quebram.
-- **`admins` e `admin_log_edicoes` ficam vazias** em qualquer alvo. Os geradores continuam no código: basta aumentar as quantidades em `config.py` para voltar a gerá-las (o log continua barrado no `main`, pois auditoria falsa no principal é pior que auditoria vazia).
-
-</details>
-
-<details>
-<summary><b>Catálogo de produtos</b></summary>
-
-<br>
-
-`data/catalog/produtos.json` traz 100 substâncias distintas usadas em produtos de limpeza (alvejantes, desinfetantes, ácidos, álcalis, tensoativos, solventes, sequestrantes, espessantes, conservantes e fragrâncias), com CAS que passam no dígito verificador e foram conferidos no PubChem. As 100 entradas estão marcadas como revisadas, com fonte e data de consulta.
-
-> [!WARNING]
-> É um **catálogo de teste**. A entrada 1 usa uso e dosagem da página técnica de um produto real; nas demais, `instrucao_de_uso` e `dosagem_tecnica` são textos de teste, e os textos de descarte são genéricos por classe de substância, sem conferência em FDS. Informação de segurança nunca é inventada para produção: antes de uso real, cada entrada precisa ser conferida na FDS/FISPQ do produto.
-
-</details>
-
-<details>
-<summary><b>Geradores e carga</b></summary>
-
-<br>
-
-- **Determinismo:** a mesma semente e o mesmo momento de carga geram exatamente os mesmos dados (as datas são relativas ao momento da carga). O `senha_hash` usa um salt derivado da semente, para também ser reproduzível; a senha é a mesma em todas as contas sintéticas, então isso não expõe nada.
-- **Produtos concentrados em parte dos usuários:** 100 posses para 100 usuários não permitiriam misturas (2 a 4 produtos). Por isso entre 25 e 37 usuários têm de 2 a 4 produtos cada.
-- **Históricos planejados antes de gerados:** o tipo e o número de produtos de cada um são sorteados para somarem exatamente 100 em `historicos_produtos`. Se as regras não permitirem, o seed para com erro em vez de quebrar uma regra. Testado com 300 sementes diferentes, sem falha.
-- **Descrições neutras** ("Uso registrado.", "Estante verificada."), sem descrever reações ou procedimentos; 20% ficam sem descrição.
-- **`sort_by_parameter_order=True`** garante que os IDs do `RETURNING` voltem na ordem das linhas.
-- **`admin_log_edicoes` é inserida por último:** o `id_registro` aponta para várias tabelas, mas não é FK, então a ordem calculada pelas FKs não enxerga essa dependência.
-- **`seed verificar`** confere no banco as regras de negócio (estante e produtos do mesmo usuário, regras por tipo de histórico, um descarte por produto, datas, idade mínima, uma estante por cômodo, logs coerentes, e-mails, CNPJ e CAS).
-
-</details>
+- **SSL `verify-ca`, não `verify-full`:** [ADR 0003](dataload/docs/adr/0003-ssl-verify-ca.md).
+- **`database/sql/` é a fonte da verdade e não há Alembic:** [ADR 0006](dataload/docs/adr/0006-sql-fonte-da-verdade-sem-alembic.md).
+- **Catálogo de produtos de teste e revisão antes do `main`:** [ADR 0018](dataload/docs/adr/0018-catalogo-de-produtos-escrito-a-mao.md).
+- **`admins` e `admin_log_edicoes` vazias:** [ADR 0021](dataload/docs/adr/0021-admins-e-auditoria-vazias.md).
+- **Travas de proteção do banco principal:** [ADR 0028](dataload/docs/adr/0028-carga-sintetica-restrita-no-banco-principal.md) e [ADR 0029](dataload/docs/adr/0029-travas-do-banco-principal.md).
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 
@@ -562,7 +505,7 @@ Decisões já tomadas, com o motivo de cada uma.
 4. Abra a PR para a `develop` e peça a revisão de alguém da equipe.
 
 > [!TIP]
-> Mudou o schema? Atualize `sql/`, `modelos.py` e `contratos.py` no mesmo commit, rode `uv run pytest` e depois `uv run seed check` para confirmar que o banco de teste bate com os modelos.
+> Mudou o schema? Atualize `database/sql/`, `modelos.py` e `contratos.py` no mesmo commit, rode `uv run pytest` (em `dataload/`) e depois `uv run seed check` para confirmar que o banco de teste bate com os modelos.
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 

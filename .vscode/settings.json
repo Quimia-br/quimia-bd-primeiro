@@ -1,10 +1,10 @@
 {
-  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.defaultInterpreterPath": "${workspaceFolder}/dataload/.venv/Scripts/python.exe",
 
-  // O .env é o arquivo do banco PRINCIPAL (ADR 0016). A extensão Python carrega
+  // O .env é o arquivo do banco PRINCIPAL (ADR 0002). A extensão Python carrega
   // "python.envFile" (padrão: .env) nos testes, no debugger e no terminal; aqui ele
   // aponta para um arquivo que não existe, para nada ser injetado automaticamente.
-  "python.envFile": "${workspaceFolder}/.env.editor-desativado",
+  "python.envFile": "${workspaceFolder}/dataload/.env.editor-desativado",
   "python.terminal.useEnvFile": false,
 
   "[python]": {
@@ -38,5 +38,6 @@
 
   "python.testing.pytestEnabled": true,
   "python.testing.unittestEnabled": false,
+  "python.testing.cwd": "${workspaceFolder}/dataload",
   "python.testing.pytestArgs": ["tests"]
 }
