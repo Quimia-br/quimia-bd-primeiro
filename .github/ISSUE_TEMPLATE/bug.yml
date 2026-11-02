@@ -1,0 +1,48 @@
+name: Relatar um erro
+description: Algo no schema, na carga ou na documentação não funciona como deveria.
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Antes de enviar, **remova senhas, hosts, certificados e qualquer dado real** do relato.
+        Para vulnerabilidades, não use este formulário: veja a [Política de Segurança](https://github.com/Quimia-br/quimia-bd-primeiro/blob/main/SECURITY.md).
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - database (schema SQL)
+        - dataload (ferramenta seed)
+        - Documentação
+        - Outra
+    validations:
+      required: true
+  - type: textarea
+    id: o-que-aconteceu
+    attributes:
+      label: O que aconteceu
+      description: Descreva o erro e a mensagem exibida, se houver.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que você esperava
+    validations:
+      required: true
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Como reproduzir
+      description: Comandos executados, em ordem (por exemplo, `uv run seed run --dry-run`).
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: Sistema operacional, versão do Python e do uv.
+      placeholder: "Windows 11, Python 3.14, uv 0.x"
