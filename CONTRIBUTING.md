@@ -33,7 +33,7 @@ docs: explica o fluxo de revisão do catálogo
 
 Tipos: `feat`, `fix`, `refactor`, `perf`, `docs`, `test` e `chore`. Um `!` depois do tipo (`feat!:`) ou o rodapé `BREAKING CHANGE:` marca uma mudança incompatível.
 
-Os commits **definem a próxima versão** (veja [Versões e releases](#versões-e-releases)), então escolha o tipo com cuidado.
+O tipo do commit ajuda a escolher a próxima versão e a escrever as notas do release (veja [Versões e releases](#versões-e-releases)), então escolha-o com cuidado.
 
 ## Antes de abrir o PR
 
@@ -80,16 +80,17 @@ Registre num ADR novo em [`dataload/docs/adr/`](dataload/docs/adr/README.md), co
 
 ## Versões e releases
 
-As versões seguem o [Versionamento Semântico](https://semver.org/lang/pt-BR/) e são geradas automaticamente pelo [release-please](https://github.com/googleapis/release-please) a partir dos commits que chegam na `main`:
+As versões seguem o [Versionamento Semântico](https://semver.org/lang/pt-BR/) (`MAJOR.MINOR.PATCH`) e os releases são criados **manualmente** por quem mantém o projeto, a partir da `main`:
 
-| Commit | Efeito na versão (antes da 1.0) |
+| O que entrou desde o último release | Versão (antes da 1.0) |
 |---|---|
-| `fix:` | sobe o número de correção (`0.1.0` → `0.1.1`) |
-| `feat:` | sobe o número menor (`0.1.0` → `0.2.0`) |
-| `feat!:` ou `BREAKING CHANGE:` | também sobe o número menor, até a versão 1.0 |
-| `docs:`, `refactor:`, `perf:` | aparecem no CHANGELOG, sem gerar versão sozinhos |
-| `test:`, `chore:` | não aparecem no CHANGELOG |
+| Só correções (`fix:`) | sobe o número de correção (`0.1.0` → `0.1.1`) |
+| Novidades (`feat:`) ou mudança incompatível (`feat!:`, `BREAKING CHANGE:`) | sobe o número menor (`0.1.0` → `0.2.0`) |
+| Só documentação, testes ou manutenção | normalmente não gera release |
 
-O release-please mantém aberto um PR chamado **"chore(main): release x.y.z"**, com a versão e o `CHANGELOG.md` (criado no primeiro release). **Mergear esse PR cria a tag e a release no GitHub.** Não edite o CHANGELOG nem a versão à mão.
+Para criar um release:
 
-Para forçar uma versão específica (por exemplo, a 1.0.0), inclua no corpo de um commit a linha `Release-As: 1.0.0`.
+1. No GitHub, abra **Releases → Draft a new release**.
+2. Em **Choose a tag**, crie uma tag nova no formato `vX.Y.Z` (por exemplo, `v0.1.0`), apontando para a `main`.
+3. Clique em **Generate release notes**: o GitHub lista os PRs mergeados desde o release anterior.
+4. Revise o texto e clique em **Publish release**.
