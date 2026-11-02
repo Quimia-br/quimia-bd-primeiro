@@ -8,7 +8,7 @@ Algumas colunas têm CHECK no banco (`status`, `porte`, `acao`). Outras, como `c
 
 ## Decisão
 
-Usar enums em Python só para os CHECKs do DDL. Um teste confere os valores contra `sql/01_ddl.sql`. Os valores de `comodo` e dos tipos de histórico ficam em `data/reference`.
+Usar enums em Python só para os CHECKs do DDL. Um teste confere os valores contra `database/sql/01_ddl.sql`. Os valores de `comodo` e dos tipos de histórico ficam em `data/reference`.
 
 ## Consequências
 

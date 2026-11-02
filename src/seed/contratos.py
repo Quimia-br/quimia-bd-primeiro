@@ -36,7 +36,7 @@ from seed import validacao
 from seed.config import EMAIL_DOMINIOS, FUSO_DE_GERACAO, IDADE_MINIMA
 
 # ---------------------------------------------------------------------------
-# Enums dos CHECKs do DDL (um teste confere contra sql/01_ddl.sql)
+# Enums dos CHECKs do DDL (um teste confere contra database/sql/01_ddl.sql)
 # ---------------------------------------------------------------------------
 
 

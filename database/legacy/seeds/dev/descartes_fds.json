@@ -1,0 +1,1202 @@
+[
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Descartar em coleta seletiva de plástico.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Não descartar em rede de esgoto sem tratamento prévio.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Proibido descarte em corpos d'água.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Não reutilizar a embalagem para outros fins.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Conter vazamentos com material absorvente inerte."
+  },
+  {
+    "metodo_descarte_produto": "Neutralizar antes do descarte conforme legislação local.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Sem restrição adicional além da legislação vigente.",
+    "precaucao_ambiental": "Evitar contato com solo e vegetação."
+  },
+  {
+    "metodo_descarte_produto": "Encaminhar para empresa especializada em resíduos químicos.",
+    "metodo_descarte_embalagem": "Embalagem vazia deve ser encaminhada para reciclagem.",
+    "restricao_descarte": "Não descartar junto ao lixo orgânico.",
+    "precaucao_ambiental": "Impedir que o produto atinja sistemas de drenagem."
+  },
+  {
+    "metodo_descarte_produto": "Diluir em grande quantidade de água antes do descarte.",
+    "metodo_descarte_embalagem": "Perfurar a embalagem antes do descarte.",
+    "restricao_descarte": "Não incinerar em ambiente fechado.",
+    "precaucao_ambiental": "Tóxico para organismos aquáticos."
+  }
+]

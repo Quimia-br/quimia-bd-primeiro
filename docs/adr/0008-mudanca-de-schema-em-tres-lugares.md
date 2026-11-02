@@ -4,11 +4,11 @@ Status: Aceita
 
 ## Contexto
 
-O schema existe em `sql/` (fonte da verdade), em `modelos.py` (ORM) e em `contratos.py` (validação).
+O schema existe em `database/sql/` (fonte da verdade), em `modelos.py` (ORM) e em `contratos.py` (validação).
 
 ## Decisão
 
-Toda mudança de schema atualiza `sql/`, `modelos.py` e `contratos.py` juntos.
+Toda mudança de schema atualiza `database/sql/`, `modelos.py` e `contratos.py` juntos.
 
 ## Consequências
 

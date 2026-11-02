@@ -1,7 +1,7 @@
-"""Modelos ORM que espelham ``sql/01_ddl.sql`` e ``sql/02_fks.sql`` (fonte da verdade).
+"""Modelos ORM que espelham ``database/sql/01_ddl.sql`` e ``02_fks.sql`` (fonte da verdade).
 
 Os modelos NÃO criam nem alteram tabelas: o schema é gerenciado fora deste projeto
-pelos scripts de ``sql/``. Eles servem para descrever as tabelas, dar a ordem de
+pelos scripts de ``database/sql/``. Eles servem para descrever as tabelas, dar a ordem de
 carga e a tipagem. Os inserts usam o Core (``insert(Modelo.__table__)``).
 
 Regras deste arquivo:
@@ -12,7 +12,7 @@ Regras deste arquivo:
 - PKs simples como ``GENERATED ALWAYS AS IDENTITY``: o banco recusa IDs informados,
   então o seed nunca envia essas colunas e obtém os IDs com ``RETURNING``.
 
-Qualquer mudança no DDL exige atualizar ``sql/``, este arquivo e ``contratos.py``
+Qualquer mudança no DDL exige atualizar ``database/sql/``, este arquivo e ``contratos.py``
 juntos. O ``seed check`` compara estes modelos com o banco real.
 """
 

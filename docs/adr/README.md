@@ -22,7 +22,7 @@ Os arquivos são numerados na ordem em que aparecem aqui (`0001-...`, `0002-...`
 
 | ADR | Decisão |
 |---|---|
-| [0006](0006-sql-fonte-da-verdade-sem-alembic.md) | `sql/` é a fonte da verdade e não há Alembic |
+| [0006](0006-sql-fonte-da-verdade-sem-alembic.md) | `database/sql/` é a fonte da verdade e não há Alembic |
 | [0007](0007-modelos-orm-e-contratos-pydantic.md) | Modelos ORM só para descrever tabelas e contratos Pydantic para validar linhas |
 | [0008](0008-mudanca-de-schema-em-tres-lugares.md) | Mudança de schema atualiza três lugares juntos |
 | [0009](0009-cas-number-sem-unique.md) | `cas_number` não é UNIQUE no banco |
