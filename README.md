@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Quimia-br/quimia-landingpage/main/Landing%20Page/assets/user/icons/logo.svg" alt="Logo do Quimia" width="88">
+<img src="assets/logo.svg" alt="Logo do Quimia" width="88">
 
 # Quimia · Banco de Dados e Carga
 
