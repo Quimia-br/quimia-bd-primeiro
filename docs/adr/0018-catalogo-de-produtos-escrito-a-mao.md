@@ -19,3 +19,4 @@ O catálogo fica em `data/catalog/produtos.json`, escrito à mão:
 ## Consequências
 
 - Só entradas revisadas vão para o `main` ([ADR 0028](0028-carga-sintetica-restrita-no-banco-principal.md)).
+- Estado atual: as 100 entradas estão marcadas como revisadas, com CAS conferidos no PubChem, mas o catálogo continua sendo de **teste**. `instrucao_de_uso`, `dosagem_tecnica` e os textos de descarte são genéricos e não foram conferidos em FDS/FISPQ. Antes de uso real, cada entrada precisa dessa conferência.
