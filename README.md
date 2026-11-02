@@ -16,7 +16,8 @@
 
 [![Ruff](https://img.shields.io/badge/lint-Ruff-D7FF64?style=flat-square&logo=ruff&logoColor=black)](https://docs.astral.sh/ruff/)
 [![mypy](https://img.shields.io/badge/tipos-mypy-2A6DB2?style=flat-square)](https://mypy-lang.org/)
-[![pytest](https://img.shields.io/badge/testes-318%20passando-1EEE97?style=flat-square&logo=pytest&logoColor=white)](#qualidade-e-testes)
+[![pytest](https://img.shields.io/badge/testes-pytest-1EEE97?style=flat-square&logo=pytest&logoColor=white)](#qualidade-e-testes)
+[![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-blue?style=flat-square)](LICENSE)
 [![pre-commit](https://img.shields.io/badge/pre--commit-ativo-FAB040?style=flat-square&logo=precommit&logoColor=white)](.pre-commit-config.yaml)
 [![Conventional Commits](https://img.shields.io/badge/commits-conventional-FE5196?style=flat-square&logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org/)
 [![Último commit](https://img.shields.io/github/last-commit/Quimia-br/quimia-bd-primeiro/develop?label=%C3%BAltimo%20commit%20(develop)&style=flat-square)](https://github.com/Quimia-br/quimia-bd-primeiro/commits/develop)
@@ -25,7 +26,8 @@
 [Instalação](#instalação) ·
 [Comandos](#comandos) ·
 [Travas de segurança](#travas-de-segurança) ·
-[Decisões](#decisões-de-projeto)
+[Decisões](#decisões-de-projeto) ·
+[Contribuindo](#contribuindo)
 
 </div>
 
@@ -44,6 +46,7 @@
 - [Qualidade e testes](#qualidade-e-testes)
 - [Estrutura do projeto](#estrutura-do-projeto)
 - [Decisões de projeto](#decisões-de-projeto)
+- [Versões e releases](#versões-e-releases)
 - [Contribuindo](#contribuindo)
 - [Equipe](#equipe)
 
@@ -282,7 +285,6 @@ Requisitos: [uv](https://docs.astral.sh/uv/getting-started/installation/) (Windo
 ```bash
 git clone https://github.com/Quimia-br/quimia-bd-primeiro.git
 cd quimia-bd-primeiro
-git switch develop
 
 # a ferramenta de carga fica na pasta dataload/: todos os comandos uv abaixo rodam nela
 cd dataload
@@ -415,7 +417,7 @@ flowchart TD
 uv run ruff check           # lint (inclui regras de segurança do Bandit)
 uv run ruff format --check  # formatação
 uv run mypy                 # tipos (modo com plugin do Pydantic)
-uv run pytest               # 318 testes, nenhum conecta a banco
+uv run pytest               # testes unitários, nenhum conecta a banco
 ```
 
 Os testes conferem, entre outras coisas, que os modelos ORM batem com o `database/sql/01_ddl.sql`, que os contratos batem com os modelos, que os enums batem com os `CHECK` do DDL, as travas da CLI e os validadores de CAS, CNPJ, CEP e fuso.
@@ -434,6 +436,8 @@ Os testes conferem, entre outras coisas, que os modelos ORM batem com o `databas
 | `end-of-file-fixer`, `trailing-whitespace`, `mixed-line-ending` | Arquivos com LF e sem espaços sobrando (os scripts de `database/sql/` ficam como foram entregues) |
 | `check-yaml`, `check-toml` | YAML e TOML válidos |
 | `sem-coautoria-claude` | Mensagem de commit sem linha de coautoria de assistente de IA |
+
+Os mesmos hooks rodam no GitHub em todo PR e em todo push para `develop` e `main` (exceto o de mensagem de commit).
 
 </details>
 
@@ -497,12 +501,22 @@ Alguns pontos que costumam gerar dúvida:
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 
+## Versões e releases
+
+As versões seguem o [Versionamento Semântico](https://semver.org/lang/pt-BR/) e são geradas automaticamente a partir dos commits no padrão Conventional Commits que chegam na `main`. Um PR chamado **"chore(main): release x.y.z"** fica aberto com a próxima versão e o `CHANGELOG.md`; mergeá-lo cria a tag e a release no GitHub. O fluxo completo está em [CONTRIBUTING.md](CONTRIBUTING.md#versões-e-releases).
+
+<p align="right"><a href="#top">voltar ao topo</a></p>
+
 ## Contribuindo
 
-1. Parta da `develop` atualizada e crie uma branch com prefixo do tipo: `feat/`, `fix/`, `refactor/`, `test/`, `chore/`.
+Contribuições são bem-vindas. O resumo:
+
+1. Parta da `develop` atualizada e crie uma branch com prefixo do tipo: `feat/`, `fix/`, `refactor/`, `test/`, `docs/`, `chore/`.
 2. Escreva os commits no padrão [Conventional Commits](https://www.conventionalcommits.org/), no imperativo.
-3. Rode `ruff`, `mypy` e `pytest` (o pre-commit já faz a maior parte) antes de abrir a PR.
-4. Abra a PR para a `develop` e peça a revisão de alguém da equipe.
+3. Rode `ruff`, `mypy` e `pytest` (o pre-commit já faz a maior parte) antes de abrir o PR.
+4. Abra o PR para a `develop` e peça a revisão de alguém da equipe.
+
+O guia completo está em [CONTRIBUTING.md](CONTRIBUTING.md). Veja também o [Código de Conduta](CODE_OF_CONDUCT.md) e a [Política de Segurança](SECURITY.md) (vulnerabilidades **não** vão em issue pública).
 
 > [!TIP]
 > Mudou o schema? Atualize `database/sql/`, `modelos.py` e `contratos.py` no mesmo commit, rode `uv run pytest` (em `dataload/`) e depois `uv run seed check` para confirmar que o banco de teste bate com os modelos.
@@ -511,9 +525,7 @@ Alguns pontos que costumam gerar dúvida:
 
 ## Equipe
 
-<a href="https://github.com/Quimia-br/quimia-bd-primeiro/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Quimia-br/quimia-bd-primeiro" alt="Contribuidores do quimia-bd-primeiro">
-</a>
+Veja quem contribui em [Contributors](https://github.com/Quimia-br/quimia-bd-primeiro/graphs/contributors).
 
 Projeto desenvolvido para a **ExpoTech 2026**.
 
@@ -523,3 +535,7 @@ Projeto desenvolvido para a **ExpoTech 2026**.
 | [`quimia-landingpage`](https://github.com/Quimia-br/quimia-landingpage) | Site institucional, publicado em [quimia.tech](https://quimia.tech) |
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
+
+## Licença
+
+Distribuído sob a licença MIT. Veja o arquivo [LICENSE](LICENSE).

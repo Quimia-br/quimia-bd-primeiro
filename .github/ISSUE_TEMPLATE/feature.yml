@@ -1,0 +1,33 @@
+name: Sugerir uma melhoria
+description: Proponha uma funcionalidade ou uma mudança no schema ou na carga.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options:
+        - database (schema SQL)
+        - dataload (ferramenta seed)
+        - Documentação
+        - Outra
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual problema isso resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposta
+    attributes:
+      label: Proposta
+      description: O que você sugere? Se mexe no schema, lembre que `database/sql/`, `modelos.py` e `contratos.py` mudam juntos.
+    validations:
+      required: true
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
