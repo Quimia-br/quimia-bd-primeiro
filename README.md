@@ -503,7 +503,7 @@ Alguns pontos que costumam gerar dúvida:
 
 ## Versões e releases
 
-As versões seguem o [Versionamento Semântico](https://semver.org/lang/pt-BR/) e são geradas automaticamente a partir dos commits no padrão Conventional Commits que chegam na `main`. Um PR chamado **"chore(main): release x.y.z"** fica aberto com a próxima versão e o `CHANGELOG.md`; mergeá-lo cria a tag e a release no GitHub. O fluxo completo está em [CONTRIBUTING.md](CONTRIBUTING.md#versões-e-releases).
+As versões seguem o [Versionamento Semântico](https://semver.org/lang/pt-BR/) e os releases são criados manualmente a partir da `main`, com as notas geradas pelo GitHub. O passo a passo está em [CONTRIBUTING.md](CONTRIBUTING.md#versões-e-releases).
 
 <p align="right"><a href="#top">voltar ao topo</a></p>
 
